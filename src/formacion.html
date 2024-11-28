@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formación e Intervención</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="includes.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/includes.js" defer></script>
 
 </head>
 <body>
@@ -14,28 +15,31 @@
     <div id="header-placeholder"></div>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <h1>Formación e Intervención</h1>
-        <p>Discover our training and intervention programs for social impact.</p>
+    <section class="hero-formacion">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Formación</h1>
+                <p>Únete a nuestros programas de formación para conocer y explorar lo que nos mueve.</p>
+                <a href="contact-us.html" class="cta-button-formacion">Contáctanos</a>
+            </div>
+            <div class="hero-image">
+                <img src="assets/Landingpage.svg" alt="Formacion Image">
+            </div>
+        </div>
     </section>
 
     <!-- Interventions Section -->
-    <section class="interventions">
-        <h2>Intervenciones</h2>
-        <div class="interventions-timeline">
-            <div class="timeline-item">
-                <span>8M - Cali/2020</span>
-                <p>Description of the intervention.</p>
-            </div>
-            <!-- Add more timeline items -->
-        </div>
+    <section class="interventions interventions-formacion" id="interventions-list">
+        <h2 class="interventions-title">Intervenciones</h2>
+        <!-- Las intervenciones se renderizarán aquí mediante JavaScript -->
+        <div id="interventions-container"></div>
     </section>
 
     <!-- Blog CTA -->
     <section class="blog-cta">
-        <h2>Learn More About Activismo</h2>
-        <p>Check out our blog posts on Activismo to stay updated.</p>
-        <a href="blog.html?topic=formacion" class="cta-button">Read Formación Blog</a>
+        <h2>Saber más sobre Formación</h2>
+        <p>Explora nuestras entradas sobre Formación para actualizarte.</p>
+        <a href="blog.html?topic=formacion" class="cta-button">Leer entradas del Blog para Formación </a>
     </section>
 
     <!-- Footer Section -->

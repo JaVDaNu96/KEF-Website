@@ -5,22 +5,13 @@
     box-sizing: border-box;
 }
 
+h1, p {
+    display: block!important;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Urbanist', sans-serif;
     line-height: 1.6;
-}
-
-/* Header */
-header {
-    background-color: #f0f0f0;
-    padding: 1rem 0;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 2rem;
 }
 
 a {
@@ -28,136 +19,534 @@ a {
     color: inherit; /* Inherits color from the parent element */
 }
 
-.logo {
-    font-size: 1.5rem;
+/*///////////////////////////// SITE /////////////////////////////////////*/
+
+/* Header Styles */
+.site-header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top:0;
+    background-color: white; /* White background */
+    border-bottom: 2px solid black; /* 3px black border */
+    padding: 0.2rem 3rem 0.2rem 4.2rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: auto;
+}
+
+/* Left Section: Logo/Icon */
+.header-left .logo {
+    max-width: 3rem; /* Adjust as needed */
+}
+
+/* Right Section: CTA Links */
+.header-right {
+    text-align: right;
+    right: -2rem;
+}
+
+.header-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.header-nav li {
+    margin-left: 20px;
+}
+
+.header-nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.1rem;
     font-weight: bold;
 }
 
-.nav-links {
+.header-nav a:hover {
+    color: #ff6b6b; /* Hover color for CTA links */
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+    }
+
+    .header-nav {
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+
+    .header-nav li {
+        margin: 10px 0;
+    }
+}
+
+/*////////////////////////////////////////////////////////////////////////*/
+
+/*/////////////// Banner Styles////////////////////////*/
+/* Moving Banner Section */
+.moving-banner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.moving-banner-b {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style the banner text */
+.banner-text {
+    display: flex;
+    width: 100%;
+}
+.banner-text-b {
+    display: flex;
+    width: 100%;
+}
+
+/* The UL should scroll horizontally */
+.banner-text ul {
+    display: flex;
+    justify-content: space-around;
     list-style-type: none;
+    padding: 0;
+    margin: 0;
+    animation: move-text 50s linear infinite; /* Adjust time for faster/slower scrolling */
+    width: 100%;
 }
 
-.nav-links li {
-    display: inline;
-    margin: 0 1rem;
+.banner-text-b ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    animation: move-text-b 50s linear infinite; /* Adjust time for faster/slower scrolling */
+    width: 100%;
 }
 
-.nav-links a {
-    text-decoration: none;
+/* Style for individual list items */
+.banner-text li {
+    padding: 0rem 0rem; /* Space between each word */
+    font-size: 1rem;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 700;
     color: black;
 }
 
-/* ////////////////////////////////////////////////////*/
+.banner-text-b li {
+    padding: 0rem 0rem; /* Space between each word */
+    font-size: 1rem;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 700;
+    color: black;
+}
+
+/* Animation for scrolling text */
+@keyframes move-text {
+    0% {
+        transform: translateX(100%); /* Start from right */
+    }
+    100% {
+        transform: translateX(-100%); /* Move all the way to the left */
+    }
+}
+@keyframes move-text-b {
+    0% {
+        transform: translateX(-100%); /* Start from right */
+    }
+    100% {
+        transform: translateX(100%); /* Move all the way to the left */
+    }
+}
+
+
+/* Example for media queries (optional) for mobile */
+@media (max-width: 768px) {
+    .banner-text {
+        font-size: 1.2rem;
+    }
+}
+
+/*//////////////////////////////// HERO ////////////////////////////////////////*/
 
 /* Hero Section */
 .hero {
-    text-align: center;
-    padding: 2rem 1rem;
-    background: #fafafa;
+    background-color: white;
+    padding: 4rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
 }
 
-.hero h1 {
-    font-size: 2.5rem;
+.hero-content {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.hero-social-container {
+    padding: 2rem 0;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    align-content: stretch;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
+/* Left: Image Section */
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 500px; /* Adjust according to your design */
+    border-radius: 10px; /* Optional */
+}
+
+/* Right: Text Section */
+.hero-text {
+    flex: 1;
+    padding: 2rem 5rem;
+    text-align: left;
+}
+
+.hero-text h1 {
+    font-size: 3rem; /* Adjust according to your design */
+    font-family: 'Urbanist', sans-serif;
+    margin-bottom: 1rem;
+    font-weight: 700; /* Bold text */
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    font-family: 'Urbanist', sans-serif;
+    line-height: 1.5rem;
     margin-bottom: 1rem;
 }
 
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-}
+/*///////////////////////////////// LINES OF WORK CARDS ///////////////////////////////////////*/
 
-.social-icons a {
-    margin: 0 10px;
-    color: black;
-    font-size: 1.5rem;
-}
-
-/* ////////////////////////////////////////////////////*/
-
-/* Carousel Section */
-.carousel {
+/* Card Container */
+.card-container {
     display: flex;
     justify-content: center;
-    padding: 2rem 0;
-    background: #f9f9f9;
+    gap: 2rem;
+    padding: 7rem 5rem;
 }
 
-.carousel-container {
-    display: flex;
-}
-
-.carousel-card {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 0 1rem;
+/* Card Styling */
+.card {
+    background-color: white;
+    border-radius: 15px;
+    width: 17rem;
+    height: 27rem;
     padding: 1rem;
     text-align: center;
-    width: 200px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
 }
 
-.carousel-card a {
-    text-decoration: none;
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Specific Border Colors */
+.activismo {
+    border: 3px solid #D9A9FB;
+}
+
+.formacion {
+    border: 3px solid #FF8080;
+}
+
+.consumo {
+    border: 3px solid #99CC33;
+}
+
+/* Card Image */
+.card-image {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 50%; /* Optional circular style */
+}
+
+/* Card Title */
+.card h3 {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
     color: #333;
 }
 
-.carousel-card h3 {
-    margin-bottom: 0.5rem;
-}
-
-.carousel-card p {
-    font-size: 0.9rem;
-}
-
-/* ////////////////////////////////////////////////////*/
-
-
-/* Info Block */
-.info-block {
-    text-align: center;
-    padding: 2rem 1rem;
-    margin-bottom: 2rem;
-    background-color: #f9f9f9;
-}
-
-.info-heading {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.info-description {
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-}
-
-.info-button {
-    padding: 0.5rem 1.5rem;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
+/* Card Description */
+.card p {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 400;
     font-size: 1rem;
+    color: #666;
+    padding: 0 0.5rem;
 }
 
-/* ////////////////////////////////////////////////////*/
+/*/////////////////////////////// ABOUT US /////////////////////////////////////////*/
 
-/* Footer */
-footer {
-    background-color: #333;
-    padding: 1rem 0;
+/* Conócenos Section Styling */
+.conocenos-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 9rem;
+    background-color: #ffffff; /* Optional background color */
+}
+
+.conocenos-text {
+    flex: 1;
     text-align: center;
+    padding: 2rem;
+}
+
+.conocenos-text h2 {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #000000;
+}
+
+.conocenos-text p {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: #000000;
+}
+
+.conocenos-text .cta-button {
+    padding: 0.7rem 1.5rem;
+    background-color: #D9A9FB;
     color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.conocenos-text .cta-button:hover {
+    background-color: #bd64fc;
+}
+
+/* Right Side: Image Styling */
+.conocenos-image {
+    flex: 1;
+    text-align: center;
+}
+
+.conocenos-image img {
+    width: 100%;
+    max-width: 400px; /* Adjust as needed */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .conocenos-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .conocenos-text {
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .conocenos-image img {
+        max-width: 300px; /* Adjust for smaller screens */
+    }
+}
+
+/*/////////////////////////////// VISIT US /////////////////////////////////////////*/
+
+/* Visítanos Section Styling */
+.visitanos-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 9rem;
+    background-color: #ffffff; /* Optional background color */
+}
+
+.visitanos-image {
+    flex: 1;
+    text-align: center;
+}
+
+.visitanos-image img {
+    width: 100%;
+    max-width: 400px; /* Adjust as needed */
+}
+
+/* Right Side: Text and CTA */
+.visitanos-text {
+    flex: 1;
+    padding: 2rem;
+    text-align: center;
+}
+
+.visitanos-text h2 {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #000000;
+}
+
+.visitanos-text p {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: #000000;
+}
+
+.visitanos-text .cta-button {
+    padding: 0.7rem 1.5rem;
+    background-color: #FF8080;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.visitanos-text .cta-button:hover {
+    background-color: #ff4f4f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .visitanos-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .visitanos-text {
+        padding-left: 0;
+        margin-top: 2rem;
+    }
+
+    .visitanos-image img {
+        max-width: 300px; /* Adjust for smaller screens */
+    }
+}
+
+
+/*/////////////////////////////// FOOTER /////////////////////////////////////////*/
+
+/* Footer Styles */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background-color: #fff; /* Background color of the footer */
+    color: #333;
+    border-top: solid 2px; 
+    border-color: #333;
+}
+
+.footer-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-contact, .footer-copyright, .footer-social {
+    flex: 1;
+    text-align: left;
+}
+
+.footer-copyright {
+    text-align: center;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.5rem;
+    padding-right: 4rem;
+    color:#000000;
 }
 
 .footer-social a {
-    margin: 0 10px;
-    color: white;
-    font-size: 1.5rem;
+    display: inline-block;
 }
 
-/* ////////////////////////////////////////////////////*/
+.footer-social img {
+    width: 24px; /* Adjust size as needed */
+    height: 24px;
+    border-radius: 25%;
+    filter: invert(0); /* Makes icons white if they are black by default */
+    transition: transform 0.3s ease;
+}
+
+.footer-social img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        margin-bottom: 1rem;
+    }
+}
+
+/*///////////////////////////////// BLOG ///////////////////////////////////////*/
 
 /* Blog Filters */
+.blog {
+    padding: 6rem 4rem;
+}
 .blog-filters {
     display: flex;
     flex-wrap: wrap;
@@ -192,4 +581,618 @@ footer {
 .blog-entry p.meta {
     font-size: 0.9rem;
     color: #888;
+}
+
+/*//////////////////////////////// DONATE ////////////////////////////////////////*/
+
+/* Donations Section Layout */
+.donations-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 1rem;
+    background-color: white;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 2rem 0;
+    border-radius: 10px;
+}
+
+.donations-content {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;
+    gap: 2rem;
+}
+
+.donations-text {
+    flex: 1;
+    text-align: left;
+}
+
+.donations-text h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    font-family: 'Urbanist', sans-serif;
+    margin-bottom: 1rem;
+}
+
+.donations-text p {
+    font-size: 1.1rem;
+    color: #666;
+    font-family: 'Urbanist', sans-serif;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.donations-text ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #666;
+}
+
+.donations-text ul li {
+    margin-bottom: 0.5rem;
+}
+
+.donations-detail {
+    padding: 7rem 4rem;
+}
+
+/* CTA Button */
+.cta-button {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    background-color: #ff6b6b;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #D19FE8;
+}
+
+/* Donations Image Styling */
+.donations-image {
+    flex: 1;
+    text-align: center;
+}
+
+.donations-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .donations-section {
+        flex-direction: column;
+    }
+
+    .donations-content {
+        flex-direction: column;
+    }
+
+    .donations-text, .donations-image {
+        text-align: center;
+    }
+
+    .donations-image img {
+        max-width: 300px; /* Ajuste para pantallas pequeñas */
+    }
+}
+
+
+/*////////////////////////////////////////////////////////////////////////*/
+
+/*/////////////////////////// SUMATE ////////////////////////////////*/
+
+/* Line of Work Section */
+.line-of-work {
+    padding: 2rem 15rem;
+    background-color: #fff;
+    margin-bottom: 2rem;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.line-of-work h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.line-of-work p {
+    padding:0 10rem;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    background-color: #ff6b6b;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+.cta-button:hover {
+    background-color: #ff4747;
+}
+
+/* Join CTA Section */
+.join-cta {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+
+.join-cta h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+
+}
+
+.join-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+/*////////////////////////////////////////////////////////////////////////*/
+
+/*//////////////////////////// VISITANOS //////////////////////////////*/
+
+/* Map Section */
+.visit-map {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.visit-map h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.visit-map iframe {
+    margin: 1rem auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Contact Details Section */
+.visit-contact {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+}
+
+.visit-contact h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.visit-contact p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+/*////////////////////////////////////////////////////////////////////////*/
+
+/*//////////////////////////// CONTACT US //////////////////////////////*/
+
+/* Contact Form Section */
+.contact-form {
+    max-width: 600px; /* Limits the width for better readability */
+    margin: 2rem auto; /* Centers the form and adds vertical spacing */
+    padding: 7rem 2rem;
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    font-family: 'Urbanist', sans-serif; /* Consistent font */
+}
+
+.contact-form h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+    text-align: center;
+}
+
+.contact-form p {
+    margin-bottom: 1.5rem;
+    color: #666;
+    text-align: center;
+}
+
+/* Form Labels */
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Form Inputs */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="phonenumber"],
+.contact-form textarea {
+    width: 100%; /* Full width for consistency */
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+    box-sizing: border-box; /* Ensures padding does not affect width */
+}
+
+/* Form Input Focus State */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #ff6b6b; /* Highlight border on focus */
+    box-shadow: 0 0 5px rgba(255, 107, 107, 0.5);
+}
+
+/* Textarea Styling */
+.contact-form textarea {
+    resize: vertical; /* Allows vertical resizing only */
+}
+
+/* Submit Button */
+.contact-form button {
+    width: 100%; /* Full width for a unified look */
+    padding: 0.75rem;
+    background-color: #ff6b6b; /* Button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #e55b5b; /* Darker shade on hover */
+}
+
+
+/*////////////////////////////////////////////////////////////////////////*/
+
+/*//////////////////////////// ACTIVISMO //////////////////////////////*/
+
+/* Hero Section for Activismo */
+.hero-activismo {
+    margin-top: 4rem;
+    background-color: #F0E5FF; /* Color de fondo similar a la imagen */
+    padding: 3rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-activismo .hero-text p{
+    padding: 0 0 0.5rem 0;
+}
+.cta-button-activismo {
+    padding: 0.7rem 1.5rem;
+    background-color: #ab5ccf;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+
+}
+
+.cta-button-activismo:hover {
+    background-color: #c64bff;
+}
+
+/*//////////////////////////// FORMACIÓN //////////////////////////////*/
+
+/* Hero Section for Formacion */
+.hero-formacion {
+    margin-top: 4rem;
+    background-color: #ffc7c7; /* Color de fondo similar a la imagen */
+    padding: 3rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-formacion .hero-text p{
+    padding: 0 0 0.5rem 0;
+}
+
+.cta-button-formacion {
+    padding: 0.7rem 1.5rem;
+    background-color: #fd8787;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.cta-button-formacion:hover {
+    background-color: #fd5656;
+}
+
+/*//////////////////////////// CONSUMO //////////////////////////////*/
+
+/* Hero Section for Consumo */
+.hero-consumo {
+    margin-top: 4rem;
+    background-color: #deffb4; /* Color de fondo similar a la imagen */
+    padding: 3rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-consumo .hero-text p{
+    padding: 0 0 0.5rem 0;
+}
+.cta-button-consumo {
+    padding: 0.7rem 1.5rem;
+    background-color: #8edf24;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+
+}
+
+.cta-button-consumo:hover {
+    background-color: #8ef803;
+}
+
+
+/*////////////////////////////////////////////////////////////////////////*/
+
+/*//////////////////////////// INTERVENCIONES //////////////////////////////*/
+/* Interventions Section */
+.interventions {
+    padding: 3rem 1rem;
+    background-color: white;
+    text-align: center;
+}
+/* Styling for the Interventions Section Title */
+.interventions-title {
+    padding: 2rem 5rem;
+    text-align: center; /* Centers the title */
+    font-size: 2rem;
+    margin-bottom: 1rem; /* Adds space between the title and the container */
+    color: #333;
+}
+
+/* Interventions Container */
+/* Wrapper for the dot and card */
+.intervention-wrapper {
+    display: flex;
+    align-items: flex-start;
+    position: relative; /* Ensures the pseudo-element is positioned relative to the wrapper */
+    width: 100%; /* Ensure the whole wrapper fits within the container */
+    justify-content: center; /* Centers the entire wrapper */
+}
+
+/* Line passing through the dots */
+.intervention-wrapper::before {
+    content: '';
+    position: absolute;
+    left: 26.15rem; /* Adjust as needed to align with the dot */
+    top: 0;
+    bottom: 0;
+    width: 2px; /* Thickness of the line */
+    background-color: currentColor; /* Uses the current color of the dot */
+    z-index: 0; /* Ensures it stays behind the dot */
+}
+
+/* Dot Styling */
+.dot {
+    margin-top: 5rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%; /* Makes the dot circular */
+    margin-right: 3rem; /* Space between the dot and the card */
+    background-color: inherit; /* Ensures it matches the line color */
+    z-index: 1; /* Ensures the dot stays above the line */
+}
+
+/* Dot Color for Activismo Section */
+.interventions-activismo .intervention-wrapper::before,
+.interventions-activismo .dot {
+    background-color: #d9a9fb; /* Red shade */
+    color:#d9a9fb; /* Ensures currentColor matches */
+}
+
+/* Dot Color for Formacion Section */
+.interventions-formacion .intervention-wrapper::before,
+.interventions-formacion .dot {
+    background-color: #ff6b6b; /* Green shade */
+    color: #ff6b6b;
+}
+
+/* Dot Color for Consumo Section */
+.interventions-consumo .intervention-wrapper::before,
+.interventions-consumo .dot {
+    background-color: #99cc33; /* Green shade */
+    color: #99cc33;
+}
+
+/* Intervention Card Styling */
+.intervention-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1.5rem;
+    width: 80%; /* Adjust width as needed */
+    max-width: 600px; /* Maximum width for consistency */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.intervention-card:hover {
+    transform: translateY(-5px);
+}
+
+.intervention-card h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.intervention-card p {
+    color: #666;
+    margin: 0.5rem 0;
+}
+
+/* Estilo de los botones de filtro */
+.filters button {
+    padding: 0.5rem 1rem;
+    margin: 0.2rem;
+    border: none;
+    background-color: #ff6b6b;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.filters button:hover {
+    background-color: #e55b5b;
+}
+/*////////////////////////////////////////////////////////////////////////*/
+
+/*//////////////////////////// ALIADAS  //////////////////////////////*/
+/* Allies Section */
+.allies {
+    padding: 3rem 1rem;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.allies h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.allies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.ally-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.ally-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.ally-card h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.ally-card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Blog CTA Section */
+.blog-cta {
+    background-color: #f4f4f4;
+    padding: 2rem;
+    text-align: center;
+}
+
+.blog-cta h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.blog-cta .cta-button {
+    background-color: #D19FE8;
+    padding: 0.7rem 1.5rem;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.blog-cta .cta-button:hover {
+    background-color: #B07DC1;
+}
+
+
+
+/*////////////////////////////////////////////////////////////////////////*/
+
+/*//////////////////////////// CALENDARIO //////////////////////////////*/
+
+/* Calendar Section */
+.calendar-section {
+    padding: 7rem 4rem;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    margin: 2rem auto;
+    max-width: 800px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-section h1 {
+    text-align: center;
+    font-family: 'Urbanist', sans-serif;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+/* Calendar Event Cards */
+.calendar-event {
+    background-color: #ffffff;
+    border-left: 5px solid #ff6b6b;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.calendar-event:hover {
+    transform: translateY(-5px);
+}
+
+.calendar-event h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.calendar-event p {
+    color: #666;
+}
+
+/* Styling for smoother background */
+.calendar-event:nth-child(odd) {
+    background-color: #fdf1f1;
+}
+
+.calendar-event:nth-child(even) {
+    background-color: #f1f5ff;
 }

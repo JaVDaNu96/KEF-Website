@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "title": "Taller de Suculentas",
+        "date": "2024-05-18",
+        "location": "Cali, Colombia",
+        "description": "Un taller para aprender a cuidar y plantar suculentas."
+    },
+    {
+        "id": 2,
+        "title": "Gran Sembratón Mundial",
+        "date": "2024-05-05",
+        "location": "Lote Loperita, Cristo Rey",
+        "description": "Siembra de árboles con más de 12,000 especies."
+    },
+    {
+        "id": 3,
+        "title": "8M – Mujeres y Diversidades a las Calles",
+        "date": "2024-03-08",
+        "location": "Cali, Colombia",
+        "description": "Marcha feminista para el Día Internacional de la Mujer."
+    }
+]
