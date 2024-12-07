@@ -29,7 +29,6 @@ function renderInterventions(interventions) {
         interventionElement.className = 'intervention-wrapper';
 
         interventionElement.innerHTML = `
-            <div class="dot"></div>
             <div class="intervention-card">
                 <h3>${intervention.title}</h3>
                 <p><strong>Fecha:</strong> ${new Date(intervention.date).toLocaleDateString('es-ES')}</p>
