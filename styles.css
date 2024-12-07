@@ -606,7 +606,7 @@ a {
     }
 }
 
-/*/////////////////////////////// ABOUT US /////////////////////////////////////////*/
+/*/////////////////////////////// CONOCENOS - KNOW US /////////////////////////////////////////*/
 
 /* Conócenos Section Styling */
 .conocenos-section {
@@ -805,7 +805,6 @@ a {
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    margin-bottom:2rem;
 }
 
 .footer-contact, .footer-copyright, .footer-social {
@@ -846,7 +845,7 @@ a {
     .footer-content {
         flex-direction: column;
         text-align: center;
-        margin-bottom: 0rem;
+        margin-bottom: 2rem;
     }
 
     .footer-contact,
@@ -860,6 +859,38 @@ a {
 }
 
 /*///////////////////////////////// BLOG ///////////////////////////////////////*/
+
+/* Blog cta */
+.blog-cta {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.blog-cta h2 {
+    padding: 1rem 0;
+}
+
+.blog-cta p {
+    font-size: 1.2rem;
+    padding: 1rem 0;
+}
+
+.blog-cta a {
+    font-size: 1.2rem;
+    padding: 1.2rem;
+    margin: 1rem 0;
+}
+@media (max-width: 768px) {
+    .blog-cta h2 {
+        padding: 0.5rem 0;
+    }
+    
+    .blog-cta p {
+        font-size: 1.2rem;
+        padding: 0.5rem 0;
+    }
+}
 
 /* Blog Filters */
 .blog {
@@ -1024,8 +1055,9 @@ a {
 }
 
 .hero-sumate p{
+    text-align: center;
     font-size: 1.2rem;
-    padding: 0 4rem;
+    padding: 0 5rem;
     align-items: center;
 }
 /* Line of Work Section */
@@ -1089,6 +1121,30 @@ a {
         flex-direction: column;
         align-items: center;
     }
+
+    .hero-sumate p{
+        padding: 1rem 3rem;
+    }
+
+    .line-of-work p{
+        padding:0 2rem;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
+}
+@media (max-width: 480px) {
+    .hero-sumate {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-sumate p{
+        align-items: center;
+        padding: 1rem 2rem;
+    }
+
     .line-of-work p{
         padding:0 2rem;
         font-size: 1.1rem;
@@ -1355,6 +1411,7 @@ a {
 
 /*////////////////////////////////////////////////////////////////////////*/
 
+
 /*//////////////////////////// INTERVENCIONES //////////////////////////////*/
 /* Interventions Section */
 .interventions {
@@ -1382,15 +1439,6 @@ a {
 }
 
 /* Dot Styling */
-.dot {
-    margin-top: 5rem;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%; /* Makes the dot circular */
-    margin-right: 3rem; /* Space between the dot and the card */
-    background-color: inherit; /* Ensures it matches the line color */
-    z-index: 1; /* Ensures the dot stays above the line */
-}
 
 /* Dot Color for Activismo Section */
 .interventions-activismo .intervention-wrapper::before,
@@ -1465,6 +1513,115 @@ a {
     }
 }
 /*////////////////////////////////////////////////////////////////////////*/
+
+
+/*/////////////////////////////// ABOUT US /////////////////////////////////////////*/
+
+/* Conócenos Section Styling */
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 9rem;
+    background-color: #ffffff; /* Optional background color */
+}
+
+.about-section h1 {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #000000;
+}
+
+.about-section p{
+    font-family: 'Urbanist', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: #000000;
+}
+.about-text {
+    flex: 1;
+    text-align: center;
+    padding: 4rem;
+}
+
+.about-text h2 {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #000000;
+}
+
+.about-text p {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: #000000;
+}
+
+.about-text .cta-button {
+    padding: 0.7rem 1.5rem;
+    background-color: #D9A9FB;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.about-text .cta-button:hover {
+    background-color: #bd64fc;
+}
+
+/* Right Side: Image Styling */
+.about-image {
+    flex: 1;
+    text-align: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 400px; /* Adjust as needed */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 4rem;
+    }
+
+    .about-text {
+        padding: 0 4rem;
+        margin-bottom: 2rem;
+    }
+
+    .about-image img {
+        max-width: 300px; /* Adjust for smaller screens */
+    }
+
+    .about-text .cta-button {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        background-color: #D9A9FB;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-family: 'Urbanist', sans-serif;
+        font-weight: 500;
+        transition: background-color 0.3s;
+    }
+}
+/*//////////////////////////////////////////////////////////////////////////////////////*/
+
 
 /*//////////////////////////// ALIADAS  //////////////////////////////*/
 /* Allies Section */
