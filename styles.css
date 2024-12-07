@@ -281,7 +281,7 @@ a {
 }
 
 .hero-text a{
-    align: center;
+    align-items: center;
     max-width: 8rem;
     margin: 2rem 1rem;
 }
