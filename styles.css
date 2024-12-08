@@ -265,32 +265,35 @@ a {
 
 /* Text Styling */
 .hero-text {
+    display:flex;
+    flex-direction: column;
     max-width: 50vw;
     text-align: left;
+    padding: 1rem 5rem;
 }
 
 .hero-text h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 2rem;
 }
 
 .hero-text p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 1.5;
-    padding: 0.5rem 0;
+    padding: 1.5rem 0;
 }
 
 .hero-text a{
     align-items: center;
     max-width: 8rem;
     margin: 2rem 1rem;
+    font-size: 1.2rem;
 }
 
 /* Image Styling */
 .hero-image img {
     min-width: 30vw;
     height: auto;
-    margin:auto;
+    margin: 1rem;
 }
 
 .hero-social-container {
@@ -327,9 +330,15 @@ a {
     }
 
     .hero-text p{
-        font-size: 1.2rem!important;
+        font-size: 1.2rem;
         text-align: center; /* Center-align text */
         padding: 0.2rem 1rem;
+    }
+    .hero-text a{
+        font-size: 1.2rem;
+        text-align: center; /* Center-align text */
+        padding: 1rem 1rem;
+        margin: 1rem 0;
     }
 
     .hero-image img {
@@ -367,19 +376,19 @@ a {
     }
     .hero-text h1{
         font-size: 1.5rem; /* Further reduce font size */
-        padding: 0.2rem 0;
+        padding: 0;
     }
 
     .hero-text p{
-        font-size: 0.85rem; /* Smaller font for extra small screens */
+        font-size: 1rem; /* Smaller font for extra small screens */
         padding: 1rem 2rem;
         line-height: auto;
-        margin: 2rem 0;
+        margin: 1rem 0;
     }
 
     .hero-image {
         padding: 0.2rem 0.2rem;
-        max-width: 20rem;
+        max-width: 50vw;
     }
     
 
@@ -1150,7 +1159,6 @@ a {
         font-size: 1.1rem;
         margin-bottom: 1rem;
     }
-
 }
 
 /*////////////////////////////////////////////////////////////////////////*/
@@ -1309,7 +1317,7 @@ a {
 
 /* Hero Section for Activismo */
 .hero-activismo {
-    margin-top: 4rem;
+    min-height: 40vh;
     background-color: #F0E5FF; /* Color de fondo similar a la imagen */
     padding: 3rem 1rem;
     display: flex;
@@ -1317,17 +1325,13 @@ a {
     justify-content: center;
 }
 
-.hero-activismo .hero-text p{
-    padding: 0 0 0.5rem 0;
-}
-
 .cta-button-activismo {
-    padding: 0.7rem 1.5rem;
+    margin: 1rem 0rem!important;
+    padding: 1rem 2rem 1rem 0.6rem;
     background-color: #ab5ccf;
     color: white;
     border-radius: 5px;
     text-decoration: none;
-
 }
 
 .cta-button-activismo:hover {
@@ -1357,19 +1361,17 @@ a {
 
 /* Hero Section for Formacion */
 .hero-formacion {
-    margin-top: 4rem;
+    min-height: 0vh;
     background-color: #ffc7c7; /* Color de fondo similar a la imagen */
     padding: 3rem 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.hero-formacion .hero-text p{
-    padding: 0 0 0.5rem 0;
-}
+
 
 .cta-button-formacion {
-    padding: 0.7rem 1.5rem;
+    padding: 1rem 1rem 1rem 0.7rem;
     background-color: #fd8787;
     color: white;
     border-radius: 5px;
@@ -1396,12 +1398,12 @@ a {
     padding: 0 0 0.5rem 0;
 }
 .cta-button-consumo {
-    padding: 0.7rem 1.5rem;
+    padding: 1rem 1rem 1rem 0.5rem;
     background-color: #8edf24;
     color: white;
     border-radius: 5px;
     text-decoration: none;
-
+    margin: 1rem 0!important;
 }
 
 .cta-button-consumo:hover {
@@ -1419,6 +1421,7 @@ a {
     background-color: white;
     text-align: center;
 }
+
 /* Styling for the Interventions Section Title */
 .interventions-title {
     padding: 2rem 5rem;
@@ -1472,6 +1475,7 @@ a {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: left;
     transition: transform 0.3s;
+    margin: 0.5rem;
 }
 
 .intervention-card:hover {
@@ -1505,7 +1509,7 @@ a {
 
 @media (max-width: 768px) {
     .interventions-title {
-        padding: 3rem 5rem 2rem 5rem;
+        padding: 1rem 1rem;
         text-align: center; /* Centers the title */
         font-size: 2rem;
         margin-bottom: 1rem; /* Adds space between the title and the container */
