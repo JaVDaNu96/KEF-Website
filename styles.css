@@ -285,7 +285,7 @@ a {
 .hero-text a{
     align-items: center;
     max-width: 8rem;
-    margin: 2rem 1rem;
+    margin: 2rem 0;
     font-size: 1.2rem;
 }
 
@@ -335,10 +335,12 @@ a {
         padding: 0.2rem 1rem;
     }
     .hero-text a{
+        display: flex;
+        flex-direction: column;
         font-size: 1.2rem;
-        text-align: center; /* Center-align text */
-        padding: 1rem 1rem;
-        margin: 1rem 0;
+        align-items: center; /* Center-align text */
+        padding: 1rem 3rem;
+        max-width: auto;
     }
 
     .hero-image img {
@@ -1355,8 +1357,53 @@ a {
     .donations-image img {
         max-width: 300px; /* Ajuste para pantallas pequeñas */
     }
+
+    .cta-button-activismo {
+        margin: 1rem 12rem!important;
+        padding: 1rem 3rem;
+        background-color: #ab5ccf;
+        color: white;
+        border-radius: 5px;
+        text-decoration: none;
+        min-width: 20vw;
+    }
+    
+    .cta-button-activismo:hover {
+        background-color: #c64bff;
+    }
 }
 
+@media (max-width: 480px) {
+    .cta-button-activismo {
+        margin: 1rem 8rem!important;
+        padding: 1rem 3rem;
+        background-color: #ab5ccf;
+        color: white;
+        border-radius: 5px;
+        text-decoration: none;
+        min-width: 20vw;
+    }
+    
+    .cta-button-activismo:hover {
+        background-color: #c64bff;
+    }
+}
+
+@media (max-width: 320px) {
+    .cta-button-activismo {
+        margin: 1rem 6rem!important;
+        padding: 1rem 3rem;
+        background-color: #ab5ccf;
+        color: white;
+        border-radius: 5px;
+        text-decoration: none;
+        min-width: 20vw;
+    }
+    
+    .cta-button-activismo:hover {
+        background-color: #c64bff;
+    }
+}
 /*//////////////////////////// FORMACIÓN //////////////////////////////*/
 
 /* Hero Section for Formacion */
@@ -1382,11 +1429,75 @@ a {
     background-color: #fd5656;
 }
 
+@media (max-width: 768px) {
+    .donations-section {
+        flex-direction: column;
+    }
+
+    .donations-content {
+        flex-direction: column;
+    }
+
+    .donations-text, .donations-image {
+        text-align: center;
+    }
+
+    .donations-image img {
+        max-width: 300px; /* Ajuste para pantallas pequeñas */
+    }
+
+    .cta-button-formacion {
+        margin: 1rem 12rem!important;
+        padding: 1rem 3rem;
+        background-color: #fd8787;
+        color: white;
+        border-radius: 5px;
+        text-decoration: none;
+        min-width: 20vw;
+    }
+    
+    .cta-button-formacion:hover {
+        background-color: #fd5656;
+    }
+}
+
+@media (max-width: 480px) {
+    .cta-button-formacion {
+        margin: 1rem 8rem!important;
+        padding: 1rem 3rem;
+        background-color: #fd8787;
+        color: white;
+        border-radius: 5px;
+        text-decoration: none;
+        min-width: 20vw;
+    }
+    
+    .cta-button-formacion:hover {
+        background-color: #fd5656;
+    }
+}
+
+@media (max-width: 320px) {
+    .cta-button-formacion {
+        margin: 1rem 6rem!important;
+        padding: 1rem 3rem;
+        background-color: #fd8787;
+        color: white;
+        border-radius: 5px;
+        text-decoration: none;
+        min-width: 40vw;
+    }
+    
+    .cta-button-formacion:hover {
+        background-color: #fd5656;
+    }
+}
+
 /*//////////////////////////// CONSUMO //////////////////////////////*/
 
 /* Hero Section for Consumo */
 .hero-consumo {
-    margin-top: 4rem;
+    min-height: 40vh;
     background-color: #deffb4; /* Color de fondo similar a la imagen */
     padding: 3rem 1rem;
     display: flex;
@@ -1403,11 +1514,74 @@ a {
     color: white;
     border-radius: 5px;
     text-decoration: none;
-    margin: 1rem 0!important;
 }
 
 .cta-button-consumo:hover {
     background-color: #8ef803;
+}
+
+@media (max-width: 768px) {
+    .donations-section {
+        flex-direction: column;
+    }
+
+    .donations-content {
+        flex-direction: column;
+    }
+
+    .donations-text, .donations-image {
+        text-align: center;
+    }
+
+    .donations-image img {
+        max-width: 300px; /* Ajuste para pantallas pequeñas */
+    }
+
+    .cta-button-consumo {
+        margin: 1rem 12rem!important;
+        padding: 1rem 3rem;
+        background-color: #8edf24;
+        color: white;
+        border-radius: 5px;
+        text-decoration: none;
+        min-width: 20vw;
+    }
+    
+    .cta-button-consumo:hover {
+        background-color: #8ef803;
+    }
+}
+
+@media (max-width: 480px) {
+    .cta-button-consumo {
+        margin: 1rem 7rem!important;
+        padding: 1rem 3rem;
+        background-color: #8edf24;
+        color: white;
+        border-radius: 5px;
+        text-decoration: none;
+        min-width: 40vw!important;
+    }
+    
+    .cta-button-consumo:hover {
+        background-color: #8ef803;
+    }
+}
+
+@media (max-width: 320px) {
+    .cta-button-consumo {
+        margin: 1rem 6rem!important;
+        padding: 1rem 3rem;
+        background-color: #8edf24;
+        color: white;
+        border-radius: 5px;
+        text-decoration: none;
+        min-width: 40vw;
+    }
+    
+    .cta-button-consumo:hover {
+        background-color: #8ef803;
+    }
 }
 
 
