@@ -32,8 +32,9 @@ a {
     left: 0;
     width: 100vw;
     height: 70vh;
-    transition: transform 0.9s ease-in-out;
-    margin: 6rem 0 5rem 0;
+    transition: transform 0.7s ease-in-out;
+    margin: 3rem 0 5rem 0;
+    padding: 4rem;
 }
 
 /* Visible state */
@@ -99,7 +100,7 @@ transform: translateY(100vh);
     width: 100%;
     z-index: 1000; /* Ensures it stays on top of other content */
     background-color: white; /* Or your desired background */
-    padding: 1.5rem 2rem;
+    padding: 0.7rem 2rem;
     border-bottom: 1px solid #000000;
 }
 
@@ -456,7 +457,7 @@ transform: translateY(100vh);
     align-items: center;
     justify-content: space-between;
     gap: 2rem; /* Space between image and text */
-    padding: 2rem 1rem 3rem 1rem;
+    padding: 1rem 1rem 3rem 1rem;
     margin: auto 0; /* Centers content vertically */
 }
 
@@ -845,9 +846,11 @@ transform: translateY(100vh);
 }
 
 /* Adjust footer for visitanos section */
-.visitanos-section #footer-placeholder {
-    margin-top: auto; /* Push footer to bottom of section */
-}
+#footer-placeholder {
+    transition: opacity 0.6s ease;
+    display: block;
+    opacity: 1;
+    }
 
 /*/////////////////////////////// FOOTER /////////////////////////////////////////*/
 
@@ -957,7 +960,7 @@ transform: translateY(100vh);
 
 /* Blog Filters */
 .blog {
-    padding: 6rem 4rem;
+    padding: 10rem 4rem;
 }
 .blog-filters {
     display: flex;
@@ -1111,6 +1114,7 @@ transform: translateY(100vh);
     flex-direction: column;
     align-items: center;
     padding: 2rem;
+    margin-top: 80px;
 }
 
 .hero-sumate h1{
@@ -1223,6 +1227,7 @@ transform: translateY(100vh);
     flex-direction: column;
     text-align: center;
     padding: 2rem 4rem;
+    margin-top: 80px;
 }
 
 .hero-visitanos h1 {
@@ -1287,9 +1292,13 @@ transform: translateY(100vh);
 /*//////////////////////////// CONTACT US //////////////////////////////*/
 
 /* Contact Form Section */
+.contact-form-container {
+    padding: 4rem;
+    margin: 4rem;
+}
 .contact-form {
     max-width: 600px; /* Limits the width for better readability */
-    margin: 2rem auto; /* Centers the form and adds vertical spacing */
+    margin: 4rem auto; /* Centers the form and adds vertical spacing */
     padding: 7rem 2rem;
     background-color: #f9f9f9; /* Light background for contrast */
     border-radius: 10px;
@@ -1642,15 +1651,26 @@ transform: translateY(100vh);
 
 /*//////////////////////////// INTERVENCIONES //////////////////////////////*/
 /* Interventions Section */
+
+.hero-intervenciones {
+    margin: 9rem 0 1.5rem 0;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
 .interventions {
-    padding: 3rem 1rem;
+    padding: 1.5rem 1rem;
     background-color: white;
     text-align: center;
 }
 
 /* Styling for the Interventions Section Title */
 .interventions-title {
-    padding: 2rem 5rem;
     text-align: center; /* Centers the title */
     font-size: 2rem;
     margin-bottom: 1rem; /* Adds space between the title and the container */
@@ -1990,7 +2010,7 @@ transform: translateY(100vh);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 6rem 0 4rem 0;
+    padding: 4.5rem 0 4rem 0;
 }
 
 .hero-full {

@@ -64,7 +64,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
     // Constants and state variables
-    const TRANSITION_DURATION = 600; // in milliseconds (should match your CSS transition duration)
+    const footer = document.getElementById('footer-placeholder');
+    const TRANSITION_DURATION = 700; // in milliseconds (should match your CSS transition duration)
     let isAnimating = false;
     const wrappers = document.querySelectorAll('.full-section-wrapper');
     let currentIndex = 0;
@@ -98,6 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // After the animation, mark next as active and current as off-screen.
             nextSection.classList.remove('slide-in-up');
             nextSection.classList.add('active');
+            // currentIndex === wrappers.length - 1? footer.classList.add('visible'): footer.classList.remove('visible');
             currentIndex++;
             isAnimating = false;
         }, TRANSITION_DURATION);
@@ -118,6 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
             currentSection.classList.add('off-screen');
             prevSection.classList.remove('off-screen');
             prevSection.classList.add('active');
+            // currentIndex === wrappers.length - 1? footer.classList.add('visible'): footer.classList.remove('visible');
             currentIndex--;
             isAnimating = false;
         }, TRANSITION_DURATION);
