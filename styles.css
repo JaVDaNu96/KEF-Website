@@ -23,6 +23,41 @@ a {
 }
 
 /*////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*/////////////////////////////   SLIDING STYLES FOR HOMEPAGE ////////////////////////////*/
+
+.full-section-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 70vh;
+    transition: transform 0.9s ease-in-out;
+    margin: 6rem 0 5rem 0;
+}
+
+/* Visible state */
+.active {
+transform: translateY(0);
+}
+
+/* Not visible – positioned off-screen below */
+.off-screen {
+transform: translateY(100vh);
+}
+
+/* Transition state: next card slides in from below */
+.slide-in-up {
+transform: translateY(0);
+}
+
+/* Transition state: current card slides out down */
+.slide-out-down {
+transform: translateY(100vh);
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////*/
+
 /*///////////////////////////// GLOBAL RESPONSIVENESS /////////////////////////////////////*/
 
 .header-placeholder {
@@ -58,10 +93,14 @@ a {
 
 /* General Navbar Styling */
 .site-header {
-    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures it stays on top of other content */
+    background-color: white; /* Or your desired background */
     padding: 1.5rem 2rem;
     border-bottom: 1px solid #000000;
-    width: 100%;
 }
 
 .navbar {
@@ -1952,38 +1991,30 @@ a {
     flex-direction: column;
     justify-content: space-between;
     padding: 6rem 0 4rem 0;
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
 }
 
 .hero-full {
-    z-index: 10;
     background-color: white;
 }
 
 .cards-full {
-    z-index: 20;
     background-color: white;
 }
 
 .conocenos-full {
-    z-index: 30;
     background-color: white;
 }
 
 .visitanos-section {
-    z-index: 40;
     background-color: white;
 }
 
 /* Main container for snap scrolling */
 .main-container {
-    height: 100vh;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
     position: relative;
+    height: 100vh;
+    overflow: hidden;
+    padding-top: 80px;
 }
 
 /* Adjust specific section paddings */

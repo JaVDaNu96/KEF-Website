@@ -61,3 +61,66 @@ document.addEventListener('DOMContentLoaded', () => {
         loadInterventions(); // Carga todas las intervenciones
     }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Constants and state variables
+    const TRANSITION_DURATION = 600; // in milliseconds (should match your CSS transition duration)
+    let isAnimating = false;
+    const wrappers = document.querySelectorAll('.full-section-wrapper');
+    let currentIndex = 0;
+
+    // Initialization: assign fixed z-indexes and initial classes
+    wrappers.forEach((wrapper, index) => {
+        wrapper.style.zIndex = index + 1; // Fix the deck order
+        if (index === currentIndex) {
+            wrapper.classList.add('active');
+        } else {
+            wrapper.classList.add('off-screen');
+        }
+        });
+
+    // Listen for wheel events on the window
+    window.addEventListener('wheel', (e) => {
+        console.log('wheel event fired', e.deltaY)
+        if (isAnimating) return; // Prevent overlapping animations
+
+        // Scrolling down: bring the next card in from the bottom
+        if (e.deltaY > 0 && currentIndex < wrappers.length - 1) {
+        isAnimating = true;
+        const currentSection = wrappers[currentIndex];
+        const nextSection = wrappers[currentIndex + 1];
+        
+        // Prepare next card: remove its off-screen class and animate it in
+        nextSection.classList.remove('off-screen');
+        nextSection.classList.add('slide-in-up');
+        
+        setTimeout(() => {
+            // After the animation, mark next as active and current as off-screen.
+            nextSection.classList.remove('slide-in-up');
+            nextSection.classList.add('active');
+            currentIndex++;
+            isAnimating = false;
+        }, TRANSITION_DURATION);
+        
+        // Scrolling up: slide the current card down to reveal the previous card
+        } else if (e.deltaY < 0 && currentIndex > 0) {
+        isAnimating = true;
+        const currentSection = wrappers[currentIndex];
+        const prevSection = wrappers[currentIndex - 1];
+        
+        // Animate the current card down
+        currentSection.classList.remove('active');
+        currentSection.classList.add('slide-out-down');
+        
+        setTimeout(() => {
+            // After the animation, mark current card as off-screen and previous as active.
+            currentSection.classList.remove('slide-out-down');
+            currentSection.classList.add('off-screen');
+            prevSection.classList.remove('off-screen');
+            prevSection.classList.add('active');
+            currentIndex--;
+            isAnimating = false;
+        }, TRANSITION_DURATION);
+        }
+    });
+    }); 
