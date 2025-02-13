@@ -1,3 +1,18 @@
+/* Fonts */
+
+@font-face {
+    font-family: 'Coniferous';
+    src: url('/fonts/Coniferous/fonnts.com-Coniferous-Demo-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gill Sans Nova';
+    src: url('/fonts/GillSansNova/gillsansnova_cnmedium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* Reset */
 * {
     margin: 0;
@@ -672,7 +687,7 @@ transform: translateY(100vh);
     justify-content: center;
     padding: 2rem 9rem 3rem 9rem;
     margin: auto 0; /* Centers content vertically */
-    background-color: #ffffff; /* Optional background color */
+    background-color: #99CC33; /* Optional background color */
 }
 
 .conocenos-text {
@@ -700,7 +715,7 @@ transform: translateY(100vh);
 
 .conocenos-text .cta-button {
     padding: 0.7rem 1.5rem;
-    background-color: #D9A9FB;
+    background-color: #145A32;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -803,11 +818,10 @@ transform: translateY(100vh);
 
 .visitanos-text .cta-button {
     padding: 0.7rem 1.5rem;
-    background-color: #FF8080;
+    background-color: #C0392B;
     color: white;
     text-decoration: none;
     border-radius: 5px;
-    font-family: 'Urbanist', sans-serif;
     font-weight: 500;
     transition: background-color 0.3s;
 }
@@ -2018,15 +2032,15 @@ transform: translateY(100vh);
 }
 
 .cards-full {
-    background-color: white;
+    background-color: #D9A9FB;
 }
 
 .conocenos-full {
-    background-color: white;
+    background-color: #99CC33;
 }
 
 .visitanos-section {
-    background-color: white;
+    background-color: #FF8080;
 }
 
 /* Main container for snap scrolling */
@@ -2062,4 +2076,14 @@ transform: translateY(100vh);
 .moving-banner {
     margin-top: 2rem;
     margin-bottom: 2rem;
+}
+
+/* Override fonts for headings and body text */
+h1, h2, h3 {
+font-family: 'Coniferous', sans-serif !important;
+}
+
+p, ul, li {
+font-family: 'Gill Sans Nova', sans-serif !important;
+font-size: 1.4rem;
 }
