@@ -20,34 +20,65 @@
     box-sizing: border-box;
 }
 
-html {
-    height: 100%;
+/* Base styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: 'Gill Sans Nova', sans-serif; /* or your chosen default */
 }
-
-body {
-    font-family: 'Urbanist', sans-serif;
-    line-height: 1.6;
-    font-size: 16px;
+main {
+    width: 100vw;
     overflow-x: hidden;
-    height: 100%;
 }
-
+section {
+    width: 100vw;
+    min-height: 60vh;
+    padding: 0px;
+}
 a {
     text-decoration: none; /* Removes underline */
     color: inherit; /* Inherits color from the parent element */
 }
+/* Tablet and above */
+@media (min-width: 768px) {
+    section {
+        padding: 2rem 3rem;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+    p {
+        font-size: 1.5rem;
+    }
+}
+
+/* Desktop and above */
+@media (min-width: 1024px) {
+    section {
+        padding: 3rem 5rem;
+    }
+    /* Possibly change layout from column to row where needed */
+    .hero {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
 
 /*////////////////////////////////////////////////////////////////////////////////////////*/
 
+
 /*/////////////////////////////   SLIDING STYLES FOR HOMEPAGE ////////////////////////////*/
 
-.full-section-wrapper {
+/*.full-section-wrapper {
     position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
-    height: 70vh;
+    height: 100vh;
     transition: transform 0.7s ease-in-out;
+    overflow-y: scroll;
     padding: 0;
 }
 
@@ -61,24 +92,15 @@ transform: translateY(0);
 transform: translateY(100vh);
 }
 
-/* Transition state: next card slides in from below */
-.slide-in-up {
-transform: translateY(0);
-}
-
-/* Transition state: current card slides out down */
-.slide-out-down {
-transform: translateY(100vh);
-}
-
 /* XS and S Media Queries */
-@media (max-width: 768px) { /* Covers XS and S */
-.full-section-wrapper {
+/*@media (max-width: 768px) { /* Covers XS and S */
+    /*.full-section-wrapper {
         position: absolute;
         top: 0;
         left: 0;
         width: 100vw;
-        height: 70vh;
+        height: auto;
+        min-height: 100vh;
         transition: transform 0.7s ease-in-out;
         margin: 0.5rem 0 1rem 0;
         padding: 0.5rem;
@@ -86,16 +108,22 @@ transform: translateY(100vh);
 }
 
 @media (max-width: 480px) { /* Specific to XS */
-    .full-section-wrapper {
+    /*.full-section-wrapper {
         position: absolute;
         top: 0;
         left: 0;
         width: 100vw;
-        height: 70vh;
         transition: transform 0.7s ease-in-out;
+        height: auto;
         padding: 0.5rem 0 1.5rem 0;
+        margin: 0 0 5rem 0;
+        
     }
-}
+
+    .full-section-wrapper.hero-image {
+        background-color: #D9A9FB;
+    }
+}*/
 
 /*////////////////////////////////////////////////////////////////////////////////////////*/
 
@@ -107,7 +135,7 @@ transform: translateY(100vh);
 
 /* General Container Responsiveness */
 .container {
-    width: 90%; /* Makes containers fluid and adaptable */
+    width: 100vw; /* Makes containers fluid and adaptable */
     max-width: 1200px; /* Prevents overly wide layouts */
     margin: 0 auto; /* Centers content */
     padding: 1rem; /* Adds breathing room */
@@ -286,7 +314,7 @@ transform: translateY(100vh);
     position: relative;
     width: 100%;
     overflow: hidden;
-    height: 5rem;
+    height: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -298,7 +326,7 @@ transform: translateY(100vh);
     position: relative;
     width: 100%;
     overflow: hidden;
-    height: 5rem;
+    height: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -343,7 +371,7 @@ transform: translateY(100vh);
     display: inline-block;
     white-space: nowrap;
     padding: 0 1rem; /* Space between each word */
-    font-size: 4rem!important;
+    font-size: 2.7rem;
     font-weight: 700;
     color: black;
 }
@@ -529,7 +557,7 @@ transform: translateY(100vh);
 
     .hero-image {
         padding: 0.2rem 0.2rem;
-        max-width: 50vw;
+        max-width: 95vw;
     }
     
 
@@ -553,7 +581,7 @@ transform: translateY(100vh);
     justify-content: space-between;
     gap: 2rem; /* Space between image and text */
     padding: 1rem;
-    margin: 0 auto; /* Centers content vertically */
+    margin: 0px; /* Centers content vertically */
     background-color: #D9A9FB;
 }
 
@@ -587,12 +615,12 @@ transform: translateY(100vh);
 .main-hero-image {
     min-width: 100vw;
     height: auto;
-    padding: 2rem;
-    border-radius: 5%;
     background-color: #D9A9FB;
+    margin: 0;
+    align-content: center;
 }
 .main-hero-image img {
-    min-width: 95vw;
+    width: 90vw;
     height: auto;
     margin: 0px;
     border-radius: 5%;
@@ -612,12 +640,12 @@ transform: translateY(100vh);
 @media (max-width: 768px) { /* Covers XS and S */
     .main-hero {
         flex-direction: column; /* Stack image and text vertically */
-        padding: 2rem 0 1rem 9rem;
+        padding:0px;
     }
 
     .main-hero.container {
         flex-direction: column; /* Stack image and text vertically */
-        padding: 2rem 0 0 10rem;
+        padding: 3rem 0 0 0;
     }
     .main-hero-content {
         flex-direction: column; /* Ensures image and text stack */
@@ -626,24 +654,23 @@ transform: translateY(100vh);
     }
     .main-hero-text {
         min-width: 100vw;
-        padding: 0px 4rem 0 0;
     }
 
     .main-hero-text h1 {
         font-size: 4rem; /* Reduce font size for smaller screens */
         text-align: center; /* Center-align text for narrow screens */
-        padding: 0 5rem 0 0;
     }
 
     .main-hero-text p {
-        font-size: 2rem!important;
-        line-height: 2rem!important;
+        font-size: 2rem;
+        line-height: 2rem;
         text-align: center; /* Center-align text */
         padding: 0.2rem 6rem 2rem 3rem;
     }
 
     .main-hero-image img {
-        min-width: 200vw; /* Scale down the image */
+        src: url("/assets/womensmarch-sm.jpg");
+        max-width: 100vw; /* Scale down the image */
     }
     
     .main-hero-social-container {
@@ -652,12 +679,13 @@ transform: translateY(100vh);
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 0.5rem 7rem 1rem 0;
+        padding: 0.5rem 5rem 1rem 2rem;
     }
 
     .main-hero-social-container img{
         min-width: 1.5rem;
         height: auto!important;
+        
     }
 }
 
@@ -673,21 +701,24 @@ transform: translateY(100vh);
         flex-direction: column;
     }
     .main-hero-text {
-        max-width: 90vw;
-        padding: 0px 1.5rem 0 0!important;
+        max-width: 100vw;
+        margin: 2.5rem 5rem 1rem 4.5rem;
+        padding: 0 2rem;
         text-align: justify;
     }
     .main-hero-text h1 {
-        padding: 0 7rem 0 0;
-        line-height: 2rem;
-        font-size: 2.5rem; /* Further reduce font size */
+        text-align: left;
+        padding: 0;
+        margin: 0 0 1rem 0;
+        line-height: 3.5rem;
+        font-size: 3.5rem; /* Further reduce font size */
     }
 
     .main-hero-text p {
-        font-size: 1.5rem!important; /* Smaller font for extra small screens */
-        line-height: 1.4rem!important;
-        padding: 0 5rem 0 0;
-        margin: 0 0 1rem 0;
+        font-size: 1.2rem; /* Smaller font for extra small screens */
+        line-height: 1.4rem;
+        padding: 0px;
+        text-align: left;
     }
     .main-hero-social-container {
         display: flex;
@@ -695,7 +726,9 @@ transform: translateY(100vh);
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 1rem 7rem 1rem 0; 
+        padding: 0px; 
+        max-height: 4rem;
+        margin: 2rem 0;
     }
 
     .main-hero-social-container img{
@@ -703,7 +736,19 @@ transform: translateY(100vh);
         height: auto!important;
     }
     
+    .main-hero-image {
+        max-width: 100vw;
+        max-height: 50vh!important;
+        background-color: #D9A9FB;
+        padding: 0 0.25rem 0 0.35rem;
+
+    }
+    .main-hero-image img {
+        min-width: 95vw;
+        padding: 0 0.5rem 0 0;
+    }
 }
+
 /*/////////////////////////////////////////////////////////////////////////////////////////////*/
 
 
@@ -711,14 +756,14 @@ transform: translateY(100vh);
 
 /* Card Container */
 .card-container {
-    min-width: 40vw;
+    min-width: 90vw;
     display: flex;
     justify-content: center;
     gap: 2rem;
     padding: 2rem 5rem 3rem 5rem;
     margin: auto 0; /* Centers content vertically */
     overflow-x: auto; /* Enables horizontal scrolling */
-    scroll-snap-type: x mandatory; /* Smooth snapping for cards */
+    scroll-snap-type: y mandatory; /* Smooth snapping for cards */
 }
 .card p {
     text-overflow: hidden;
@@ -2146,7 +2191,7 @@ transform: translateY(100vh);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 4.5rem 0 4rem 0;
+    padding: 2.5rem 0 4rem 0;
 }
 
 .hero-full {
@@ -2163,23 +2208,6 @@ transform: translateY(100vh);
 
 .visitanos-section {
     background-color: #FF8080;
-}
-
-
-
-/* Main container for snap scrolling */
-.main-container {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-    padding-top: 80px 0 0 0;
-    margin:0
-}
-
-/* Adjust specific section paddings */
-.main-hero {
-    padding: 2rem 1rem 3rem 1rem;
-    margin: auto 0;
 }
 
 .card-container {
@@ -2201,6 +2229,14 @@ transform: translateY(100vh);
 .moving-banner {
     margin-top: 2rem;
     margin-bottom: 2rem;
+}
+@media (max-width: 480px) {
+    /* Banner spacing */
+.moving-banner {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+    
 }
 
 /* Override fonts for headings and body text */
