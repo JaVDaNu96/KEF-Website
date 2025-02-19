@@ -166,10 +166,11 @@ transform: translateY(100vh);
     top: 0;
     left: 0;
     width: 100%;
+    height: 5.5rem;
     z-index: 1000; /* Ensures it stays on top of other content */
     background-color: white; /* Or your desired background */
-    padding: 0.7rem 2rem;
-    border-bottom: 1px solid #000000;
+    padding: 1rem 2rem;
+    border-bottom: 0.5px solid #000000;
 }
 
 .navbar {
@@ -180,7 +181,8 @@ transform: translateY(100vh);
 }
 
 .logo {
-    max-width: 3rem; /* Adjust as needed */
+    min-width: 1.7rem;
+    max-width: 4rem; /* Adjust as needed */
 }
 
 /* Hide Nav Links by Default */
@@ -318,8 +320,6 @@ transform: translateY(100vh);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 2rem; /* Space above banner */
-    margin-bottom: 2rem; /* Space below banner */
 }
 
 .moving-banner-b {
@@ -669,7 +669,6 @@ transform: translateY(100vh);
     }
 
     .main-hero-image img {
-        src: url("/assets/womensmarch-sm.jpg");
         max-width: 100vw; /* Scale down the image */
     }
     
@@ -728,7 +727,7 @@ transform: translateY(100vh);
         align-items: center;
         padding: 0px; 
         max-height: 4rem;
-        margin: 2rem 0;
+        margin: 2rem 0 1rem 0;
     }
 
     .main-hero-social-container img{
@@ -756,14 +755,13 @@ transform: translateY(100vh);
 
 /* Card Container */
 .card-container {
-    min-width: 90vw;
+    min-width: 100vw;
     display: flex;
     justify-content: center;
     gap: 2rem;
     padding: 2rem 5rem 3rem 5rem;
     margin: auto 0; /* Centers content vertically */
     overflow-x: auto; /* Enables horizontal scrolling */
-    scroll-snap-type: y mandatory; /* Smooth snapping for cards */
 }
 .card p {
     text-overflow: hidden;
@@ -783,12 +781,11 @@ transform: translateY(100vh);
 .card {
     flex: 0 0 auto; /* Prevents cards from resizing or wrapping */
     scroll-snap-align: start; /* Ensures cards align neatly during scrolling */
-    background-color: white;
     border-radius: 15px;
-    width: 17rem;
-    height: 27rem;
+    width: 90vw;
+    height: auto;
     padding: 1rem;
-    text-align: center;
+    text-align: left;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
 }
@@ -828,14 +825,54 @@ transform: translateY(100vh);
 }
 
 @media (max-width: 480px) {
+
+    .text-cards {
+        padding: 0 2rem;
+    }
+
+    .text-cards h1{        
+        text-align: left;
+        padding: 0 0 2rem 0;
+    }
+    
+    .text-cards p{
+        text-align: left;
+        font-size: 1.3rem;
+    }
     .card-container {
         gap: 0.5rem; /* Further reduce gap for XS devices */
-        padding: 4rem 1rem; /* Tight padding for very small screens */
+        padding: 1.5rem 1rem; /* Tight padding for very small screens */
+        flex-direction: column;
     }
 
     .card {
-        width: 14rem; /* Smaller card width for XS */
+        width: 90vw;
+        height: auto; /* Smaller card width for XS */
+        margin: 1rem 0;
     }
+
+    .card h1{
+        font-size: 3rem;
+    }
+
+    
+    .card p{
+        padding: 1rem 3rem 1rem 0;
+        font-size: 1.3rem;
+    }
+    .cta-cards {
+        padding: 0 2rem;
+    }
+    .cta-cards p{
+        font-size: 2rem;
+    }
+    .cta-cards a {
+        color: #209e00; 
+    }
+    .cta-cards a:hover {
+        color: #99CC33;
+    }
+
 }
 
 /*/////////////////////////////// CONOCENOS - KNOW US /////////////////////////////////////////*/
@@ -853,7 +890,6 @@ transform: translateY(100vh);
 .conocenos-text {
     flex: 1;
     text-align: center;
-    padding: 4rem;
 }
 
 .conocenos-text h2 {
@@ -902,14 +938,15 @@ transform: translateY(100vh);
 /* Responsive Design */
 @media (max-width: 768px) {
     .conocenos-section {
+        width: 100vw;
         flex-direction: column;
         text-align: center;
-        padding: 2rem 4rem;
+        padding: 2rem 2rem;
     }
 
     .conocenos-text {
-        padding: 0 4rem;
         margin-bottom: 2rem;
+        width: 100vw;
     }
 
     .conocenos-image img {
@@ -932,34 +969,29 @@ transform: translateY(100vh);
 /*/////////////////////////////// VISIT US /////////////////////////////////////////*/
 
 /* Visítanos Section Styling */
-.visitanos-section {
+.contactanos-full {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem 9rem 3rem 9rem;
+    padding: 0px 4rem;
     margin: auto 0; /* Centers content vertically */
-    background-color: #ffffff; /* Optional background color */
+    background-color: #FF8080; /* Optional background color */
     padding-bottom: 0; /* Remove padding to fit footer */
 }
 
-.visitanos-image {
+.contactanos-image {
     flex: 1;
     text-align: center;
 }
 
-.visitanos-image img {
-    width: 100%;
-    max-width: 400px; /* Adjust as needed */
-}
-
 /* Right Side: Text and CTA */
-.visitanos-text {
+.contactanos-text {
     flex: 1;
     padding: 2rem;
     text-align: center;
 }
 
-.visitanos-text h2 {
+.contactanos-text h2 {
     font-family: 'Urbanist', sans-serif;
     font-size: 2.5rem;
     font-weight: 700;
@@ -967,7 +999,7 @@ transform: translateY(100vh);
     color: #000000;
 }
 
-.visitanos-text p {
+.contactanos-text p {
     font-family: 'Urbanist', sans-serif;
     font-size: 1.2rem;
     font-weight: 400;
@@ -976,9 +1008,9 @@ transform: translateY(100vh);
     color: #000000;
 }
 
-.visitanos-text .cta-button {
+.contactanos-text .cta-button {
     padding: 0.7rem 1.5rem;
-    background-color: #C0392B;
+    background-color: #ff4f4f;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -986,29 +1018,32 @@ transform: translateY(100vh);
     transition: background-color 0.3s;
 }
 
-.visitanos-text .cta-button:hover {
+.contactanos-text .cta-button:hover {
     background-color: #ff4f4f;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .visitanos-section {
+    .contactanos-full {
+        padding: 2rem 2rem;
         flex-direction: column;
         text-align: center;
     }
 
-    .visitanos-text {
+    .contactanos-text {
         padding: 0;
         margin-top: 2rem;
     }
-
-    .visitanos-image img {
-        max-width: 300px; /* Adjust for smaller screens */
+    .contactanos-text h2{
+        font-size: 3rem;
+    }
+    .contactanos-text p{
+       font-size: 1.3rem;
     }
 
-    .visitanos-text .cta-button {
+    .contactanos-text .cta-button {
         padding: 0.7rem 1.5rem;
-        background-color: #FF8080;
+        background-color: #ff4545;
         color: white;
         text-decoration: none;
         border-radius: 5px;
@@ -1019,7 +1054,7 @@ transform: translateY(100vh);
     }
 }
 
-/* Adjust footer for visitanos section */
+/* Adjust footer for contactanos section */
 #footer-placeholder {
     transition: opacity 0.6s ease;
     display: block;
@@ -1479,8 +1514,8 @@ transform: translateY(100vh);
 }
 .contact-form {
     max-width: 600px; /* Limits the width for better readability */
-    margin: 4rem auto; /* Centers the form and adds vertical spacing */
-    padding: 7rem 2rem;
+    margin: 2rem auto 0 auto; /* Centers the form and adds vertical spacing */
+    padding: 2rem 2rem;
     background-color: #f9f9f9; /* Light background for contrast */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
@@ -2184,7 +2219,7 @@ transform: translateY(100vh);
 .cards-full,
 .conocenos-full,
 .visitanos-section {
-    min-height: 100vh;
+    min-height: 40vh;
     width: 100%;
     position: relative;
     overflow: hidden;
@@ -2210,11 +2245,6 @@ transform: translateY(100vh);
     background-color: #FF8080;
 }
 
-.card-container {
-    padding: 2rem 5rem 3rem 5rem;
-    margin: auto 0;
-}
-
 .conocenos-section {
     padding: 2rem 9rem 3rem 9rem;
     margin: auto 0;
@@ -2225,16 +2255,10 @@ transform: translateY(100vh);
     margin: auto 0;
 }
 
-/* Banner spacing */
-.moving-banner {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
 @media (max-width: 480px) {
     /* Banner spacing */
 .moving-banner {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin: 0px;
 }
     
 }
