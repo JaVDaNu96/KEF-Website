@@ -43,7 +43,7 @@ a {
     color: inherit; /* Inherits color from the parent element */
 }
 /* Tablet and above */
-@media (min-width: 768px) {
+@media (min-width: 767px) {
     section {
         padding: 2rem 3rem;
     }
@@ -87,23 +87,16 @@ transform: translateY(0);
 transform: translateY(100vh);
 }
 
-/* XS and S Media Queries */
-/*@media (max-width: 768px) { /* Covers XS and S */
-    /*.full-section-wrapper {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: auto;
-        min-height: 100vh;
-        transition: transform 0.7s ease-in-out;
-        margin: 0.5rem 0 1rem 0;
-        padding: 0.5rem;
+/*XS and S Media Queries*/ 
+@media (max-width: 767px) { 
+    /*Covers XS and S*/
+    .full-section-wrapper {
+        padding: 0;
     }
 }
 
-@media (max-width: 480px) { /* Specific to XS */
-    /*.full-section-wrapper {
+@media (max-width: 480px) { Specific to XS 
+    .full-section-wrapper {
         position: absolute;
         top: 0;
         left: 0;
@@ -118,7 +111,7 @@ transform: translateY(100vh);
     .full-section-wrapper.hero-image {
         background-color: #D9A9FB;
     }
-}*/
+}
 
 /*////////////////////////////////////////////////////////////////////////////////////////*/
 
@@ -137,7 +130,7 @@ transform: translateY(100vh);
 }
 
 /* Text Responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     body {
         font-size: 14px; /* Reduce font size for smaller devices */
     }
@@ -244,7 +237,7 @@ transform: translateY(100vh);
         padding: 0;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .site-header {
         position: fixed;
         top: 0;
@@ -391,7 +384,7 @@ transform: translateY(100vh);
 
 
 /* Example for media queries (optional) for mobile */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .banner-text {
         font-size: 0.7rem;
     }
@@ -470,7 +463,7 @@ transform: translateY(100vh);
 
 
 /* XS and S Media Queries */
-@media (max-width: 768px) { /* Covers XS and S */
+@media (max-width: 767px) { /* Covers XS and S */
 
     .hero-content {
         display: flex;
@@ -620,7 +613,7 @@ transform: translateY(100vh);
 
 
 /* XS and S Media Queries */
-@media (max-width: 768px) { /* Covers XS and S */
+@media (max-width: 767px) { /* Covers XS and S */
     .main-hero {
         flex-direction: column; /* Stack image and text vertically */
         padding:0px;
@@ -794,7 +787,7 @@ transform: translateY(100vh);
 }
 
 /* Responsive Adjustments for XS and S */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .card-container {
         justify-content: left; /* Align cards to the left */
         gap: 1rem; /* Reduce gap between cards */
@@ -918,7 +911,7 @@ transform: translateY(100vh);
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .conocenos-section {
         width: 100vw;
         flex-direction: column;
@@ -1001,7 +994,7 @@ transform: translateY(100vh);
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .contactanos-full {
         padding: 2rem 0;
         flex-direction: column;
@@ -1121,7 +1114,7 @@ transform: translateY(100vh);
 }
 
 /* Mobile Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .footer-content {
         flex-direction: column;
         text-align: left;
@@ -1168,7 +1161,7 @@ transform: translateY(100vh);
     padding: 1.2rem;
     margin: 1rem 0;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .blog-cta h2 {
         padding: 0.5rem 0;
     }
@@ -1219,7 +1212,7 @@ transform: translateY(100vh);
     color: #888;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 }
 @media (max-width: 480px) { 
     .blog {
@@ -1239,13 +1232,15 @@ transform: translateY(100vh);
 /*//////////////////////////////// DONATE ////////////////////////////////////////*/
 
 /* Donations Section Layout */
+.hero-content .donaciones {
+    padding: 4rem 0;
+}
 .donations-section {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 3rem 1rem;
     background-color: white;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     margin: 2rem 0;
     border-radius: 10px;
 }
@@ -1266,13 +1261,13 @@ transform: translateY(100vh);
 .donations-text h2 {
     font-size: 2rem;
     font-weight: 700;
-    color: #333;
+    color: black;
     margin-bottom: 1rem;
 }
 
 .donations-text p {
     font-size: 1.1rem;
-    color: #666;
+    color: black;
     line-height: 1.6;
     margin-bottom: 1.5rem;
 }
@@ -1281,7 +1276,7 @@ transform: translateY(100vh);
     list-style-type: disc;
     padding-left: 1.5rem;
     margin-bottom: 1.5rem;
-    color: #666;
+    color: black;
 }
 
 .donations-text ul li {
@@ -1321,7 +1316,11 @@ transform: translateY(100vh);
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+    .hero-donations {
+        padding: 5rem 2rem 0 2rem;
+    }
+
     .donations-section {
         flex-direction: column;
     }
@@ -1332,6 +1331,50 @@ transform: translateY(100vh);
 
     .donations-text, .donations-image {
         text-align: left;
+    }
+
+    .donations-image img {
+        max-width: 300px; /* Ajuste para pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-donations {
+        padding: 5rem 2rem 0 2rem;
+    }
+
+    .hero-donations h1{
+        font-size: 3rem;
+    }
+
+    .hero-donations p{
+        font-size: 1.2rem;
+    }
+
+    .donations-section {
+        flex-direction: column;
+        padding: 0 2rem;
+        margin: 1rem 0 3rem 0;
+    }
+
+    .donations-content {
+        flex-direction: column;
+    }
+
+    .donations-text {
+        text-align: left;
+    }
+
+    .donations-text h2{
+        font-size: 3rem;
+    }
+
+    .donations-text p{
+        font-size: 1.2rem;
+    }
+
+    .donations-text li{
+        font-size: 1.2rem;
     }
 
     .donations-image img {
@@ -1416,16 +1459,25 @@ transform: translateY(100vh);
     font-size: 1.2rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .hero-sumate {
         display: flex;
         flex-direction: column;
         align-items: left;
+        padding: 2rem 2rem 1rem 2rem;
+    }
+
+    .line-of-work {
+        min-height: auto;
     }
 
     .line-of-work p{
         font-size: 1.2rem;
         margin-bottom: 1rem;
+    }
+
+    .join-cta {
+        min-height: auto;
     }
 
 }
@@ -1445,6 +1497,12 @@ transform: translateY(100vh);
         font-size: 1.2rem;
         align-items: left;
     }
+
+    .line-of-work {
+        padding: 1rem 2rem;
+        margin: 0;
+    }
+
     .line-of-work h2{
         align-items: left;
         font-size: 3rem;
@@ -1455,6 +1513,12 @@ transform: translateY(100vh);
         align-items: left;
         font-size: 1.2rem;
         margin-bottom: 1rem;
+    }
+    .join-cta {
+        text-align: left;
+        padding: 2rem 2rem;
+        border-radius: 10px;
+        margin-top: 0;
     }
 }
 
@@ -1516,9 +1580,20 @@ transform: translateY(100vh);
     margin-bottom: 1rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .visit-map p{
         font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .visit-map {
+        margin: 0 0 0 3rem;
+        padding:  0 0 0 3rem;
+    }
+
+    .hero-visitanos {
+        margin: 1rem 2rem;
     }
 }
 
@@ -1615,6 +1690,22 @@ transform: translateY(100vh);
     background-color: #ffa1a1; /* Darker shade on hover */
 }
 
+@media (max-width: 767px) {
+
+}
+
+@media (max-width: 480px) {
+    .hero-visitanos {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .contact-form-container {
+        padding: 0;
+        margin: 0;
+    }
+
+}
 
 /*////////////////////////////////////////////////////////////////////////*/
 
@@ -1644,7 +1735,7 @@ transform: translateY(100vh);
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .donations-section {
         flex-direction: column;
     }
@@ -1750,7 +1841,7 @@ transform: translateY(100vh);
     background-color: #fd5656;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .donations-section {
         flex-direction: column;
     }
@@ -1846,7 +1937,7 @@ transform: translateY(100vh);
     background-color: #8ef803;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .donations-section {
         flex-direction: column;
     }
@@ -2029,7 +2120,7 @@ transform: translateY(100vh);
     background-color: #e55b5b;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .interventions-title {
         padding: 1rem 1rem;
         text-align: left; /* Centers the title */
@@ -2159,7 +2250,7 @@ transform: translateY(100vh);
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .about-section {
         flex-direction: column;
         text-align: left;
@@ -2262,6 +2353,12 @@ transform: translateY(100vh);
     background-color: #B07DC1;
 }
 
+@media (max-width:767px) {
+    .blog-cta {
+        min-height: auto;
+    }
+}
+
 
 
 /*////////////////////////////////////////////////////////////////////////*/
@@ -2275,12 +2372,11 @@ transform: translateY(100vh);
     border-radius: 10px;
     margin: 2rem auto;
     max-width: 800px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .calendar-section h1 {
     text-align: left;
-    color: #333;
+    color: black;
     margin-bottom: 1.5rem;
 }
 
@@ -2291,7 +2387,6 @@ transform: translateY(100vh);
     padding: 1rem;
     margin-bottom: 1rem;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
 }
 
@@ -2301,11 +2396,11 @@ transform: translateY(100vh);
 
 .calendar-event h3 {
     margin-top: 0;
-    color: #333;
+    color: black;
 }
 
 .calendar-event p {
-    color: #666;
+    color: black;
 }
 
 /* Styling for smoother background */
@@ -2350,11 +2445,24 @@ transform: translateY(100vh);
 
 
 @media (max-width: 480px) {
-    /* Banner spacing */
-.moving-banner {
-    margin: 1rem 0 0 0;
-}
+    .calendar-section {
+        padding: 4rem 2rem
+    }
     
+    .calendar-section h1{
+        font-size: 3rem;
+    }
+
+    .calendar-event h3{
+        font-size: 2rem;
+    }
+    .calendar-event p{
+        font-size: 1.2rem;
+    }
+    /* Banner spacing */
+    .moving-banner {
+        margin: 1rem 0 0 0;
+    }
 }
 
 /* Override fonts for headings and body text */
