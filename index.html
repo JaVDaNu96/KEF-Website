@@ -16,7 +16,7 @@
 
     <!-- Main Container for Snap Scrolling -->
     <main>
-        <section class="full-section-wrapper" id="hero-text">
+        <section class="full-section-wrapper" id="hero-text" z-index="10">
                 <!-- Hero Section -->
                 <div class="main-hero container">
                     <div class="main-hero-content">
@@ -49,7 +49,7 @@
                     </div>
                 </div>
         </section>
-        <section class="full-section-wrapper main-hero-image" id="hero-image">
+        <section class="full-section-wrapper main-hero-image" id="hero-image" z-index="20">
         <!-- Bottom: Image or Design -->
             <div>
                 <img src="assets/Borondo.jpeg" alt="Hero Image">
@@ -78,7 +78,7 @@
                 </div>
             </div>
         </section>
-        <section class="full-section-wrapper">
+        <section class="full-section-wrapper" z-index="30">
             <!-- Cards Full Section -->
             <div class="full-section cards-full">
                 <div class="text-cards">
@@ -87,22 +87,24 @@
                 </div>
                 <!-- Carousel Section -->
                 <div class="card-container">
-                    <!-- Activismo Card -->
-                    <a href="activismo.html">
-                    <div class="card activismo">
-                        <h3>Activismo</h3>
-                        <p>Hacemos ruido y nos movilizamos para defender nuestras causas. Participamos en marchas, intervenciones urbanas, acciones simbólicas y campañas de sensibilización que generan impacto y visibilizan la lucha por los derechos de las mujeres y el medio ambiente.</p>
-                    </div>
-                    </a>
-                
-                    <!-- Formación Card -->
-                    <a href="formacion.html">
-                    <div class="card formacion">
-                        <h3>Educación</h3>
-                        <p>Creemos que el conocimiento es poder, por eso organizamos talleres, charlas, encuentros y espacios de aprendizaje sobre equidad de género, justicia ambiental, sostenibilidad y economía circular. Queremos que más personas se sumen a esta conversación y se sientan parte del cambio.</p>
-                    </div>
-                    </a>
-                
+                    <section class="full-section-wrapper" z-index="40">
+                        <!-- Activismo Card -->
+                        <a href="activismo.html">
+                        <div class="card activismo">
+                            <h3>Activismo</h3>
+                            <p>Hacemos ruido y nos movilizamos para defender nuestras causas. Participamos en marchas, intervenciones urbanas, acciones simbólicas y campañas de sensibilización que generan impacto y visibilizan la lucha por los derechos de las mujeres y el medio ambiente.</p>
+                        </div>
+                        </a>
+                    </section>
+                    <section class="full-section-wrapper" z-index="40">
+                        <!-- Formación Card -->
+                        <a href="formacion.html">
+                        <div class="card formacion">
+                            <h3>Educación</h3>
+                            <p>Creemos que el conocimiento es poder, por eso organizamos talleres, charlas, encuentros y espacios de aprendizaje sobre equidad de género, justicia ambiental, sostenibilidad y economía circular. Queremos que más personas se sumen a esta conversación y se sientan parte del cambio.</p>
+                        </div>
+                        </a>
+                    </section>
                     <!-- Consumo Card -->
                     <a href="consumo.html">
                     <div class="card consumo">

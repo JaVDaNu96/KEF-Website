@@ -31,6 +31,7 @@ html, body {
 }
 main {
     min-width: 100vw;
+    min-height: auto;
     overflow-x: hidden;
 }
 section {
@@ -74,6 +75,9 @@ a {
 /*/////////////////////////////   SLIDING STYLES FOR HOMEPAGE ////////////////////////////*/
 
 .full-section-wrapper {
+    position: sticky;
+    top: 0;
+    min-height: auto;
     overflow-x: hidden;
     padding: 0;
     margin: 0;
@@ -92,6 +96,9 @@ transform: translateY(100vh);
 @media (max-width: 1028px) { 
     /*Covers XS and S*/
     .full-section-wrapper {
+        position: sticky;
+        top: 0;
+        min-height: auto;
         padding: 0;
         margin: 0;
     }
@@ -106,12 +113,10 @@ transform: translateY(100vh);
 
 @media (max-width: 480px) { Specific to XS 
     .full-section-wrapper {
-        position: absolute;
+        position: sticky;
         top: 0;
-        left: 0;
-        width: 100vw;
-        transition: transform 0.7s ease-in-out;
-        height: auto;
+        min-height: auto;
+        overflow-x: hidden;
         padding: 0.5rem 0 1.5rem 0;
         margin: 0 0 5rem 0;
         
@@ -752,6 +757,7 @@ transform: translateY(100vh);
         justify-content: center;
         align-items: center;
         padding: 0.5rem 5rem 1rem 2rem;
+        margin: 0 4rem 0 0;
     }
 
     .main-hero-social-container img{
@@ -790,6 +796,7 @@ transform: translateY(100vh);
         font-size: 1.5rem; /* Smaller font for extra small screens */
         line-height: 1.4rem;
         padding: 0px;
+        margin: 0;
         text-align: left;
     }
     .main-hero-social-container {
@@ -838,7 +845,7 @@ transform: translateY(100vh);
     gap: 2rem;
     padding: 2rem 2rem 3rem 45rem;
     margin: auto 0; /* Centers content vertically */
-    overflow-x: auto; /* Enables horizontal scrolling */
+    overflow-x: hidden; /* Enables horizontal scrolling */
 }
 .card p {
     text-overflow: hidden;
@@ -976,6 +983,7 @@ transform: translateY(100vh);
         gap: 0.5rem; /* Further reduce gap for XS devices */
         padding: 1.5rem 1rem; /* Tight padding for very small screens */
         flex-direction: column;
+        overflow-x: hidden;
     }
 
     .card {
@@ -3411,5 +3419,33 @@ color:black;
 
 p, ul, li {
 font-family: 'Gill Sans Nova', sans-serif !important;
-font-size: 2.5rem;
+font-size: 2rem;
 } 
+
+@media (max-width: 767px) {
+/* Override fonts for headings and body text */
+    h1, h2, h3 {
+        font-family: 'Coniferous', sans-serif !important;
+        font-size: 3rem;
+        color:black;
+        }
+    
+    p, ul, li, a, label, button {
+        font-family: 'Gill Sans Nova', sans-serif !important;
+        font-size: 2rem;
+        }
+}   
+
+@media (max-width: 480px) {
+    /* Override fonts for headings and body text */
+        h1, h2, h3 {
+            font-family: 'Coniferous', sans-serif !important;
+            font-size: 3rem;
+            color:black;
+            }
+        
+        p, ul, li, a, label, button {
+            font-family: 'Gill Sans Nova', sans-serif !important;
+            font-size: 2rem;
+            }
+    }
