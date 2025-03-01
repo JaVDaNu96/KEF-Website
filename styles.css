@@ -356,7 +356,7 @@ transform: translateY(100vh);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 1rem 0;
+    margin: 0;
     padding: 0.5rem 0 1rem 0;
 }
 
@@ -1024,8 +1024,8 @@ transform: translateY(100vh);
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem 9rem 1rem 5rem;
-    margin: auto 0; /* Centers content vertically */
+    padding: 2rem 9rem 4rem 5rem;
+    margin: 2rem 0; /* Centers content vertically */
     background-color: #99CC33; /* Optional background color */
 }
 
@@ -1181,8 +1181,8 @@ transform: translateY(100vh);
     display: flex;
     flex-direction: column;
     align-items: left;
-    padding: 0;
-    margin: auto 0; /* Centers content vertically */
+    padding: 4rem 0;
+    margin: 0; /* Centers content vertically */
     background-color: #FF8080; /* Optional background color */
     padding-bottom: 0; /* Remove padding to fit footer */
 }
@@ -2889,13 +2889,13 @@ transform: translateY(100vh);
 }
 
 .intervention-card h3 {
-    font-size: 5rem;
+    font-size: 3rem;
     margin-top: 0;
     color: black;
 }
 
 .intervention-card p {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: black;
     margin: 0.5rem 0;
 }
@@ -2950,14 +2950,14 @@ transform: translateY(100vh);
     }
 
     .hero-intervenciones h1{
-       font-size: 3rem;
+        font-size: 3rem;
     }
 
     .hero-intervenciones p{
         font-size: 1.5rem;
         margin: 1rem 0;
-     }
-   
+        }
+
     .filters {
         display: flex;
         flex-direction: column;
@@ -3262,44 +3262,57 @@ transform: translateY(100vh);
 
 /*//////////////////////////// CALENDARIO //////////////////////////////*/
 
-/* Calendar Section */
-.calendar-section {
-    padding: 7rem 4rem;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    margin: 2rem auto;
-    max-width: 800px;
+#calendar-container {
+    text-align: center;
+    padding: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.calendar-section h1 {
-    text-align: left;
-    color: black;
-    margin-bottom: 1.5rem;
-}
-
-/* Calendar Event Cards */
-.calendar-event {
-    background-color: #ffffff;
-    border-left: 5px solid #ff6b6b;
+.year-button, .month-button {
+    display: block;
+    width: 30vw;
+    margin: 1rem;
     padding: 1rem;
-    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-family: 'Gill Sans Nova', sans-serif;
+    cursor: pointer;
+    background-color: #FF8080;
+    color: white;
+    border: none;
     border-radius: 5px;
-    transition: transform 0.3s;
+    transition: background 0.5s;
 }
 
-.calendar-event:hover {
-    transform: translateY(-5px);
+.year-button:hover, .month-button:hover {
+    background-color: #fd5353;
 }
 
-.calendar-event h3 {
-    margin-top: 0;
-    color: black;
+.year-container, .month-container {
+    margin-bottom: 10px;
+    text-align: left;
 }
 
-.calendar-event p {
-    color: black;
+.hidden {
+    display: none;
 }
 
+.calendar-event {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin: 5px 0;
+    border-left: 5px solid #4CAF50;
+    border-radius: 5px;
+}
+
+.events-container {
+    margin-left: 20px;
+    padding-left: 10px;
+    border-left: 2px dashed #4CAF50;
+}
+
+/* 
 @media (max-width: 1028px) {
     .calendar-event h3{
         font-size: 2.5rem;
@@ -3316,7 +3329,7 @@ transform: translateY(100vh);
 
 .calendar-event:nth-child(even) {
     background-color: #f1f5ff;
-}
+} */
 
 /* Full Section Components */
 .hero-full,
