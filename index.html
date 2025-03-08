@@ -6,6 +6,8 @@
     <title>KEF - Komunidad Eco Feminista</title>
     <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="js/includes.js" defer></script>
     <script src="js/main.js" defer></script>
 </head>
@@ -16,125 +18,170 @@
 
     <!-- Main Container for Snap Scrolling -->
     <main>
-        <section class="full-section-wrapper" id="hero-text" z-index="10">
-                <!-- Hero Section -->
-                <div class="main-hero container">
-                    <div class="main-hero-content">
-                        <div class="main-hero-text">
-                            <h1>BIENVENIDXS A KEF</h1>
-                            <p>Somos una comunidad de mujeres que impulsa la equidad de género y la justicia ambiental en Cali y la región pacífica.<br><br> Aquí creemos en el poder de lo colectivo, en la fuerza de las mujeres cuando nos organizamos y en que otro mundo es posible (y necesario).<br><br> ¡Así que súmate a esta historia! <br>KEF es de todas, todes y todos los que quieran aportar a este movimiento.</p>
-                            <div class="main-hero-social-container">
-                                <div class="footer-social social-hero">
-                                    <a href="https://facebook.com" target="_blank">
-                                        <img src="assets/icons/facebook-icon.svg" alt="Facebook">
-                                    </a>
-                                    <a href="https://spotify.com" target="_blank">
-                                        <img src="assets/icons/spotify-icon.svg" alt="YouTube">
-                                    </a>
-                                    <a href="https://twitter.com" target="_blank">
-                                        <img src="assets/icons/x-icon.svg" alt="Twitter">
-                                    </a>
-                                    <a href="https://instagram.com" target="_blank">
-                                        <img src="assets/icons/instagram-icon.svg" alt="Instagram">
-                                    </a>
-                                    <a href="https://youtube.com" target="_blank">
-                                        <img src="assets/icons/youtube-icon.svg" alt="YouTube">
-                                    </a>
-                                    <a href="https://tiktok.com" target="_blank">
-                                        <img src="assets/icons/tiktok-icon.svg" alt="YouTube">
-                                    </a>
+        <div class="panel">
+            <section class="full-section-wrapper" id="hero-text" z-index="10">
+                    <!-- Hero Section -->
+                    <div class="main-hero container">
+                        <div class="main-hero-content">
+                            <div class="main-hero-text">
+                                <h1>BIENVENIDXS A KEF</h1>
+                                <p>Somos una comunidad de mujeres que impulsa la equidad de género y la justicia ambiental en Cali y la región pacífica.<br><br> Aquí creemos en el poder de lo colectivo, en la fuerza de las mujeres cuando nos organizamos y en que otro mundo es posible (y necesario).<br><br> ¡Así que súmate a esta historia! <br>KEF es de todas, todes y todos los que quieran aportar a este movimiento.</p>
+                                <div class="main-hero-social-container">
+                                    <div class="footer-social social-hero">
+                                        <a href="https://facebook.com" target="_blank">
+                                            <img src="assets/icons/facebook-icon.svg" alt="Facebook">
+                                        </a>
+                                        <a href="https://spotify.com" target="_blank">
+                                            <img src="assets/icons/spotify-icon.svg" alt="YouTube">
+                                        </a>
+                                        <a href="https://twitter.com" target="_blank">
+                                            <img src="assets/icons/x-icon.svg" alt="Twitter">
+                                        </a>
+                                        <a href="https://instagram.com" target="_blank">
+                                            <img src="assets/icons/instagram-icon.svg" alt="Instagram">
+                                        </a>
+                                        <a href="https://youtube.com" target="_blank">
+                                            <img src="assets/icons/youtube-icon.svg" alt="YouTube">
+                                        </a>
+                                        <a href="https://tiktok.com" target="_blank">
+                                            <img src="assets/icons/tiktok-icon.svg" alt="YouTube">
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+            </section>
+        </div>
+        <div class="panel">
+            <section class="full-section-wrapper main-hero-image" id="hero-image" z-index="20">
+            <!-- Bottom: Image or Design -->
+                <div>
+                    <img src="assets/Borondo.jpeg" alt="Hero Image">
                 </div>
-        </section>
-        <section class="full-section-wrapper main-hero-image" id="hero-image" z-index="20">
-        <!-- Bottom: Image or Design -->
-            <div>
-                <img src="assets/Borondo.jpeg" alt="Hero Image">
-            </div>
-            <!-- Banner 1: After Hero (99CC33) -->
-            <div class="moving-banner" style="background-color: #8E44AD;">
-                <div class="banner-text">
-                    <ul>
-                        <li>AMIGAS</li>
-                        <li>HERMANAS</li>
-                        <li>HIJAS</li>
-                        <li>PARCERAS</li>
-                        <li>COMPAÑERES</li>
-                        <li>CONOCE KEF</li>
-                        <li>MADRES</li>
-                        <li>ALIADAS</li>
-                        <li>AMIGAS</li>
-                        <li>HERMANAS</li>
-                        <li>HIJAS</li>
-                        <li>PARCERAS</li>
-                        <li>COMPAÑERES</li>
-                        <li>CONOCE KEF</li>
-                        <li>MADRES</li>
-                        <li>ALIADAS</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <section class="full-section-wrapper" z-index="30">
-            <!-- Cards Full Section -->
-            <div class="full-section cards-full">
-                <div class="text-cards">
-                    <h2> Compromiso KEF </h2>
-                    <p>En KEF trabajamos para construir un mundo más justo desde el ecofeminismo. Nuestra apuesta se basa en educación, activismo y colaboración, tres pilares que nos permiten transformar realidades desde lo colectivo.</p>
-                </div>
-                <!-- Carousel Section -->
-                <div class="card-container">
-                    <section class="full-section-wrapper" z-index="40">
-                        <!-- Activismo Card -->
-                        <a href="activismo.html">
-                        <div class="card activismo">
-                            <h3>Activismo</h3>
-                            <p>Hacemos ruido y nos movilizamos para defender nuestras causas. Participamos en marchas, intervenciones urbanas, acciones simbólicas y campañas de sensibilización que generan impacto y visibilizan la lucha por los derechos de las mujeres y el medio ambiente.</p>
-                        </div>
-                        </a>
-                    </section>
-                    <section class="full-section-wrapper" z-index="40">
-                        <!-- Formación Card -->
-                        <a href="formacion.html">
-                        <div class="card formacion">
-                            <h3>Educación</h3>
-                            <p>Creemos que el conocimiento es poder, por eso organizamos talleres, charlas, encuentros y espacios de aprendizaje sobre equidad de género, justicia ambiental, sostenibilidad y economía circular. Queremos que más personas se sumen a esta conversación y se sientan parte del cambio.</p>
-                        </div>
-                        </a>
-                    </section>
-                    <!-- Consumo Card -->
-                    <a href="consumo.html">
-                    <div class="card consumo">
-                        <h3>Colaboración</h3>
-                        <p>No estamos solas en esto. Trabajamos de la mano con otras organizaciones y proyectos afines para potenciar nuestro impacto. Creemos en el poder de la comunidad y en que, uniendo fuerzas, podemos lograr grandes cambios.</p>
-                    </div>
-                    </a>
-                </div>
-                <div class="cta-cards">
-                    <p>Juntas, hacemos que las cosas pasen.</p> 
-                    <p><a href="sumate.html">¡Súmate a KEF y hagamos historia!</a></p>
-                </div>
-
-            </div>
-            <!-- Know Us Full Section -->
-            <div class="full-section conocenos-full">
-                <!-- Know Us Section -->
-                <div id="conocenos" class="conocenos-section">
-                    <!-- Left Side: Text and CTA -->
-                    <div class="conocenos-text">
-                        <h2>Conócenos</h2>
-                        <p>Somos la Colectiva Feminista de Colombia. </p>
-                        <p>Nos dedicamos a crear espacios de educación, activismo, y apoyo comunitario.</p>
-                        <p>Únete a nosotros para marcar la diferencia.</p>
-                        <a href="about-us.html" class="cta-button">Más Info</a>
+                <!-- Banner 1: After Hero (99CC33) -->
+                <div class="moving-banner" style="background-color: #8E44AD;">
+                    <div class="banner-text">
+                        <ul>
+                            <li>AMIGAS</li>
+                            <li>HERMANAS</li>
+                            <li>HIJAS</li>
+                            <li>PARCERAS</li>
+                            <li>COMPAÑERES</li>
+                            <li>CONOCE KEF</li>
+                            <li>MADRES</li>
+                            <li>ALIADAS</li>
+                            <li>AMIGAS</li>
+                            <li>HERMANAS</li>
+                            <li>HIJAS</li>
+                            <li>PARCERAS</li>
+                            <li>COMPAÑERES</li>
+                            <li>CONOCE KEF</li>
+                            <li>MADRES</li>
+                            <li>ALIADAS</li>
+                        </ul>
                     </div>
                 </div>
-                    <!--Banner 2: After Carousel (D9A9FB) -->
-                    <div class="moving-banner" style="background-color: #017935;">
-                        <div class="banner-text-b">
+            </section>
+        </div>
+        <div class="panel panel">
+            <section class="full-section-wrapper" z-index="30">
+                <!-- Cards Full Section -->
+                <div class="full-section cards-full">
+                    <div class="text-cards">
+                        <h2> COMPROMISO KEF </h2>
+                        <p>En KEF trabajamos para construir un mundo más justo desde el ecofeminismo. Nuestra apuesta se basa en educación, activismo y colaboración, tres pilares que nos permiten transformar realidades desde lo colectivo.</p>
+                    </div>
+                    <!-- Carousel Section -->
+                    <div class="card-container">
+                        <div class="panel">
+                            <section class="full-section-wrapper" z-index="40">
+                                <!-- Activismo Card -->
+                                <a href="activismo.html">
+                                <div class="card activismo">
+                                    <h3>Activismo</h3>
+                                    <p>Hacemos ruido y nos movilizamos para defender nuestras causas. Participamos en marchas, intervenciones urbanas, acciones simbólicas y campañas de sensibilización que generan impacto y visibilizan la lucha por los derechos de las mujeres y el medio ambiente.</p>
+                                </div>
+                                </a>
+                            </section>
+                        </div>
+                        <div class="panel">
+                            <section class="full-section-wrapper" z-index="40">
+                                <!-- Formación Card -->
+                                <a href="formacion.html">
+                                <div class="card formacion">
+                                    <h3>Educación</h3>
+                                    <p>Creemos que el conocimiento es poder, por eso organizamos talleres, charlas, encuentros y espacios de aprendizaje sobre equidad de género, justicia ambiental, sostenibilidad y economía circular. Queremos que más personas se sumen a esta conversación y se sientan parte del cambio.</p>
+                                </div>
+                                </a>
+                            </section>
+                        </div>
+                        <div class="panel">
+                            <section class="full-section-wrapper">
+                                <!-- Consumo Card -->
+                                <div class="card consumo">
+                                    <a href="consumo.html">
+                                    <h3>Colaboración</h3>
+                                    <p>No estamos solas en esto. Trabajamos de la mano con otras organizaciones y proyectos afines para potenciar nuestro impacto. Creemos en el poder de la comunidad y en que, uniendo fuerzas, podemos lograr grandes cambios.</p>
+                                </a>
+                                </div>
+                            </section>
+                        </div>   
+                    </div>
+                    <div class="cta-cards">
+                        <p>Juntas, hacemos que las cosas pasen.</p> 
+                        <p><a href="sumate.html">¡Súmate a KEF y hagamos historia!</a></p>
+                    </div>
+                </div>
+                <!-- Know Us Full Section -->
+                <div class="full-section conocenos-full">
+                    <!-- Know Us Section -->
+                    <div id="conocenos" class="conocenos-section">
+                        <!-- Left Side: Text and CTA -->
+                        <div class="conocenos-text">
+                            <h2>Conócenos</h2>
+                            <p>Somos la Colectiva Feminista de Colombia. </p>
+                            <p>Nos dedicamos a crear espacios de educación, activismo, y apoyo comunitario.</p>
+                            <p>Únete a nosotros para marcar la diferencia.</p>
+                            <a href="about-us.html" class="cta-button">Más Info</a>
+                        </div>
+                    </div>
+                        <!--Banner 2: After Carousel (D9A9FB) -->
+                        <div class="moving-banner" style="background-color: #017935;">
+                            <div class="banner-text-b">
+                                <ul>
+                                    <li>AMIGAS</li>
+                                    <li>HERMANAS</li>
+                                    <li>HIJAS</li>
+                                    <li>PARCERAS</li>
+                                    <li>CONOCE KEF</li>
+                                    <li>MADRES</li>
+                                    <li>ALIADAS</li>
+                                    <li>AMIGAS</li>
+                                    <li>HERMANAS</li>
+                                    <li>HIJAS</li>
+                                    <li>PARCERAS</li>
+                                    <li>CONOCE KEF</li>
+                                    <li>MADRES</li>
+                                    <li>ALIADAS</li>
+                                </ul>
+                            </div>
+                        </div>
+                </div>
+                <div class="full-section contactanos-full">
+                    <!-- Contactanos Section -->
+                    <div class="contactanos-section">
+                        <!-- Right Side: Text and CTA -->
+                        <div class="contactanos-text">
+                            <h2>Contáctanos</h2>
+                            <p>Conoce nuestras instalaciones y descubre cómo puedes ser parte de nuestras actividades en persona.</p>
+                            <p>¡Te esperamos con los brazos abiertos!</p>
+                            <a href="/contact-us.html" class="cta-button">Acércate</a>
+                        </div>
+                    </div>
+                    <!-- Banner 3: After Conocenos (FF8080) -->
+                    <div class="moving-banner" style="background-color: #ff4545;">
+                        <div class="banner-text">
                             <ul>
                                 <li>AMIGAS</li>
                                 <li>HERMANAS</li>
@@ -153,42 +200,10 @@
                             </ul>
                         </div>
                     </div>
-            </div>
-            <div class="full-section contactanos-full">
-                <!-- Contactanos Section -->
-                <div class="contactanos-section">
-                    <!-- Right Side: Text and CTA -->
-                    <div class="contactanos-text">
-                        <h2>Contáctanos</h2>
-                        <p>Conoce nuestras instalaciones y descubre cómo puedes ser parte de nuestras actividades en persona.</p>
-                        <p>¡Te esperamos con los brazos abiertos!</p>
-                        <a href="/contact-us.html" class="cta-button">Acércate</a>
-                    </div>
                 </div>
-                <!-- Banner 3: After Conocenos (FF8080) -->
-                <div class="moving-banner" style="background-color: #ff4545;">
-                    <div class="banner-text">
-                        <ul>
-                            <li>AMIGAS</li>
-                            <li>HERMANAS</li>
-                            <li>HIJAS</li>
-                            <li>PARCERAS</li>
-                            <li>CONOCE KEF</li>
-                            <li>MADRES</li>
-                            <li>ALIADAS</li>
-                            <li>AMIGAS</li>
-                            <li>HERMANAS</li>
-                            <li>HIJAS</li>
-                            <li>PARCERAS</li>
-                            <li>CONOCE KEF</li>
-                            <li>MADRES</li>
-                            <li>ALIADAS</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- Footer Section -->
-        </section>
+                <!-- Footer Section -->
+            </section>
+        </div>
         <!-- Footer Section -->
         <div id="footer-placeholder"></div>
     </main>

@@ -61,3 +61,35 @@ document.addEventListener('DOMContentLoaded', () => {
         loadInterventions(); // Carga todas las intervenciones
     }
 });
+
+gsap.registerPlugin(ScrollTrigger);
+
+const panels = gsap.utils.toArray(".panel");
+panels.forEach((panel, i) => {
+
+// Pin each panel so it stays at top for its entire scroll range
+ScrollTrigger.create({
+trigger: panel,
+start: "top top",
+end: "bottom top",
+pin: true,
+pinSpacing: false 
+});
+
+// Animate the new panel from y=100% (offscreen) to y=0
+// only if it's not the first one
+if (i > 0) {
+gsap.fromTo(panel,
+    { yPercent: 80 },
+    {
+    yPercent: 0,
+    scrollTrigger: {
+        trigger: panel,
+        start: "top bottom",
+        end: "top top",
+        scrub: true
+    }
+    }
+);
+}
+});

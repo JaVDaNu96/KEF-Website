@@ -1,8 +1,8 @@
 /* Fonts */
 
 @font-face {
-    font-family: 'Coniferous';
-    src: url('/fonts/Coniferous/fonnts.com-Coniferous-Demo-Regular.otf') format('opentype');
+    font-family: 'Cooper-Hewitt';
+    src: url('/fonts/Cooper-Hewitt/CooperHewitt-Bold.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -25,9 +25,14 @@ html, body {
     margin: 0;
     padding: 0;
     width: 100vw;
-    height: auto;
+    min-height: auto;
     overflow-x:hidden;
+    overscroll-behavior-y: none;
     font-family: 'Gill Sans Nova', sans-serif; /* or your chosen default */
+}
+body {
+    /* Let body be long enough to show multiple pinned sections */
+    min-height: 100vh; /* or as many panels * 100vh as you need */
 }
 main {
     min-width: 100vw;
@@ -74,8 +79,21 @@ a {
 
 /*/////////////////////////////   SLIDING STYLES FOR HOMEPAGE ////////////////////////////*/
 
+.panel {
+    position: relative;  /* Each panel will be pinned (made sticky via JS) */
+    width: 100%;
+    min-height:auto;       /* Full viewport height */
+    overflow: hidden;    /* So we can slide content in from below */
+    display: flex;
+    /* Distinct background for each panel so you can see the layering: */
+}
+
+.pin-spacer {
+    min-height: auto;
+}
+
 .full-section-wrapper {
-    position: sticky;
+    position: relative;
     top: 0;
     min-height: auto;
     overflow-x: hidden;
@@ -83,15 +101,6 @@ a {
     margin: 0;
 }
 
-/* Visible state */
-.active {
-transform: translateY(0);
-}
-
-/* Not visible – positioned off-screen below */
-.off-screen {
-transform: translateY(100vh);
-}
 
 @media (max-width: 1028px) { 
     /*Covers XS and S*/
@@ -143,19 +152,6 @@ transform: translateY(100vh);
     padding: 1rem; /* Adds breathing room */
 }
 
-/* Text Responsiveness */
-@media (max-width: 767px) {
-    body {
-        font-size: 14px; /* Reduce font size for smaller devices */
-    }
-}
-
-@media (max-width: 480px) {
-    body {
-        font-size: 12px; /* Further reduce for extra small devices */
-    }
-}
-
 /*////////////////////////////////////////////////////////////////////////////////////////*/
 /*////////////////////////////////////////////////////////////////////////////////////////*/
 
@@ -170,7 +166,7 @@ transform: translateY(100vh);
     width: 100%;
     height: 5.5rem;
     z-index: 1000; /* Ensures it stays on top of other content */
-    background-color: white; /* Or your desired background */
+    background-color: #622d86; /* Or your desired background */
     padding: 1rem 2rem;
     border-bottom: 0.5px solid #000000;
 }
@@ -215,7 +211,7 @@ transform: translateY(100vh);
 }
 
 .hamburger-menu span {
-    background-color: #000000;
+    background-color: rgb(213, 151, 254);
     height: 3px;
     width: 25px;
     border-radius: 2px;
@@ -293,7 +289,7 @@ transform: translateY(100vh);
         width: 100%;
         max-height: 3.5rem;
         z-index: 1000; /* Ensures it stays on top of other content */
-        background-color: white; /* Or your desired background */
+        background-color: #622d86; /* Or your desired background */
         padding: 0.7rem 2rem;
         border-bottom: 1px solid #000000;
     }
@@ -320,10 +316,11 @@ transform: translateY(100vh);
         flex-direction: column;
         gap: 5px;
         cursor: pointer;
+        margin: 0 0 1rem 0;
     }
 
     .hamburger-menu span {
-        background-color: #000000;
+        background-color: rgb(213, 151, 254);
         height: 3px;
         width: 25px;
         border-radius: 2px;
@@ -609,7 +606,7 @@ transform: translateY(100vh);
     gap: 2rem; /* Space between image and text */
     padding: 1rem;
     margin: 0px; /* Centers content vertically */
-    background-color: #D9A9FB;
+    background-color: white;
     min-width: 100vw;
 }
 
@@ -629,8 +626,9 @@ transform: translateY(100vh);
 }
 
 .main-hero-text h1 {
-    font-size: 5rem;
+    font-size: 3.5rem;
     margin: 0 5rem;
+    color: #622d86;
 }
 
 .main-hero-text p {
@@ -644,16 +642,16 @@ transform: translateY(100vh);
     min-width: 100vw;
     height: auto;
     background-color: #D9A9FB;
-    padding: 0;
-    margin: 0;
+    padding: 4rem 0;
+    margin: 2rem 0;
     align-content: center;
 }
 .main-hero-image img {
     width: 100vw;
     height: auto;
-    margin: 1rem 0 4rem 0;
+    margin: 4rem 0 4rem 0;
     border-radius: 10%;
-    padding: 0 3rem;
+    padding: 2rem 3rem;
 }
 
 .main-hero-social-container {
@@ -735,7 +733,7 @@ transform: translateY(100vh);
     }
 
     .main-hero-text h1 {
-        font-size: 4rem; /* Reduce font size for smaller screens */
+        font-size: 3rem; /* Reduce font size for smaller screens */
         text-align: left; /* Center-align text for narrow screens */
     }
 
@@ -746,7 +744,13 @@ transform: translateY(100vh);
         padding: 0.2rem 6rem 2rem 3rem;
     }
 
+    .main-hero-image {
+        padding: 2rem 2rem; /* Scale down the image */
+        margin: 2rem 0;
+    }
+
     .main-hero-image img {
+        margin: 2rem 0;
         max-width: 100vw; /* Scale down the image */
     }
     
@@ -789,12 +793,12 @@ transform: translateY(100vh);
         padding: 0;
         margin: 0 0 1rem 0;
         line-height: 3.5rem;
-        font-size: 3.5rem; /* Further reduce font size */
+        font-size: 3rem; /* Further reduce font size */
     }
 
     .main-hero-text p {
-        font-size: 1.5rem; /* Smaller font for extra small screens */
-        line-height: 1.4rem;
+        font-size: 1.7rem; /* Smaller font for extra small screens */
+        line-height: 2rem;
         padding: 0px;
         margin: 0;
         text-align: left;
@@ -899,8 +903,8 @@ transform: translateY(100vh);
 
 /* Specific Border Colors */
 .activismo {
-    background-color:#D9A9FB;
-    border: 3px solid #D9A9FB;
+    background-color:rgba(217, 169, 251, 0.8);
+    border: 3px solid rgba(217, 169, 251, 0.8);
 }
 
 .formacion {
@@ -973,6 +977,7 @@ transform: translateY(100vh);
     .text-cards h1{        
         text-align: left;
         padding: 0 0 2rem 0;
+        color:#622d86;
     }
     
     .text-cards p{
@@ -3369,7 +3374,9 @@ transform: translateY(100vh);
     margin: 2rem 2rem;
 }
 .cards-full .text-cards h2{
+    color:#622d86;
     font-size: 5rem;
+    margin: 1rem 0;
 }
 .cards-full .text-cards p{
     font-size: 2.5rem;
@@ -3425,7 +3432,7 @@ transform: translateY(100vh);
 
 /* Override fonts for headings and body text */
 h1, h2, h3 {
-font-family: 'Coniferous', sans-serif !important;
+font-family: 'Hewitt-Cooper', sans-serif !important;
 font-size: 3rem;
 color:black;
 }
@@ -3438,7 +3445,7 @@ font-size: 2rem;
 @media (max-width: 767px) {
 /* Override fonts for headings and body text */
     h1, h2, h3 {
-        font-family: 'Coniferous', sans-serif !important;
+        font-family: 'Hewitt-Cooper', sans-serif !important;
         font-size: 3rem;
         color:black;
         }
@@ -3452,7 +3459,7 @@ font-size: 2rem;
 @media (max-width: 480px) {
     /* Override fonts for headings and body text */
         h1, h2, h3 {
-            font-family: 'Coniferous', sans-serif !important;
+            font-family: 'Hewitt-Cooper', sans-serif !important;
             font-size: 3rem;
             color:black;
             }
