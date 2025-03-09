@@ -177,12 +177,11 @@ a {
     flex-direction: column;
     gap: 1rem;
     padding: 0;
-    margin: 0;
+    margin: 0 0 1rem 0;
     position: absolute;
     top: 100%;
     right: 0;
-    background-color: #333;
-    color: #000000;
+    color: rgb(220, 175, 250);
     width: 200px;
     height: 0;
     overflow: hidden;
@@ -780,7 +779,7 @@ a {
         padding: 0;
         margin: 0 0 1rem 0;
         line-height: 3.5rem;
-        font-size: 3rem; /* Further reduce font size */
+        font-size: 2.5rem; /* Further reduce font size */
     }
 
     .main-hero-text p {
@@ -813,7 +812,8 @@ a {
         max-width: 100vw;
         min-height: 30vh;
         background-color: #D9A9FB;
-        padding: 0 0.25rem 2rem 0.35rem;
+        padding: 1rem 0.25rem 2rem 0.35rem;
+        margin: 0;
 
     }
     .main-hero-image img {
@@ -874,14 +874,15 @@ a {
     padding: 0 4rem;
 }
 .cta-cards p{
-    font-size: 2.5rem;
+    font-size: 3rem;
 }
 .cta-cards a {
-    color: #209e00;
-    font-weight: 400; 
+    color: rgb(167, 187, 64);
+    font-weight: 400;
+    font-size: 3rem; 
 }
 .cta-cards a:hover {
-    color: #99CC33;
+    color: rgba(167, 187, 64, 0.6);
 }
 
 .card:hover {
@@ -890,20 +891,24 @@ a {
 
 /* Specific Border Colors */
 .activismo {
-    background-color:rgba(217, 169, 251, 0.8);
-    border: 3px solid rgba(217, 169, 251, 0.8);
+    background-color:rgba(98, 45, 134, 0.6);
+}
+.activismo h3{
+    color: rgb(98, 45, 134) ;
 }
 
 .formacion {
-    background-color:#FF8080;
-    border: 3px solid #FF8080;
+    background-color:rgba(255, 128, 128, 0.6);
 }
-
+.formacion h3{
+    color: rgb(255, 128, 128);
+}
 .consumo {
-    background-color:#99CC33;
-    border: 3px solid #99CC33;
+    background-color:rgba(167, 187, 64, 0.6);
 }
-
+.consumo h3{
+    color: rgb(167, 187, 64);
+}
 /* Responsive Adjustments for M */
 @media (max-width: 1028px) {
     .card-container {
@@ -933,11 +938,7 @@ a {
         font-size: 2.5rem;
     }
     .cta-cards a {
-        color: #209e00;
         font-weight: 400; 
-    }
-    .cta-cards a:hover {
-        color: #99CC33;
     }
 }
 /* Responsive Adjustments for XS and S */
@@ -984,14 +985,15 @@ a {
         margin: 1rem 0;
     }
 
-    .card h1{
-        font-size: 3rem;
+    .card h3{
+        font-size: 2.5rem;
     }
-
-    
+    .card.consumo h3{
+        font-size: 2rem;
+    }
     .card p{
         padding: 1rem 3rem 1rem 0;
-        font-size: 1.5rem;
+        font-size: 1.7rem;
     }
     .cta-cards {
         padding: 0 2rem;
@@ -1000,13 +1002,8 @@ a {
         font-size: 2rem;
     }
     .cta-cards a {
-        color: #209e00;
         font-weight: 400; 
     }
-    .cta-cards a:hover {
-        color: #99CC33;
-    }
-
 }
 
 /*/////////////////////////////// CONOCENOS - KNOW US /////////////////////////////////////////*/
@@ -1016,9 +1013,8 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem 9rem 4rem 5rem;
+    padding: 6rem 9rem 4rem 5rem;
     margin: 2rem 0; /* Centers content vertically */
-    background-color: #99CC33; /* Optional background color */
 }
 
 .conocenos-text {
@@ -1031,7 +1027,7 @@ a {
     font-size: 5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: #000000;
+    color:rgb(167, 187, 64);
 }
 
 .conocenos-text p {
@@ -1045,8 +1041,8 @@ a {
 
 .conocenos-text .cta-button {
     padding: 1rem 1.5rem;
-    background-color: #017935;
-    color: black;
+    background-color: rgb(167, 187, 64);
+    color: rgb(198, 214, 120);
     font-size: 2.5rem;
     text-decoration: none;
     border-radius: 5px;
@@ -1055,7 +1051,8 @@ a {
 }
 
 .conocenos-text .cta-button:hover {
-    background-color: #c2ff49;
+    background-color: rgba(167, 187, 64, 0.6);
+    color: rgb(104, 121, 23);
 }
 
 /* Right Side: Image Styling */
@@ -1098,8 +1095,6 @@ a {
     .conocenos-text .cta-button {
         padding: 0.5rem 1rem;
         font-size: 2.5rem;
-        background-color: #017935;
-        color: black;
         text-decoration: none;
         border-radius: 5px;
         font-weight: 900;
@@ -1127,8 +1122,6 @@ a {
     .conocenos-text .cta-button {
         padding: 0.5rem 1rem;
         font-size: 1.5rem;
-        background-color: #017935;
-        color: black;
         text-decoration: none;
         border-radius: 5px;
             font-weight: 900;
@@ -1140,14 +1133,21 @@ a {
         width: 100vw;
         flex-direction: column;
         text-align: left;
+        margin: 1rem 0 0 0.4rem;
+        padding: 1rem 1rem;
     }
 
     .conocenos-text {
         text-align: left;
         width: 100vw;
     }
+    .conocenos-text h2{
+        padding: 0 1rem 0 0;
+        font-size: 2.5rem;
+    }
     .conocenos-text p{
         padding: 0 1rem 0 0;
+        font-size: 2rem;
     }
 
     .conocenos-image img {
@@ -1157,8 +1157,6 @@ a {
     .conocenos-text .cta-button {
         padding: 0.5rem 1rem;
         font-size: 1.5rem;
-        background-color: #017935;
-        color: black;
         text-decoration: none;
         border-radius: 5px;
             font-weight: 900;
@@ -1175,7 +1173,7 @@ a {
     align-items: left;
     padding: 4rem 0;
     margin: 0; /* Centers content vertically */
-    background-color: #FF8080; /* Optional background color */
+    background-color:rgba(255, 128, 128, 0.6); /* Optional background color */
     padding-bottom: 0; /* Remove padding to fit footer */
 }
 
@@ -1200,7 +1198,7 @@ a {
     font-size: 5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: #000000;
+    color: rgb(255, 128, 128);
 }
 
 .contactanos-text p {
@@ -1215,8 +1213,8 @@ a {
 .contactanos-text .cta-button {
     font-size: 2.5rem;
     padding: 0.7rem 1.5rem;
-    background-color: #ff4444;
-    color: black;
+    background-color: rgb(255, 128, 128);
+    color: rgb(255, 191, 191);
     text-decoration: none;
     border-radius: 5px;
     font-weight: 900;
@@ -1224,7 +1222,8 @@ a {
 }
 
 .contactanos-text .cta-button:hover {
-    background-color: #ffa6a6;
+    background-color: rgb(255, 204, 204);
+    color: rgb(255, 128, 128);
 }
 @media (max-width: 1028px) {
     .contactanos-section {
@@ -1252,8 +1251,6 @@ a {
 
     .contactanos-text .cta-button {
         padding: 0.7rem 1.5rem;
-        background-color: #ff4444;
-        color: black;
         text-decoration: none;
         border-radius: 5px;
         font-weight: 900;
@@ -1288,8 +1285,6 @@ a {
 
     .contactanos-text .cta-button {
         padding: 0.7rem 1.5rem;
-        background-color: #ff4444;
-        color: black;
         text-decoration: none;
         border-radius: 5px;
         font-weight: 900;
@@ -1309,7 +1304,7 @@ a {
         padding: 0 3rem 0 2rem;
     }
     .contactanos-text h2{
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
     .contactanos-text p{
         font-size: 2rem;
@@ -1318,8 +1313,6 @@ a {
 
     .contactanos-text .cta-button {
         padding: 0.7rem 1.5rem;
-        background-color: #ff4444;
-        color: black;
         text-decoration: none;
         border-radius: 5px;
         font-weight: 900;
@@ -2099,21 +2092,6 @@ a {
     }
 }
 
-@media (max-width: 480px) {
-    .visit-map {
-        margin: 0 0 0 3rem;
-        padding:  0 0 0 3rem;
-    }
-
-    .hero-visitanos {
-        margin: 1rem 2rem;
-    }
-    
-    .visit-contact p{
-        font-size: 1.5rem;
-    }
-}
-
 /*////////////////////////////////////////////////////////////////////////*/
 
 /*//////////////////////////// CONTACT US //////////////////////////////*/
@@ -2344,6 +2322,9 @@ a {
         padding: 4rem 0 0 0;
         margin: 0;
     }
+    .contact-form h1{
+        font-size: 2.5rem;
+    }
     /* Form Labels */
     .contact-form label {
         font-size: 1.5rem;
@@ -2356,6 +2337,16 @@ a {
         font-size: 1.5rem;
         display: block;
     }
+    .visit-map h2{ 
+        font-size: 2.5rem;
+    }
+    .hero-visitanos h1{
+        font-size: 2.5rem;
+    }
+    
+    .visit-contact p{
+        font-size: 1.5rem;
+    }
 
 }
 
@@ -2366,24 +2357,24 @@ a {
 /* Hero Section for Activismo */
 .hero-activismo {
     min-height: 40vh;
-    background-color: #F0E5FF; /* Color de fondo similar a la imagen */
+    background-color: rgba(98, 45, 134, 0.6); /* Color de fondo similar a la imagen */
     padding: 3rem 1rem;
     display: flex;
     align-items: left;
     justify-content: left;
 }
-
 .cta-button-activismo {
     margin: 1rem 0rem;
     padding: 1rem 2rem 1rem 0.6rem;
-    background-color: #ab5ccf;
-    color: white;
+    background-color: rgb(98, 45, 134);
+    color: rgb(166, 120, 197);
     border-radius: 5px;
     text-decoration: none;
 }
 
 .cta-button-activismo:hover {
-    background-color: #c64bff;
+    background-color: rgba(98, 45, 134, 0.6);
+    color: rgb(98, 45, 134);
 }
 
 /* Responsive Design */
@@ -2395,6 +2386,7 @@ a {
     }
     .hero-activismo h1{
         font-size: 3rem;
+        color: rgb(98, 45, 134);
     }
     .hero-activismo p{
         font-size: 2rem;
@@ -2434,15 +2426,9 @@ a {
     }
     .cta-button-activismo {
         padding: 1rem 2rem;
-        background-color: #ab5ccf;
-        color: white;
         border-radius: 10px;
         text-decoration: none;
         min-width: 20vw;
-    }
-    
-    .cta-button-activismo:hover {
-        background-color: #c64bff;
     }
 }
 
@@ -2485,16 +2471,10 @@ a {
     }
     .cta-button-activismo {
         padding: 1rem 2rem;
-        background-color: #ab5ccf;
-        color: white;
         border-radius: 10px;
         text-decoration: none;
         min-width: 20vw;
         font-size: 1.5rem;
-    }
-    
-    .cta-button-activismo:hover {
-        background-color: #c64bff;
     }
 }
 
@@ -2503,24 +2483,27 @@ a {
 /* Hero Section for Formacion */
 .hero-formacion {
     min-height: 0vh;
-    background-color: #ffc7c7; /* Color de fondo similar a la imagen */
+    background-color: rgba(214, 128, 138, 0.6) ; /* Color de fondo similar a la imagen */
     padding: 3rem 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
+ .hero-formacion h1{
+    color: rgb(214, 128, 138);
+ }
 
 .cta-button-formacion {
     padding: 1rem 1rem 1rem 0.7rem;
-    background-color: #fd8787;
-    color: white;
+    background-color: rgb(214, 128, 138);
+    color: rgb(255, 175, 185);
     border-radius: 5px;
     text-decoration: none;
 }
 
 .cta-button-formacion:hover {
-    background-color: #fd5656;
+    background-color: rgba(214, 128, 138, 0.6);
+    color: rgb(184, 100, 110);
 }
 
 
@@ -2563,16 +2546,11 @@ a {
         margin: 0;
     }
     .cta-button-formacion {
-        background-color: #fd8787;
-        color: white;
         border-radius: 5px;
         text-decoration: none;
         min-width: 20vw;
     }
     
-    .cta-button-formacion:hover {
-        background-color: #fd5656;
-    }
 }
 @media (max-width: 767px) {
     .donations-section {
@@ -2593,15 +2571,9 @@ a {
 
     .cta-button-formacion {
         padding: 1rem 3rem;
-        background-color: #fd8787;
-        color: white;
         border-radius: 5px;
         text-decoration: none;
         min-width: 20vw;
-    }
-    
-    .cta-button-formacion:hover {
-        background-color: #fd5656;
     }
 }
 
@@ -2630,15 +2602,9 @@ a {
         margin: 0;
     }
     .cta-button-formacion {
-        background-color: #fd8787;
-        color: white;
         border-radius: 5px;
         text-decoration: none;
         min-width: 20vw;
-    }
-    
-    .cta-button-formacion:hover {
-        background-color: #fd5656;
     }
 }
 
@@ -2647,7 +2613,7 @@ a {
 /* Hero Section for Consumo */
 .hero-consumo {
     min-height: 40vh;
-    background-color: #deffb4; /* Color de fondo similar a la imagen */
+    background-color: rgba(167, 187, 64, 0.6); /* Color de fondo similar a la imagen */
     padding: 3rem 1rem;
     display: flex;
     flex-direction: column;
@@ -2655,19 +2621,24 @@ a {
     justify-content: left;
 }
 
+.hero-consumo h1{
+    color:rgb(167, 187, 64);
+}
+
 .hero-consumo .hero-text p{
     padding: 0 0 0.5rem 0;
 }
 .cta-button-consumo {
     padding: 1rem 1rem 1rem 0.5rem;
-    background-color: #8edf24;
-    color: white;
+    background-color: rgb(167, 187, 64);
+    color: rgb(235, 252, 152);
     border-radius: 5px;
     text-decoration: none;
 }
 
 .cta-button-consumo:hover {
-    background-color: #8ef803;
+    background-color: rgba(167, 187, 64, 0.6);
+    color: rgb(116, 131, 45);
 }
 
 @media (max-width: 1028px) {
@@ -2703,15 +2674,9 @@ a {
         .cta-button-consumo {
             padding:0;
             margin: 0;
-            background-color: #8edf24;
-            color: white;
             border-radius: 5px;
             text-decoration: none;
             min-width: 20vw;
-        }
-        
-        .cta-button-consumo:hover {
-            background-color: #8ef803;
         }
     }
 @media (max-width: 767px) {
@@ -2734,15 +2699,9 @@ a {
     .cta-button-consumo {
         margin: 1rem 12rem;
         padding: 1rem 3rem;
-        background-color: #8edf24;
-        color: white;
         border-radius: 5px;
         text-decoration: none;
         min-width: 20vw;
-    }
-    
-    .cta-button-consumo:hover {
-        background-color: #8ef803;
     }
 }
 
@@ -2770,15 +2729,9 @@ a {
     .cta-button-consumo {
         padding:0;
         margin: 0 5rem 0 0;
-        background-color: #8edf24;
-        color: white;
         border-radius: 5px;
         text-decoration: none;
         min-width: 20vw;
-    }
-    
-    .cta-button-consumo:hover {
-        background-color: #8ef803;
     }
 }
 
@@ -2936,13 +2889,13 @@ a {
 
 @media (max-width: 480px) {
     .hero-intervenciones {
-        padding: 5rem 2rem 0 2rem;
+        padding: 5rem 2rem 0 1.5rem;
         margin: 0px;
         min-height: auto;
     }
 
     .hero-intervenciones h1{
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .hero-intervenciones p{
@@ -2969,7 +2922,7 @@ a {
     .interventions  .interventions-title {
         padding: 1rem 0 0 2rem;
         text-align: left; /* Centers the title */
-        font-size: 3rem;
+        font-size: 2.5rem;
         margin-bottom: 1rem; /* Adds space between the title and the container */
         color: black;
     }
@@ -2978,7 +2931,7 @@ a {
         margin: 0;
     }
     .intervention-card h3 {
-        font-size: 2rem;
+        font-size: 1.7rem;
         color: black;
         margin: 0.5rem 0;
     }
@@ -3077,6 +3030,41 @@ a {
 
     .about-text {
         margin: 1rem 1rem;
+    }
+
+    .about-image img {
+        max-width: 300px; /* Adjust for smaller screens */
+    }
+
+    .about-text .cta-button {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        background-color: #D9A9FB;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: 500;
+        transition: background-color 0.3s;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-section {
+        flex-direction: column;
+        text-align: left;
+        margin: 1rem 1rem;
+    }
+
+    .about-section h1{
+        font-size: 2.5rem;
+    }
+
+    .about-text {
+        margin: 1rem 1rem;
+        padding: 0 0;
+    }
+    .about-text h2{
+        font-size: 2.5rem;
     }
 
     .about-image img {
@@ -3218,7 +3206,7 @@ a {
         min-height: auto;
     }
     .blog-cta h2{
-        font-size: 3rem;
+        font-size: 2.5rem;
         padding: 0 0 1rem 0;
         margin: 0;
     }
@@ -3227,14 +3215,14 @@ a {
         font-size: 2rem;
     }
     .blog-cta a{
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
     .allies {
         margin: 0 1rem;
     }
     .allies h2{
         margin: 1rem 0;
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
     .allies-grid {
         margin: 1rem 0;
@@ -3347,7 +3335,7 @@ a {
 }
 
 .conocenos-full {
-    background-color: #99CC33;
+    background-color: rgba(167, 187, 64, 0.6);
 }
 
 .visitanos-section {
@@ -3414,6 +3402,9 @@ a {
         height: 2rem;
         padding: 0.5rem 0;
         margin: 1rem 0 1rem 0;
+    }
+    .cards-full .text-cards h2{
+        font-size: 2.5rem;
     }
 }
 
