@@ -1,5 +1,5 @@
 // URL del archivo JSON de eventos
-const eventsUrl = '/assets/data/events.json';
+const eventsUrl = '/data/events.json';
 
 // Función para cargar y organizar eventos en un objeto {Año -> Mes -> Eventos}
 async function loadCalendar() {
