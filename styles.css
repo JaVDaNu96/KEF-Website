@@ -835,7 +835,7 @@ a {
     .main-hero-button {
         font-size: 1.5rem;
         margin: 0;
-        padding: 0.5rem 0.5rem;
+        padding: 0.5rem 1rem;
         background-color: rgb(98, 45, 134);
         color: rgb(166, 120, 197);
         border-radius: 5px;
@@ -1060,7 +1060,7 @@ a {
     }
 
     .card h3{
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
     .card.consumo h3{
         font-size: 2rem;
@@ -2061,7 +2061,7 @@ a {
         align-items: left;
     }
     .hero-sumate h1{
-        font-size: 3rem;
+        font-size: 2rem;
         margin: 1rem 0;
         padding: 0;
         align-items: left;
@@ -2080,7 +2080,7 @@ a {
 
     .line-of-work h2{
         align-items: left;
-        font-size: 3rem;
+        font-size: 2rem;
         margin-bottom: 1rem;
     }
 
@@ -2095,7 +2095,11 @@ a {
         border-radius: 10px;
         margin-top: 0;
     } 
+    .join-cta h2{
+        font-size: 2rem;
+    }
     .join-cta p{
+        font-size: 1.5rem;
         text-align: left;
         padding: 0;
         border-radius: 10px;
@@ -2160,12 +2164,6 @@ a {
     margin-bottom: 1rem;
 }
 
-@media (max-width: 767px) {
-    .visit-map p{
-        font-size: 1.5rem;
-    }
-}
-
 /*////////////////////////////////////////////////////////////////////////*/
 
 /*//////////////////////////// CONTACT US //////////////////////////////*/
@@ -2187,7 +2185,7 @@ a {
 .contact-form {
     padding: 1rem 2rem;
     max-width: 600px; /* Limits the width for better readability */
-    margin: 4rem auto 0 auto; /* Centers the form and adds vertical spacing */
+    margin: 0 auto; /* Centers the form and adds vertical spacing */
     background-color: #fff; /* Light background for contrast */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
@@ -2268,7 +2266,7 @@ a {
 }
 
 .hero-visitanos {
-    margin: 2rem 0;
+    margin: 4rem auto 0 auto; /* Centers the form and adds vertical spacing */
     padding: 0;
 }
 .hero-visitanos h1{
@@ -2334,7 +2332,7 @@ a {
     }
 
     .hero-visitanos {
-        margin: 2rem 0;
+        margin: 4rem auto 0 auto; /* Centers the form and adds vertical spacing */
         padding: 0;
     }
     .hero-visitanos h1{
@@ -2384,7 +2382,7 @@ a {
 
 @media (max-width: 480px) {
     .hero-visitanos {
-        margin: 0;
+        margin: 4rem auto 0 auto; /* Centers the form and adds vertical spacing */
         padding: 0;
     }
     .contact-form-container {
@@ -2393,11 +2391,11 @@ a {
     }
     
     .contact-form {
-        padding: 4rem 0 0 0;
+        padding: 0;
         margin: 0;
     }
     .contact-form h1{
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
     /* Form Labels */
     .contact-form label {
@@ -2412,16 +2410,18 @@ a {
         display: block;
     }
     .visit-map h2{ 
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
     .hero-visitanos h1{
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
     
     .visit-contact p{
         font-size: 1.5rem;
     }
-
+    .visit-contact h2{
+        font-size: 2rem;
+    }
 }
 
 /*////////////////////////////////////////////////////////////////////////*/
@@ -3157,7 +3157,7 @@ a {
     }
 
     .about-section h1{
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .about-text {
@@ -3165,7 +3165,7 @@ a {
         padding: 0 0;
     }
     .about-text h2{
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .about-image img {
@@ -3307,7 +3307,7 @@ a {
         min-height: auto;
     }
     .blog-cta h2{
-        font-size: 2.5rem;
+        font-size: 2rem;
         padding: 0 0 1rem 0;
         margin: 0;
     }
@@ -3323,7 +3323,7 @@ a {
     }
     .allies h2{
         margin: 1rem 0;
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
     .allies-grid {
         margin: 1rem 0;
