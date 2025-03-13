@@ -4,7 +4,7 @@ const jsonUrl = 'assets/data/intervenciones.json';
 // Función para cargar las intervenciones desde el JSON
 async function loadInterventions(tagFilter = '') {
     try {
-        const response = await fetch(jsonUrl);
+        const response = await fetch('/.netlify/functions/getInterventions');
         const interventions = await response.json();
 
         // Filtrar intervenciones si hay un tag específico
@@ -31,7 +31,7 @@ function renderInterventions(interventions) {
         interventionElement.innerHTML = `
             <div class="intervention-card">
                 <h3>${intervention.title}</h3>
-                <p><strong>Fecha:</strong> ${new Date(intervention.date).toLocaleDateString('es-ES')}</p>
+                <p><strong>Fecha:</strong> ${intervention.date}</p>
                 <p><strong>Ubicación:</strong> ${intervention.location}</p>
                 <p>${intervention.description}</p>
             </div>
