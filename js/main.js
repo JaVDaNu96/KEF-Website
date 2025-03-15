@@ -1,8 +1,8 @@
-
+const interventionsUrl = '../.netlify/functions/getInterventions';
 // Función para cargar las intervenciones desde el JSON
 async function loadInterventions(tagFilter = '') {
     try {
-        const response = await fetch('/.netlify/functions/getInterventions');
+        const response = await fetch(interventionsUrl);
         const interventions = await response.json();
 
         // Filtrar intervenciones si hay un tag específico

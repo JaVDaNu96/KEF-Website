@@ -267,6 +267,9 @@ a {
         width: auto;
         padding: 0;
     }
+    .logo {
+        max-width: 2.5rem; /* Adjust as needed */
+    }
 }
 @media (max-width: 767px) {
     .site-header {
@@ -274,10 +277,10 @@ a {
         top: 0;
         left: 0;
         width: 100%;
-        max-height: 3.5rem;
+        max-height: 4.5rem;
         z-index: 1000; /* Ensures it stays on top of other content */
         background-color: #622d86; /* Or your desired background */
-        padding: 0.7rem 2rem;
+        padding: 0.7rem 2rem 1rem 2rem;
         border-bottom: 1px solid #000000;
     }
 
@@ -303,7 +306,7 @@ a {
         flex-direction: column;
         gap: 5px;
         cursor: pointer;
-        margin: 0 0 1rem 0;
+        margin: 0;
     }
 
     .hamburger-menu span {
@@ -664,7 +667,7 @@ a {
     flex-direction: row;
     justify-content: left;
     align-items: left;
-    padding: 1rem 61.5% 1rem 0;
+    padding: 1rem 62% 1rem 0;
     min-height: 5rem;
     min-width: auto;
 }
@@ -677,6 +680,12 @@ a {
     min-height: 5rem;
     min-width: auto;
 }
+@media (min-width: 2400px) { 
+    .main-hero-social-container {
+        padding: 1rem 78.2% 1rem 0;
+    }
+}
+
 @media (max-width: 1028px) { 
     .main-hero.container {
         padding: 7rem 3rem 0rem 3rem;
@@ -718,6 +727,9 @@ a {
     .main-hero-image img{
         margin: 0 2rem 0 0;
         padding: 0 2rem 0 0;
+    }
+    .main-hero-social-container {
+        padding: 1rem 70% 1rem 0;
     }
 
     .main-hero-social-container .footer-social {
@@ -788,7 +800,7 @@ a {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 0 30% 0 0;
+        padding: 0 35% 0 0;
         margin: 0 4rem 0 0;
     }
 
@@ -852,7 +864,7 @@ a {
         flex-direction: column;
         justify-content: left;
         align-items: left;
-        padding: 0 20% 0 0;
+        padding: 0 26% 0 0;
         max-height: 4rem;
         margin: 1rem 0 1rem 0;
     }
@@ -883,7 +895,19 @@ a {
         padding: 0 0.5rem 0 0;
     }
 }
-@media (max-width: 360px) { /* Specific to XS */
+@media (max-width: 380px) { /* Specific to XS */
+    .main-hero-social-container {
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+        justify-content: left;
+        align-items: left;
+        padding: 1rem 12% 1rem 0;
+        max-height: 4rem;
+        margin: 1rem 0 1rem 0;
+    }
+}
+@media (max-width: 320px) { /* Specific to XS */
     .main-hero-social-container {
         display: flex;
         gap: 1rem;
@@ -1911,7 +1935,8 @@ a {
 }
 
 .hero-sumate h1{
-    font-size: 5rem; 
+    padding: 2rem 0;
+    font-size: 3rem; 
 }
 
 .hero-sumate p{
@@ -1926,10 +1951,11 @@ a {
     margin-bottom: 2rem;
     text-align: left;
     border-radius: 10px;
+    width: auto;
 }
 
 .line-of-work h2 {
-    font-size: 5rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
 }
 
@@ -2089,6 +2115,9 @@ a {
         font-size: 1.5rem;
         margin-bottom: 1rem;
     }
+    .line-of-work a{
+        font-size: 1.5rem;
+    }
     .join-cta {
         text-align: left;
         padding: 2rem 2rem;
@@ -2104,6 +2133,9 @@ a {
         padding: 0;
         border-radius: 10px;
         margin-top: 0;
+    }
+    .join-cta a{
+        font-size: 1.5rem;
     }
 }
 
@@ -2192,7 +2224,7 @@ a {
 }
 
 .contact-form h1 {
-    font-size: 5rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
     color: black;
     text-align: left;

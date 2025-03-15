@@ -3,7 +3,7 @@ const path = require('path');
 
 exports.handler = async () => {
     try {
-        const filePath = path.join(__dirname, '..', '..', 'data', 'intervenciones.json');
+        const filePath = path.join(__dirname, '../../data/intervenciones.json');
         if (!fs.existsSync(filePath)) {
             console.error("JSON file not found at:", filePath);
             return { statusCode: 500, body: JSON.stringify({ error: "JSON file not found" }) };
