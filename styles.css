@@ -187,6 +187,9 @@ a {
     overflow: hidden;
     transition: height 0.3s ease-in-out;
 }
+.nav-links li:hover {
+    color:rgb(168, 105, 209);
+}
 
 /* Hamburger Menu Styling */
 .hamburger-menu {
@@ -1014,7 +1017,7 @@ a {
         flex-direction: column; 
         justify-content: right; /* Align cards to the left */
         gap: 1rem; /* Reduce gap between cards */
-        padding: 3rem 0 4rem 17rem; /* Adjust padding for smaller screens */
+        padding: 3rem 0 4rem 25rem; /* Adjust padding for smaller screens */
     }
 
     .card {
@@ -1025,6 +1028,9 @@ a {
     }
     .card h2{
         font-size: 3rem;
+    }
+    .card h3{
+        font-size: 2rem;
     }
     .card p{
         font-size: 2rem;
@@ -1050,6 +1056,9 @@ a {
     .card {
         width: 15rem; /* Reduce card width for smaller screens */
         height: auto; /* Allow height to adjust automatically */
+    }
+    .card h3{
+        font-size: 2rem;
     }
 }
 
@@ -1122,14 +1131,14 @@ a {
 }
 
 .conocenos-text h2 {
-    font-size: 5rem;
+    font-size: 3rem;
     font-weight: 700;
     margin-bottom: 1rem;
     color:rgb(167, 187, 64);
 }
 
 .conocenos-text p {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 200;
     line-height: 1.5rem;
     margin-bottom: 1rem;
@@ -1141,7 +1150,7 @@ a {
     padding: 1rem 1.5rem;
     background-color: rgb(167, 187, 64);
     color: rgb(198, 214, 120);
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-decoration: none;
     border-radius: 5px;
     font-weight: 700;
@@ -1293,14 +1302,14 @@ a {
 }
 
 .contactanos-text h2 {
-    font-size: 5rem;
+    font-size: 3rem;
     font-weight: 700;
     margin-bottom: 1rem;
     color: rgb(255, 128, 128);
 }
 
 .contactanos-text p {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 200;
     line-height: 1.2;
     padding: 0 15rem 0 0;
@@ -1309,7 +1318,7 @@ a {
 }
 
 .contactanos-text .cta-button {
-    font-size: 2.5rem;
+    font-size: 2rem;
     padding: 0.7rem 1.5rem;
     background-color: rgb(255, 128, 128);
     color: rgb(255, 191, 191);
@@ -1930,7 +1939,7 @@ a {
     min-height: auto;
     flex-direction: column;
     align-items: left;
-    padding: 5rem 4rem;
+    padding: 5rem 6rem 0 6rem;
     margin-top: 2rem;
 }
 
@@ -1947,7 +1956,7 @@ a {
 /* Line of Work Section */
 .line-of-work {
     min-height: auto;
-    padding: 2rem 4rem;
+    padding: 2rem 6rem;
     background-color: #fff;
     margin-bottom: 2rem;
     text-align: left;
@@ -1959,10 +1968,14 @@ a {
     font-size: 3rem;
     margin-bottom: 1rem;
 }
+.line-of-work .about-section{
+    margin: 0;
+    padding: 0;
+}
 
 .line-of-work p {
     font-size: 2.5rem;
-    margin-bottom: 1rem;
+    margin: 2rem 0;
 }
 
 .cta-button {
@@ -1982,7 +1995,7 @@ a {
 /* Join CTA Section */
 .join-cta {
     text-align: left;
-    padding: 2rem 4rem;
+    padding: 2rem 6rem;
     border-radius: 10px;
     margin-top: 2rem;
 }
@@ -2143,60 +2156,94 @@ a {
 /*////////////////////////////////////////////////////////////////////////*/
 
 /*//////////////////////////// VISITANOS //////////////////////////////*/
+
 .hero-visitanos {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
+    margin: 8rem auto 0 auto; /* Centers the form and adds vertical spacing */
+    padding: 0;
 }
-
-.hero-visitanos h1 {
-    font-size: 1.5rem;
-    padding: 0.5rem;
+.hero-visitanos h1{
+    margin: 1rem 2rem;
+    padding: 0;
+    font-size: 3rem;
 }
-
-.hero-visitanos p {
-    font-size: 1.5rem;
-    padding: 0.5rem;
+.hero-visitanos p{
+    margin: 0 2rem;
+    padding: 0;
+    font-size: 2rem;
 }
-
-/* Map Section */
 .visit-map {
-    text-align: left;
-    left: 1rem;
+    margin: 0;
+    padding: 0;
 }
-
-.visit-map h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+.visit-map h2{
+    margin: 1rem 2rem;
+    padding: 0;
+    font-size: 3rem;
 }
-
 .visit-map p{
-    font-size: 1.5rem;
-}
-.visit-map iframe {
-    margin: 1rem auto;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    max-width: 80vw;
-}
-
-/* Contact Details Section */
-.visit-contact {
-    margin: 0 1rem;
-    text-align: left;
-    border-radius: 10px;
-}
-
-.visit-contact h2{
+    margin: 0 2rem;
+    padding: 0;
     font-size: 2rem;
-    margin-bottom: 1rem;
+}
+.visit-map iframe{
+    margin: 1rem 2rem;
+    padding: 0;
+    font-size: 2rem;
+}
+@media (max-width: 1028px) {
+    .hero-visitanos {
+        margin: 4rem auto 0 auto; /* Centers the form and adds vertical spacing */
+        padding: 0;
+    }
+    .hero-visitanos h1{
+        margin: 1rem 2rem;
+        padding: 0;
+        font-size: 3rem;
+    }
+    .hero-visitanos p{
+        margin: 0 2rem;
+        padding: 0;
+        font-size: 2rem;
+    }
+    .visit-map {
+        margin: 0;
+        padding: 0;
+    }
+    .visit-map h2{
+        margin: 1rem 2rem;
+        padding: 0;
+        font-size: 3rem;
+    }
+    .visit-map p{
+        margin: 0 2rem;
+        padding: 0;
+        font-size: 2rem;
+    }
+    .visit-map iframe{
+        margin: 1rem 2rem;
+        padding: 0;
+        font-size: 2rem;
+    }
 }
 
-.visit-contact p{
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+@media (max-width: 480px) {
+    .hero-visitanos {
+        margin: 4rem auto 0 auto; /* Centers the form and adds vertical spacing */
+        padding: 0;
+    }
+    .visit-map h2{ 
+        font-size: 2rem;
+    }
+    .hero-visitanos h1{
+        font-size: 2rem;
+    }
+    .visit-contact p{
+        font-size: 1.5rem;
+    }
+    .visit-contact h2{
+        font-size: 2rem;
+    }
 }
-
 /*////////////////////////////////////////////////////////////////////////*/
 
 /*//////////////////////////// CONTACT US //////////////////////////////*/
@@ -2212,7 +2259,7 @@ a {
 /* Contact Form Section */
 .contact-form-container {
     padding: 4rem;
-    margin: 4rem 0 0 0;
+    margin: 0;
     min-width: 90vw;
 }
 .contact-form {
@@ -2232,7 +2279,7 @@ a {
 }
 
 .contact-form p {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 1.5rem;
     color: black;
     text-align: left;
@@ -2240,7 +2287,7 @@ a {
 
 /* Form Labels */
 .contact-form label {
-    font-size: 2.5rem;
+    font-size: 2rem;
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 600;
@@ -2298,53 +2345,6 @@ a {
     margin: 1rem auto;
 }
 
-.hero-visitanos {
-    margin: 4rem auto 0 auto; /* Centers the form and adds vertical spacing */
-    padding: 0;
-}
-.hero-visitanos h1{
-    margin: 1rem 2rem;
-    padding: 0;
-    font-size: 3rem;
-}
-.hero-visitanos p{
-    margin: 0 2rem;
-    padding: 0;
-    font-size: 2rem;
-}
-.visit-map {
-    margin: 0;
-    padding: 0;
-}
-.visit-map h2{
-    margin: 1rem 2rem;
-    padding: 0;
-    font-size: 3rem;
-}
-.visit-map p{
-    margin: 0 2rem;
-    padding: 0;
-    font-size: 2rem;
-}
-.visit-map iframe{
-    margin: 1rem 2rem;
-    padding: 0;
-    font-size: 2rem;
-}
-.visit-contact {
-    margin: 2rem 0;
-    padding: 0;
-}
-.visit-contact h2{
-    margin: 1rem 2rem;
-    padding: 0;
-    font-size: 3rem;
-}
-.visit-contact p{
-    margin: 0 2rem;
-    padding: 0;
-    font-size: 2rem;
-}
 
 @media (max-width: 1028px) {
     .contact-form-container {
@@ -2487,13 +2487,13 @@ a {
 /*////////////////////// ACTIVISMO CAROUSEL /////////////////////////////////////
 /* General Layout */
 .topic-section {
-    margin: 2rem 2rem;
+    margin: 2rem 3rem;
     padding: 2rem 0;
     border-bottom: 4px solid rgb(98, 45, 134);
 }
 
 .topic-section h2{
-    margin: 1rem 0;
+    margin: 1rem 3rem;
     font-size: 2rem;
     color: black;
 }
@@ -2502,7 +2502,12 @@ a {
 }
 
 .event-section h3{
-    margin: 1rem 0;
+    margin: 1rem 3rem;
+    font-size: 2rem;
+    color: black;
+}
+.event-section p{
+    margin: 1rem 3rem;
     font-size: 2rem;
     color: black;
 }
@@ -2725,6 +2730,82 @@ a {
     color: rgb(184, 100, 110);
 }
 
+/* Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+/* Flip Card */
+.flip-card {
+    width: 20rem;
+    height: 20rem;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Front & Back Faces */
+.flip-card-front,
+.flip-card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Front Side */
+.flip-card-front {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Back Side */
+.flip-card-back {
+    transform: rotateY(180deg);
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Text Styles */
+.flip-card h3 {
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+}
+
+.flip-card p {
+    font-size: 1.5rem;
+}
+
+/* CTA Button */
+.flip-card .cta-button {
+    font-size: 2rem;
+    padding: 10px 15px;
+    margin-top: 10px;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
 
 @media (max-width: 1028px) {
     .hero-formacion {
@@ -2848,14 +2929,53 @@ a {
     font-size: 2rem;
     margin: 0;
     padding: 1rem 0 0 0;
-    color:rgb(167, 187, 64);
+    color: rgb(167, 187, 64);
 }
 .hero-consumo a{
     padding: 1rem 0.5rem;
     font-size: 2rem;
 }
+.colaboracion-section .logo-container {
+    margin: 2rem 6rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.colaboracion-section h1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    margin: 2rem;
+}
+
+.colaboracion-section .logo {
+    min-width: 200px;  /* Adjust size */
+    height: 200px; /* Ensure uniform circle */
+    background-color: white; /* White circle */
+    border-radius: 50%; /* Makes it a circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Ensures logos don’t go outside */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    transition: transform 0.3s ease;
+}
+.colaboracion-section .logo:hover {
+    transform: scale(1.1);
+}
+
+.colaboracion-section .logo img {
+    max-width: 70%; /* Ensures logos fit */
+    max-height: 70%;
+    object-fit: contain; /* Keeps aspect ratio */
+    filter: grayscale(0); /* Optional: Keeps original colors */
+}
 .cta-button-consumo {
-    padding: 1rem 1rem 1rem 0.5rem;
+    font-size: 2rem;
+    margin: 2rem 0;
+    padding: 2rem 1rem 1rem 0.5rem;
     background-color: rgb(167, 187, 64);
     color: rgb(235, 252, 152);
     border-radius: 5px;
@@ -3174,28 +3294,40 @@ a {
 
 /* Conócenos Section Styling */
 .about-us {
-    margin: 4rem 0.5rem 0 0.5rem;
+    margin: 6rem 2rem 0 2rem;
 }
 
 .about-section {
+    margin: 2rem;
     display: flex;
     align-items: left;
     justify-content: left;
     background-color: #ffffff; /* Optional background color */
 }
 
+.about-section .about-us-image{
+    display: flex;
+    flex-direction: column;
+    min-width: auto;
+    max-width: 40rem;    
+    margin:0 17rem 0 4rem;
+}
+.about-section .about-us-image img{
+    border-radius: 10%;
+}
+
 .about-section h1 {
     font-size: 3rem;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin:0 4rem 0 4rem;
     color: #000000;
 }
 
 .about-section p{
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 400;
     line-height: 1.2;
-    margin-bottom: 1rem;
+    margin:0 17rem 0 4rem;
     color: #000000;
 }
 
@@ -3205,19 +3337,20 @@ a {
     flex: 1;
     text-align: left;
     padding: 0 1rem;
+    margin: 0 4rem;
 }
 .about-text h2 {
     font-size: 3rem;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin: 2rem 0;
     color: #000000;
 }
 
-.about-text p {
-    font-size: 1.5rem;
+.about-text p{
+    font-size: 2rem;
     font-weight: 400;
     line-height: 1.2;
-    margin-bottom: 1rem;
+    margin:0 17rem 0 0;
     color: #000000;
 }
 
@@ -3235,17 +3368,18 @@ a {
     background-color: #bd64fc;
 }
 
-/* Right Side: Image Styling */
-.about-image {
-    flex: 1;
-    text-align: left;
+.about-text .card-container {
+    margin: 2rem 4rem 6rem 0;
+    padding: 0 2rem 0 37rem;
 }
-
-.about-image img {
-    width: 100%;
-    max-width: 400px; /* Adjust as needed */
+.about-text .card h3{
+    font-size: 2rem;
 }
+.about-text .card p{
+    font-size: 2rem;
+    margin: 1rem 1rem 0 0;
 
+}
 /* Responsive Design */
 @media (max-width: 767px) {
     .about-section {
@@ -3256,10 +3390,6 @@ a {
 
     .about-text {
         margin: 1rem 1rem;
-    }
-
-    .about-image img {
-        max-width: 300px; /* Adjust for smaller screens */
     }
 
     .about-text .cta-button {
@@ -3292,11 +3422,6 @@ a {
     .about-text h2{
         font-size: 2rem;
     }
-
-    .about-image img {
-        max-width: 300px; /* Adjust for smaller screens */
-    }
-
     .about-text .cta-button {
         padding: 0.5rem 1rem;
         font-size: 1rem;
@@ -3321,7 +3446,7 @@ a {
 
 .allies h2 {
     font-size: 2rem;
-    margin: 0 0 1rem 2rem;
+    margin: 0 0 3rem 2rem;
     padding: 0 1rem 0 0;
 }
 
@@ -3371,6 +3496,10 @@ a {
     font-size: 2rem;
     margin-bottom: 1rem;
 }
+.blog-cta a {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
 
 .blog-cta .cta-button {
     background-color: #D19FE8;
@@ -3390,13 +3519,13 @@ a {
         min-height: auto;
     }
     .blog-cta h2{
-        font-size: 3rem;
+        font-size: 2rem;
         padding: 0 0 1rem 0;
         margin: 0;
     }
     .blog-cta p{
         padding: 1rem 0;
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     .blog-cta a{
         font-size: 2rem;
@@ -3406,14 +3535,13 @@ a {
     }
     .allies h2{
         margin: 1rem 0;
-        font-size: 3rem;
+        font-size: 2rem;
     }
     .allies-grid {
         margin: 1rem 0;
-        font-size: 3rem;
     }
     .allies-grid h3{
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     .allies-grid p{
         font-size: 1.5rem;
@@ -3452,12 +3580,8 @@ a {
     }
     .allies-grid {
         margin: 1rem 0;
-        font-size: 3rem;
     }
     .allies-grid h3{
-        font-size: 2rem;
-    }
-    .allies-grid p{
         font-size: 1.5rem;
     }
     
@@ -3583,6 +3707,12 @@ a {
     font-size: 2.5rem;
 }
 
+.cards-full img{
+    border-radius: 15%;
+    max-width: 95vw;
+    padding: 2rem 1rem 2rem 0rem;
+}
+
 @media (max-width: 1028px){
     .cards-full {
         min-height: 50vh;
@@ -3593,6 +3723,11 @@ a {
     }
     .cards-full .text-cards p{
         font-size: 2rem;
+    }
+    .cards-full img{
+        border-radius: 15%;
+        max-width: 95vw;
+        padding: 2rem 1rem 2rem 0rem;
     }
 }
 @media (max-width: 480px) {
@@ -3607,7 +3742,7 @@ a {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 2.5rem 0 4rem 0;
+        padding: 2.5rem 0 2rem 0;
     }
     .calendar-section {
         padding: 4rem 2rem
@@ -3631,6 +3766,11 @@ a {
     }
     .cards-full .text-cards h2{
         font-size: 2.5rem;
+    }
+    .cards-full img{
+        border-radius: 15%;
+        max-width: 95vw;
+        padding: 2rem 1rem 2rem 1rem;
     }
 }
 

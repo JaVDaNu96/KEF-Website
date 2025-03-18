@@ -128,6 +128,39 @@ function expandImage(src) {
         modal.style.display = "none";
     };
 }
-
 // Load carousels on page load
 document.addEventListener('DOMContentLoaded', loadCarousels);
+
+// const coursesUrl = '../data/cursos.json';
+
+// async function loadCourses() {
+//     try {
+//         const response = await fetch(coursesUrl);
+//         const courses = await response.json();
+//         const coursecontainer = document.getElementById("courses-container");
+        
+//         courses.forEach(course => {
+//             const card = document.createElement("div");
+//             card.className = `flip-card`;
+//             card.innerHTML = `
+//             <div class="flip-card-inner">
+//             <!-- Front Side -->
+//             <div class="flip-card-front ${course.category}">
+//             <h3>${course.name}</h3>
+//             <p>${course.date}</p>
+//             </div>
+            
+//             <!-- Back Side -->
+//             <div class="flip-card-back ${course.category}">
+//             <p>${course.description}</p>
+//             ${course.available ? `<a href="#" class="cta-button">Inscribirse</a>` : ""}
+//             </div>
+//             </div>
+//             `;
+            
+//             coursecontainer.appendChild(card);
+//         });
+//     } catch (error) {
+//         console.error("Error loading courses:", error);
+//     }
+// }

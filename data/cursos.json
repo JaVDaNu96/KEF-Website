@@ -1,0 +1,53 @@
+[
+    { 
+        "name": "Club de Lectura Be Feminist", 
+        "date": "Encuentros desde agosto 2022", 
+        "description": "Exploramos estrategias de incidencia política y defensa de derechos.",
+        "category": "formacion",
+        "available": true,
+        "link": "https://shorturl.at/kyuZ9"
+
+    }, 
+    { 
+        "name": "Taller de suculentas", 
+        "date": "18 de mayo del 2024", 
+        "description": "Exploramos estrategias de incidencia política y defensa de derechos.",
+        "category": "activismo",
+        "available": false
+    }, 
+    { 
+        "name": "Círculo de siembra urbano entre mujeres", 
+        "date": "15 de septiembre del 2024", 
+        "description": "Exploramos estrategias de incidencia política y defensa de derechos.",
+        "category": "consumo",
+        "available": false
+    }, 
+    { 
+        "name": "Taller Siembra Vida - Aliada Fundación Integral Agua de Vida", 
+        "date": "23 de octubre del 2024", 
+        "description": "Exploramos estrategias de incidencia política y defensa de derechos.",
+        "category": "consumo",
+        "available": false
+    }, 
+    { 
+        "name": "Taller mi Cuerpo- Mi territorio", 
+        "date": "17 y 18 de noviembre del 2023", 
+        "description": "Exploramos estrategias de incidencia política y defensa de derechos.",
+        "category": "activismo",
+        "available": false
+    }, 
+    { 
+        "name": "Taller Voces Valientes - Aliada Fundación Paz y Bien", 
+        "date": "Agosto a Noviembre 2024", 
+        "description": "Exploramos estrategias de incidencia política y defensa de derechos.",
+        "category": "activismo",
+        "available": false
+    }, 
+    { 
+        "name": "Talleres con Emprendedoras con enfoque Ecofeminista – Aliadas Fundación Manos Bordadoras del Pacífico", 
+        "date": "18 y 19 de septiembre del 2024", 
+        "description": "Exploramos estrategias de incidencia política y defensa de derechos.",
+        "category": "formacion",
+        "available": false
+    }
+]
