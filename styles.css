@@ -1702,12 +1702,12 @@ a {
     min-height: auto;
 }
 .hero-donations h1{
-    font-size: 5rem;
+    font-size: 3rem;
     padding: 0;
     margin: 0;
 }
 .hero-donations p{
-    font-size: 2.5rem;
+    font-size: 2rem;
     padding: 0;
     margin: 0;
 }
@@ -1737,14 +1737,14 @@ a {
 }
 
 .donations-text h2 {
-    font-size: 5rem;
+    font-size: 3rem;
     font-weight: 700;
     color: black;
     margin-bottom: 1rem;
 }
 
 .donations-text p {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: black;
     line-height: 1.6;
     margin-bottom: 1.5rem;
@@ -1946,6 +1946,7 @@ a {
 }
 /* Line of Work Section */
 .line-of-work {
+    min-height: auto;
     padding: 2rem 4rem;
     background-color: #fff;
     margin-bottom: 2rem;
@@ -1987,7 +1988,7 @@ a {
 }
 
 .join-cta h2 {
-    font-size: 5rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
 }
 
@@ -2483,6 +2484,89 @@ a {
     padding: 1rem 0.5rem;
     font-size: 2rem;
 }
+/*////////////////////// ACTIVISMO CAROUSEL /////////////////////////////////////
+/* General Layout */
+.topic-section {
+    margin: 2rem 2rem;
+    padding: 2rem 0;
+    border-bottom: 4px solid rgb(98, 45, 134);
+}
+
+.topic-section h2{
+    font-size: 2rem;
+    color: black;
+}
+.event-section {
+    margin: 2rem 0;
+}
+
+.event-section h3{
+    font-size: 2rem;
+    color: black;
+}
+
+/* Carousel Styling */
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px 0;
+    scroll-behavior: smooth;
+}
+
+.carousel::-webkit-scrollbar {
+    height: 6px;
+}
+
+.carousel::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 3px;
+}
+
+/* Image Styling */
+.carousel-img {
+    width: 200px; /* Fixed width */
+    height: 150px; /* Fixed height */
+    object-fit: cover; /* Crop if needed */
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.carousel-img:hover {
+    transform: scale(1.05);
+}
+
+/* Modal for Expanded Image */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    text-align: center;
+}
+
+.modal-content {
+    max-width: 80%;
+    max-height: 80%;
+    margin: auto;
+    display: block;
+    margin-top: 10%;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
 .cta-button-activismo {
     margin: 1rem 0rem;
     padding: 1rem 2rem 1rem 1rem;
@@ -2743,23 +2827,30 @@ a {
 
 /*//////////////////////////// CONSUMO //////////////////////////////*/
 
+
 /* Hero Section for Consumo */
 .hero-consumo {
     min-height: 40vh;
     background-color: rgba(167, 187, 64, 0.6); /* Color de fondo similar a la imagen */
     padding: 3rem 1rem;
     display: flex;
-    flex-direction: column;
     align-items: left;
     justify-content: left;
+    margin: 4rem 0;
 }
-
 .hero-consumo h1{
+    color: rgb(167, 187, 64);
+    font-size: 3rem;
+}
+.hero-consumo p{
+    font-size: 2rem;
+    margin: 0;
+    padding: 1rem 0 0 0;
     color:rgb(167, 187, 64);
 }
-
-.hero-consumo .hero-text p{
-    padding: 0 0 0.5rem 0;
+.hero-consumo a{
+    padding: 1rem 0.5rem;
+    font-size: 2rem;
 }
 .cta-button-consumo {
     padding: 1rem 1rem 1rem 0.5rem;
