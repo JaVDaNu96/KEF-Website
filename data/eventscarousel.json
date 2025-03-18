@@ -4,7 +4,7 @@
     "events": [
     {
         "name": "Conversatorio No más Violencia contra las Mujeres - 25 de noviembre del 2023",
-        "description": "A community-led effort to clean and restore the local forest.",
+        "description": "Un espacio de reflexión y acción colectiva para erradicar la violencia de género. Compartimos testimonios, estrategias de resistencia y apoyo mutuo para construir un mundo más seguro y justo para todas. ¡Porque juntas somos más fuertes! 💜✊",
         "images": [
         "/assets/images/25N/25N1.jpg",
         "/assets/images/25N/25N2.jpg",
@@ -22,7 +22,7 @@
     },
     {
         "name": "8M – Mujeres y Diversidades a las Calles - 8 de marzo del 2024",
-        "description": "Advocating for climate justice in the city streets.",
+        "description": "Tomamos las calles con fuerza y sororidad para exigir justicia, igualdad y derechos para todas. Un día de lucha, memoria y resistencia donde elevamos nuestras voces por un mundo libre de violencias y opresiones. ¡Juntas, diversas y poderosas! 💜✊🔥",
         "images": [
         "/assets/images/march1.jpg",
         "/assets/images/march2.jpg"
@@ -30,7 +30,7 @@
     },
     {
         "name": "Participación en el día de Acción Global por un Aborto libre, seguro y gratuito -28 Septiembre del 2024",
-        "description": "Advocating for climate justice in the city streets.",
+        "description": "Alzamos la voz por el derecho a decidir, la autonomía corporal y la justicia reproductiva. Nos unimos en solidaridad para exigir acceso seguro y sin criminalización al aborto. ¡Porque decidir es un derecho, no un privilegio! 💚💜✊",
         "images": [
         "/assets/images/AcciónGlobal/AG1.jpg",
         "/assets/images/AcciónGlobal/AG2.jpg",
@@ -45,7 +45,7 @@
     },
     {
         "name": "Las cuchas tienen razón - 8 de Marzo del 2025",
-        "description": "Advocating for climate justice in the city streets.",
+        "description": "Este 8M, marchamos por la memoria, la justicia y los derechos de todas. Nos unimos a la lucha de las madres buscadoras, quienes, con su resistencia, nos recuerdan que la verdad no se borra. Como en las calles, como en los muros, seguimos alzando la voz contra la violencia y el olvido. ✊💜🔥",
         "images": [
         "/assets/images/8M-2025/8M251.jpg",
         "/assets/images/8M-2025/8M252.jpg",
@@ -72,8 +72,8 @@
     "topic": "Jornada de limpieza de ríos o parques -Activismo",
     "events": [
     {
-        "name": "XVIII Jornada de revitalización del Río Pance y sus ecosistemas - 25 de Agosto de 2024 ",
-        "description": "Highlighting the role of women in technology and innovation.",
+        "name": "XVIII Jornada de revitalización del Río Pance y sus ecosistemas - 25 de Agosto de 2024",
+        "description": "Unimos fuerzas para restaurar y proteger el Río Pance, un espacio vital para la comunidad y la biodiversidad. A través de limpieza, reforestación y educación ambiental, reafirmamos nuestro compromiso con la naturaleza y el ecofeminismo. ¡Defender el agua es defender la vida! 💧🌱✨",
         "images": [
         "/assets/images/RevitalizaciónRíoPance/RP1.jpg",
         "/assets/images/RevitalizaciónRíoPance/RP2.jpg",
@@ -93,7 +93,7 @@
     "events": [
     {
         "name": "Participación en el Diplomado Ambiental - Universidad Javeriana",
-        "description": "Highlighting the role of women in technology and innovation.",
+        "description": "Fortalecemos nuestra acción ecofeminista a través del conocimiento. En este espacio de formación, compartimos saberes sobre justicia ambiental, sostenibilidad y defensa del territorio, construyendo redes para una transformación ecológica y social. ¡Porque aprender también es resistir! 🌱📚✨",
         "images": [
         "/assets/images/tech1.jpg",
         "/assets/images/tech2.jpg"
@@ -101,7 +101,7 @@
     },
     {
         "name": "Hablemos sobre Cambio Climático y participación ciudadana – Programa Juntos por la transparencia USAID - 17 de Agosto del 2024",
-        "description": "Highlighting the role of women in technology and innovation.",
+        "description": "El cambio climático nos afecta a todas, pero la acción colectiva transforma realidades. En este diálogo, exploramos cómo la participación ciudadana fortalece políticas ambientales y estrategias comunitarias para un futuro más sostenible. ¡La transparencia y el activismo son clave para la justicia climática! 🌎✊🔥",
         "images": [
         "/assets/images/CambioClimático/CC1.jpg",
         "/assets/images/CambioClimático/CC2.jpg",
@@ -111,7 +111,7 @@
     },
     {
         "name": "Acción simbólica por la contaminación del aire – DANO - 13 de Septiembre del 2024",
-        "description": "Highlighting the role of women in technology and innovation.",
+        "description": "El aire que respiramos también es un territorio en disputa. A través de esta intervención artística y de denuncia, visibilizamos los impactos de la contaminación y exigimos políticas que protejan la salud y el ambiente. ¡Respirar es un derecho, no un privilegio! 🌫️✊💨",
         "images": [
         "/assets/images/AcciónPorElAire-DANO/AA1.jpg",
         "/assets/images/AcciónPorElAire-DANO/AA2.jpg",
@@ -128,9 +128,8 @@
     },
     {
         "name": "Acciones COP 16- Firma de Acuerdo de Inírida - 2 de Septiembre del 2024",
-        "description": "Highlighting the role of women in technology and innovation.",
+        "description": "Desde los territorios, impulsamos compromisos reales por la biodiversidad y la justicia climática. En la COP 16, reafirmamos la defensa de los ecosistemas y los derechos de las comunidades indígenas con la Firma del Acuerdo de Inírida. ¡Por un futuro donde la vida esté en el centro! 🌎✊🌱",
         "images": [
-        "/assets/images/DeclaracióndeInírida/DI1.jpeg",
         "/assets/images/DeclaracióndeInírida/DI2.jpg",
         "/assets/images/DeclaracióndeInírida/DI3.jpg",
         "/assets/images/DeclaracióndeInírida/DI4.jpg",
@@ -140,7 +139,7 @@
     },
     {
         "name": "Pre-borondo y Borondo por las aves y las Mariposas - 25 y 26 de Octubre del 2024",
-        "description": "Highlighting the role of women in technology and innovation.",
+        "description": "Celebramos la belleza y diversidad de nuestros ecosistemas con un recorrido de arte, ciencia y activismo. Entre senderos y murales, reflexionamos sobre la protección de aves y mariposas, esenciales para el equilibrio ambiental. ¡Que el vuelo de la vida nunca se apague! 🦋🐦🎨✨",
         "images": [
         "/assets/images/COP16/PB1.jpeg",
         "/assets/images/COP16/PB2.jpeg",

@@ -667,7 +667,7 @@ a {
     flex-direction: row;
     justify-content: left;
     align-items: left;
-    padding: 1rem 62% 1rem 0;
+    padding: 1rem 64% 1rem 0;
     min-height: 5rem;
     min-width: auto;
 }
@@ -2493,14 +2493,16 @@ a {
 }
 
 .topic-section h2{
+    margin: 1rem 0;
     font-size: 2rem;
     color: black;
 }
 .event-section {
-    margin: 2rem 0;
+    margin: 4rem 0;
 }
 
 .event-section h3{
+    margin: 1rem 0;
     font-size: 2rem;
     color: black;
 }
@@ -3347,14 +3349,14 @@ a {
 }
 
 .ally-card h3 {
-    font-size: 3rem;
-    color: #333;
+    font-size: 1.5rem;
+    color: black;
     margin-bottom: 0.5rem;
 }
 
 .ally-card p {
-    font-size: 1.5rem;
-    color: #666;
+    font-size: 1.2rem;
+    color: black;
 }
 
 /* Blog CTA Section */
