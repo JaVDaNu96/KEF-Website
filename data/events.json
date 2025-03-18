@@ -4,225 +4,234 @@
         "title": "Club de Lectura Be Feminist",
         "category":"Club de Lectura Be Feminist",
         "description": "Encuentros desde Agosto 2022.",
-        "date": "01-08-2022",
+        "date": "2022-08-01",
         "location": "Cali, Colombia",
         "tags": ["Formacion"]
     },
     {
         "id": 2,
-        "title": "Feria Cherry",
-        "category":"Participación en Ferias",
-        "description": "Intervención en Cali para el Día Internacional de la Mujer.",
-        "date": "26-11-2023",
-        "location": " Skankin House, San Antonio. Cali, Colombia",
-        "tags": ["Consumo"]
+        "title": "Taller mi Cuerpo- Mi territorio",
+        "category": "Talleres sobre el cuidado de la vida con enfoque feminista",
+        "description": "Taller sobre el autocuidado y reconocimiento del cuerpo.",
+        "date": "2023-11-17",
+        "location": "KEF",
+        "tags": ["Formacion"]
     },
     {
         "id": 3,
-        "title": "Mercadillo del Puerto. Edición San Valentín",
-        "category":"Participación en Ferias",
-        "description": "Intervención en Cali para el Día Internacional de la Mujer.",
-        "date": "07-02-2024",
-        "location": "Puerto 125. Cali, Colombia",
-        "tags": ["Consumo"]
-    },
-    {
-        "id": 4,
-        "title": "Juanchatienda Bio 5",
-        "category":"Moda circular",
-        "description": "Intervención en Cali para el Día Internacional de la Mujer.",
-        "date": "08-12-2023",
-        "location": " Juanchaco. Buenaventura, Colombia",
-        "tags": ["Consumo","Activismo"]
-    },
-    {
-        "id": 5,
-        "title": "Swap Party KEF",
-        "category": "Eventos de Consumo",
-        "description": "Intercambio de ropa y artículos.",
-        "date": "06-04-2024",
-        "location": "KEF",
-        "tags": ["Consumo"]
-    },
-    {
-        "id": 6,
-        "title": "Juanchatienda Bio 6",
-        "category": "Eventos de Consumo",
-        "description": "Evento en Juanchaco para promover el consumo bio.",
-        "date": "15-06-2024",
-        "location": "Juanchaco",
-        "tags": ["Consumo"]
-    },
-    {
-        "id": 7,
-        "title": "Pulguerito y Trueque KEF & Santeli",
-        "category": "Eventos de Consumo",
-        "description": "Mercado de trueque para promover el consumo consciente.",
-        "date": "07-09-2024",
-        "location": "KEF",
-        "tags": ["Consumo"]
-    },
-    {
-        "id": 8,
         "title": "Conversatorio No más Violencia contra las Mujeres",
         "category": "Movilizaciones o encuentros feministas",
         "description": "Conversatorio en contra de la violencia de género.",
-        "date": "25-11-2023",
+        "date": "2023-11-25",
         "location": "Dulcencanto",
         "tags": ["Activismo"]
     },
     {
-        "id": 9,
+        "id": 4,
+        "title": "Feria Cherry",
+        "category":"Participación en Ferias",
+        "description": "Intervención en Cali para el Día Internacional de la Mujer.",
+        "date": "2023-11-26",
+        "location": " Skankin House, San Antonio. Cali, Colombia",
+        "tags": ["Consumo"]
+    },
+    {
+        "id": 5,
+        "title": "Juanchatienda Bio 5",
+        "category":"Moda circular",
+        "description": "Intervención en Cali para el Día Internacional de la Mujer.",
+        "date": "2023-12-08",
+        "location": " Juanchaco. Buenaventura, Colombia",
+        "tags": ["Consumo","Activismo"]
+    },
+    {
+        "id": 6,
+        "title": "Mercadillo del Puerto. Edición San Valentín",
+        "category":"Participación en Ferias",
+        "description": "Intervención en Cali para el Día Internacional de la Mujer.",
+        "date": "2024-02-07",
+        "location": "Puerto 125. Cali, Colombia",
+        "tags": ["Consumo"]
+    },
+    {
+        "id": 7,
         "title": "8M – Mujeres y Diversidades a las Calles",
         "category": "Movilizaciones o encuentros feministas",
         "description": "Marcha feminista para el Día Internacional de la Mujer.",
-        "date": "08-03-2024",
+        "date": "2024-03-08",
         "location": "Cali, Colombia",
         "tags": ["Activismo"]
     },
     {
-        "id": 10,
-        "title": "Día de Acción Global por un Aborto libre, seguro y gratuito",
-        "category": "Movilizaciones o encuentros feministas",
-        "description": "Participación en apoyo a los derechos reproductivos.",
-        "date": "28-09-2024",
-        "location": "Cali, Colombia",
-        "tags": ["Activismo"]
+        "id": 8,
+        "title": "Swap Party KEF",
+        "category": "Eventos de Consumo",
+        "description": "Intercambio de ropa y artículos.",
+        "date": "2024-04-06",
+        "location": "KEF",
+        "tags": ["Consumo"]
     },
     {
-        "id": 11,
+        "id": 9,
         "title": "Gran Sembratón Mundial",
         "category": "Jornadas de Siembras Comunitarias",
         "description": "Siembra de árboles con más de 12,000 especies.",
-        "date": "05-05-2024",
+        "date": "2024-05-05",
         "location": "Lote Loperita, Cristo Rey",
         "tags": ["Formacion"]
     },
     {
-        "id": 12,
+        "id": 10,
         "title": "Taller de suculentas",
         "category": "Jornadas de Siembras Comunitarias",
         "description": "Taller de plantación y cuidado de suculentas.",
-        "date": "18-05-2024",
+        "date": "2024-05-18",
         "location": "Cali, Colombia",
         "tags": ["Formacion"]
     },
     {
-        "id": 13,
+        "id": 11,
+        "title": "Juanchatienda Bio 6",
+        "category": "Eventos de Consumo",
+        "description": "Evento en Juanchaco para promover el consumo bio.",
+        "date": "2024-06-15",
+        "location": "Juanchaco",
+        "tags": ["Consumo"]
+    },
+    {
+        "id": 12,
         "title": "Huerta comunitaria en el Hogar Juvenil Campesino",
         "category": "Jornadas de Siembras Comunitarias",
         "description": "Creación de una huerta en el corregimiento El Hormiguero.",
-        "date": "19-07-2024",
+        "date": "2024-07-19",
         "location": "Vereda Cascajal",
         "tags": ["Formacion"]
     },
     {
-        "id": 14,
-        "title": "Círculo de siembra urbano entre mujeres",
-        "category": "Jornadas de Siembras Comunitarias",
-        "description": "Círculo de siembra y apoyo mutuo entre mujeres.",
-        "date": "15-09-2024",
-        "location": "Casa de una aliada",
-        "tags": ["Formacion"]
-    },
-    {
-        "id": 15,
-        "title": "Taller Siembra Vida",
-        "category": "Jornadas de Siembras Comunitarias",
-        "description": "Taller sobre prácticas de siembra sostenible.",
-        "date": "23-10-2024",
-        "location": "Fundación Integral Agua de Vida",
-        "tags": ["Formacion"]
-    },
-    {
-        "id": 16,
-        "title": "XVIII Jornada de revitalización del Río Pance y sus ecosistemas",
-        "category": "Jornada de limpieza de ríos o parques",
-        "description": "Actividad de limpieza y conservación del río Pance.",
-        "date": "25-08-2024",
-        "location": "Río Pance, Cali",
-        "tags": ["Activismo"]
-    },
-    {
-        "id": 17,
-        "title": "Taller mi Cuerpo- Mi territorio",
-        "category": "Talleres sobre el cuidado de la vida con enfoque feminista",
-        "description": "Taller sobre el autocuidado y reconocimiento del cuerpo.",
-        "date": "17-11-2023",
-        "location": "KEF",
-        "tags": ["Formacion"]
-    },
-    {
-        "id": 18,
-        "title": "1er Taller Voces Valientes – Violencias basadas en género",
-        "category": "Talleres sobre el cuidado de la vida con enfoque feminista",
-        "description": "Taller sobre la violencia de género y sus efectos.",
-        "date": "20-08-2024",
-        "location": "Barrio Manuela Beltrán, Comuna 14",
-        "tags": ["Formacion"]
-    },
-    {
-        "id": 19,
-        "title": "2do Taller Voces Valientes – Sexualidad y consentimiento",
-        "category": "Talleres sobre el cuidado de la vida con enfoque feminista",
-        "description": "Taller sobre la sexualidad y el consentimiento.",
-        "date": "18-10-2024",
-        "location": "Barrio Manuela Beltrán, Comuna 14",
-        "tags": ["Formacion"]
-    },
-    {
-        "id": 20,
-        "title": "3er Taller Voces Valientes – Manejo de las emociones y defensa Personal",
-        "category": "Talleres sobre el cuidado de la vida con enfoque feminista",
-        "description": "Taller sobre manejo emocional y técnicas de defensa personal.",
-        "date": "07-11-2024",
-        "location": "Barrio Manuela Beltrán, Comuna 14",
-        "tags": ["Formacion"]
-    },
-    {
-        "id": 21,
-        "title": "Talleres con mujeres de Manos Bordadoras del Pacífico",
-        "category": "Talleres con Emprendedoras con enfoque Ecofeminista",
-        "description": "Taller con enfoque ecofeminista para emprendedoras.",
-        "date": "18-09-2024",
-        "location": "Cali, Colombia",
-        "tags": ["Formacion"]
-    },
-    {
-        "id": 22,
+        "id": 13,
         "title": "Hablemos sobre Cambio Climático y participación ciudadana",
         "category": "COP 16",
         "description": "Evento sobre cambio climático y participación ciudadana.",
-        "date": "17-08-2024",
+        "date": "2024-08-17",
         "location": "Universidad Santiago de Cali",
         "tags": ["Formacion", "Activismo"]
     },
     {
-        "id": 23,
-        "title": "Acción simbólica por la contaminación del aire – DANO",
-        "category": "COP 16",
-        "description": "Acción simbólica sobre la contaminación del aire.",
-        "date": "13-09-2024",
-        "location": "CAM",
-        "tags": ["Formacion", "Activismo"]
+        "id": 14,
+        "title": "1er Taller Voces Valientes – Violencias basadas en género",
+        "category": "Talleres sobre el cuidado de la vida con enfoque feminista",
+        "description": "Taller sobre la violencia de género y sus efectos.",
+        "date": "2024-08-20",
+        "location": "Barrio Manuela Beltrán, Comuna 14",
+        "tags": ["Formacion"]
     },
     {
-        "id": 24,
+        "id": 15,
+        "title": "XVIII Jornada de revitalización del Río Pance y sus ecosistemas",
+        "category": "Jornada de limpieza de ríos o parques",
+        "description": "Actividad de limpieza y conservación del río Pance.",
+        "date": "2024-08-25",
+        "location": "Río Pance, Cali",
+        "tags": ["Activismo"]
+    },
+    {
+        "id": 16,
         "title": "Acciones COP 16- Firma de Acuerdo de Inírida",
         "category": "COP 16",
         "description": "Firma del Acuerdo de Inírida en apoyo al COP 16.",
-        "date": "02-09-2024",
+        "date": "2024-09-02",
         "location": "Cámara de Comercio de Cali",
         "tags": ["Formacion", "Activismo"]
     },
     {
-        "id": 25,
+        "id": 17,
+        "title": "Pulguerito y Trueque KEF & Santeli",
+        "category": "Eventos de Consumo",
+        "description": "Mercado de trueque para promover el consumo consciente.",
+        "date": "2024-09-07",
+        "location": "KEF",
+        "tags": ["Consumo"]
+    },
+    {
+        "id": 18,
+        "title": "Acción simbólica por la contaminación del aire – DANO",
+        "category": "COP 16",
+        "description": "Acción simbólica sobre la contaminación del aire.",
+        "date": "2024-09-13",
+        "location": "CAM",
+        "tags": ["Formacion", "Activismo"]
+    },
+    {
+        "id": 19,
+        "title": "Círculo de siembra urbano entre mujeres",
+        "category": "Jornadas de Siembras Comunitarias",
+        "description": "Círculo de siembra y apoyo mutuo entre mujeres.",
+        "date": "2024-09-15",
+        "location": "Casa de una aliada",
+        "tags": ["Formacion"]
+    },
+    {
+        "id": 20,
+        "title": "Talleres con mujeres de Manos Bordadoras del Pacífico",
+        "category": "Talleres con Emprendedoras con enfoque Ecofeminista",
+        "description": "Taller con enfoque ecofeminista para emprendedoras.",
+        "date": "2024-09-18",
+        "location": "Cali, Colombia",
+        "tags": ["Formacion"]
+    },
+    {
+        "id": 21,
+        "title": "Día de Acción Global por un Aborto libre, seguro y gratuito",
+        "category": "Movilizaciones o encuentros feministas",
+        "description": "Participación en apoyo a los derechos reproductivos.",
+        "date": "2024-09-28",
+        "location": "Cali, Colombia",
+        "tags": ["Activismo"]
+    },
+    {
+        "id": 22,
+        "title": "2do Taller Voces Valientes – Sexualidad y consentimiento",
+        "category": "Talleres sobre el cuidado de la vida con enfoque feminista",
+        "description": "Taller sobre la sexualidad y el consentimiento.",
+        "date": "2024-10-18",
+        "location": "Barrio Manuela Beltrán, Comuna 14",
+        "tags": ["Formacion"]
+    },
+    {
+        "id": 23,
+        "title": "Taller Siembra Vida",
+        "category": "Jornadas de Siembras Comunitarias",
+        "description": "Taller sobre prácticas de siembra sostenible.",
+        "date": "2024-10-23",
+        "location": "Fundación Integral Agua de Vida",
+        "tags": ["Formacion"]
+    },
+    {
+        "id": 24,
         "title": "Pre-borondo y Borondo por las aves y las Mariposas",
         "category": "COP 16",
         "description": "Evento de concientización ambiental en Cali.",
-        "date": "25-10-2024",
+        "date": "2024-10-25",
         "location": "Cali, Colombia",
         "tags": ["Formacion", "Activismo"]
-    }    
+    },
+    {
+        "id": 25,
+        "title": "3er Taller Voces Valientes – Manejo de las emociones y defensa Personal",
+        "category": "Talleres sobre el cuidado de la vida con enfoque feminista",
+        "description": "Taller sobre manejo emocional y técnicas de defensa personal.",
+        "date": "2024-11-07",
+        "location": "Barrio Manuela Beltrán, Comuna 14",
+        "tags": ["Formacion"]
+    },
+    {
+        "id": 26,
+        "title": "Las cuchas tienen razón - 8M del 2025",
+        "category": "Movilizaciones o encuentros feministas",
+        "description": "Marcha feminista para el Día Internacional de la Mujer.",
+        "date": "2025-03-08",
+        "location": "Cali, Colombia",
+        "tags": ["Activismo"]
+    }   
 ]
 
