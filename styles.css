@@ -2827,23 +2827,15 @@ a {
     padding: 20px;
 }
 /* Back Side */
-.flip-card .consumo p{
+.flip-card p{
     font-size: 2rem; 
-    color: rgb(167, 187, 64);
-}
-.flip-card .activismo p{
-    font-size: 2rem; 
-    color: rgb(98, 45, 134);
-
-}
-.flip-card .formacion p{  
-    font-size: 2rem; 
-    color: rgb(255, 128, 128);
+    color: white;
 }
 /* Text Styles */
 .flip-card h3 {
     font-size: 1.7rem;
     margin-bottom: 10px;
+    color: white;
 }
 
 
