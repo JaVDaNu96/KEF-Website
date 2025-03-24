@@ -435,7 +435,7 @@ a {
         white-space: nowrap;
         padding: 0 1rem; /* Space between each word */
         font-size: 1rem;
-            font-weight: 700;
+        font-weight: 700;
         color: black;
     }
 }
@@ -623,20 +623,20 @@ a {
 
 .main-hero-text h1 {
     font-size: 3.5rem;
-    margin: 0 5rem;
+    margin: 1rem 6rem;
     color: #622d86;
 }
 
 .main-hero-text p {
     font-size: 2rem;
     line-height: 1.2;
-    padding: 0.5rem 15rem 0 5rem;
+    padding: 0.5rem 50rem 0 6rem;
     margin: 1rem 0 2rem 0;
 }
 
 .main-hero-button {
     font-size: 2rem;
-    margin: 2rem 5rem;
+    margin: 2rem 6rem;
     padding: 0.5rem 1.5rem;
     background-color: rgb(98, 45, 134);
     color: white;
@@ -654,14 +654,14 @@ a {
     max-width: 100vw;
     max-height: auto;
     background-color: #D9A9FB;
-    padding: 4rem 0;
-    margin: 2rem 0;
+    padding: 0 0 4rem 0;
+    margin: 0 0 2rem 0;
     align-content: center;
 }
 .main-hero-image img {
     max-width: 100vw;
     max-height: 150vh;
-    margin: 4rem 0 4rem 0;
+    margin: 4rem 0 4rem 6rem;
     border-radius: 10%;
     padding: 2rem 3rem;
 }
@@ -673,7 +673,7 @@ a {
     flex-direction: row;
     justify-content: left;
     align-items: left;
-    padding: 1rem 64% 1rem 0;
+    padding: 1rem 60.5% 1rem 0;
     min-height: 5rem;
     min-width: auto;
 }
@@ -693,8 +693,8 @@ a {
 }
 
 @media (max-width: 1028px) { 
-    .main-hero.container {
-        padding: 7rem 3rem 0rem 3rem;
+    .main-hero .container{
+        padding: 7rem 3rem 0rem 0;
     }
 
     .main-hero-text {
@@ -745,7 +745,7 @@ a {
         padding:0px;
     }
 
-    .main-hero.container {
+    .main-hero .container {
         flex-direction: column; /* Stack image and text vertically */
         padding: 3rem 0 0 0;
     }
@@ -968,7 +968,7 @@ a {
 }
 .cta-cards a {
     color: rgb(167, 187, 64);
-    font-weight: 400;
+    font-weight: 300;
     font-size: 3rem; 
 }
 .cta-cards a:hover {
@@ -1031,7 +1031,7 @@ a {
         font-size: 2rem;
     }
     .cta-cards a {
-        font-weight: 400; 
+        font-weight: 300; 
     }
 }
 /* Responsive Adjustments for XS and S */
@@ -1063,6 +1063,8 @@ a {
     .text-cards p{
         text-align: left;
         font-size: 1.3rem;
+        margin: 0;
+        padding: 0;
     }
     .card-container {
         gap: 0.5rem; /* Further reduce gap for XS devices */
@@ -1093,7 +1095,7 @@ a {
         font-size: 2rem;
     }
     .cta-cards a {
-        font-weight: 400; 
+        font-weight: 300; 
     }
 }
 
@@ -1124,7 +1126,7 @@ a {
 .conocenos-text p {
     font-size: 2rem;
     font-weight: 200;
-    line-height: 1.5rem;
+    line-height: 2rem;
     margin-bottom: 1rem;
     padding: 1rem 35rem 1rem 0;
     color: #000000;
@@ -1137,7 +1139,7 @@ a {
     font-size: 2rem;
     text-decoration: none;
     border-radius: 5px;
-    font-weight: 700;
+    font-weight: 300;
     transition: background-color 0.3s;
 }
 
@@ -1188,7 +1190,7 @@ a {
         font-size: 2rem;
         text-decoration: none;
         border-radius: 5px;
-        font-weight: 900;
+        font-weight: 500;
         transition: background-color 0.3s;
     }
 }
@@ -1295,7 +1297,7 @@ a {
     font-size: 2rem;
     font-weight: 200;
     line-height: 1.2;
-    padding: 0 15rem 0 0;
+    padding: 0 55rem 0 0;
     margin-bottom: 1.5rem;
     color: #000000;
 }
@@ -1307,7 +1309,7 @@ a {
     color: white;
     text-decoration: none;
     border-radius: 5px;
-    font-weight: 900;
+    font-weight: 500;
     transition: background-color 0.3s;
 }
 
@@ -3485,8 +3487,8 @@ a {
 
 .allies h2 {
     font-size: 2rem;
-    margin: 0 0 3rem 2rem;
-    padding: 0 1rem 0 0;
+    margin: 0 0 3rem 5rem;
+    padding: 0 20rem 0 0;
 }
 
 .allies-grid {
@@ -3739,7 +3741,7 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 2.5rem 0 4rem 0;
+    padding: 2rem 0 4rem 0;
 }
 
 .hero-full {
@@ -3769,6 +3771,7 @@ a {
 }
 .cards-full .text-cards p{
     font-size: 2rem;
+    margin: 0 30rem 2rem 0;
 }
 
 .cards-full img{
@@ -3837,6 +3840,8 @@ a {
     }
     .cards-full .text-cards p{
         font-size: 1.5rem;
+        margin: 0;
+        padding: 0;
     }
     .cards-full img{
         border-radius: 15%;
