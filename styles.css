@@ -612,25 +612,25 @@ a {
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    margin: 8rem 0 0 0;
 }
 
 /* Text Styling */
 .main-hero-text {
     min-width: 100vw;
     text-align: left; 
-    padding: 7rem 0 0 0;
 }
 
 .main-hero-text h1 {
     font-size: 3.5rem;
-    margin: 1rem 6rem;
+    margin: 0 6rem 1rem 6rem;
     color: #622d86;
 }
 
 .main-hero-text p {
     font-size: 2rem;
     line-height: 1.2;
-    padding: 0.5rem 50rem 0 6rem;
+    padding: 0.5rem 7rem 0 6rem;
     margin: 1rem 0 2rem 0;
 }
 
@@ -654,8 +654,8 @@ a {
     max-width: 100vw;
     max-height: auto;
     background-color: #D9A9FB;
-    padding: 0 0 4rem 0;
-    margin: 0 0 2rem 0;
+    padding: 0 0 1rem 0;
+    margin: 0;
     align-content: center;
 }
 .main-hero-image img {
@@ -673,7 +673,7 @@ a {
     flex-direction: row;
     justify-content: left;
     align-items: left;
-    padding: 1rem 60.5% 1rem 0;
+    padding: 1rem 62vw 1rem 0;
     min-height: 5rem;
     min-width: auto;
 }
@@ -815,10 +815,11 @@ a {
     }
     .main-hero-content {
         flex-direction: column;
+        margin: 6rem 0 1rem 0;
     }
     .main-hero-text {
         max-width: 100vw;
-        margin: 4rem 0 0 0;
+        margin: 0;
         padding: 0;
         text-align: justify;
     }
@@ -1399,7 +1400,7 @@ a {
         font-size: 2.5rem;
     }
     .contactanos-text p{
-        font-size: 2rem;
+        font-size: 1.5rem;
         padding: 0 2rem 0 0;
     }
 
@@ -1654,14 +1655,17 @@ a {
 
 .entrada-blog h1{
     padding: 10rem 0 0;
-    margin: 2rem 6rem 1rem 6rem;
+    margin: 2rem 6rem 3rem 6rem;
 }
 .entrada-blog p{
     font-size: 2rem;
-    margin: 1rem 6rem 1rem 6rem;
+    margin: 1rem 10rem 1rem 6rem;
 }
 .entrada-blog .referencias {
     background-color: #ebebeb;
+    font-size: 1.5rem;
+    margin:0;
+    padding:1rem 6rem;
 }
 
 @media (max-width: 767px) {
@@ -1740,7 +1744,7 @@ a {
 }
 .hero-donations p{
     font-size: 2rem;
-    padding: 0;
+    padding: 0 10rem 0 0;
     margin: 0;
 }
 .donations-section {
@@ -1978,37 +1982,50 @@ a {
 }
 /* Line of Work Section */
 .line-of-work {
+    display: flex;
+    flex-direction: row;
     min-height: auto;
     padding: 2rem 6rem;
-    background-color: #fff;
     margin-bottom: 2rem;
     text-align: left;
     border-radius: 10px;
     width: auto;
 }
-
+.line-of-work-card {
+    padding: 3rem 8rem 1rem 3rem;
+    margin: 0 1rem;
+    border-radius: 20px;
+    min-height: auto;
+}
+.line-of-work-card.activismo {
+    background-color: rgba(217, 169, 251, 0.4);
+}
+.line-of-work-card.formacion {
+    background-color: rgba(255, 128, 128, 0.4);
+}
+.line-of-work-card.colaboracion {
+    background-color: rgba(153, 204, 51, 0.4);
+}
 .line-of-work h2 {
     font-size: 3rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 .line-of-work .about-section{
     margin: 0;
     padding: 0;
 }
-
 .line-of-work p {
     font-size: 2rem;
     margin: 2rem 0;
 }
-
 .cta-button {
     font-size: 2.5rem;
     display: inline-block;
     padding: 0.7rem 1.5rem;
     color: white;
     text-decoration: none;
-    border-radius: 5px;
-    margin-top: 1rem;
+    border-radius: 10px;
+    margin: 1rem 0;
 }
 
 .cta-button:hover {
@@ -2031,6 +2048,7 @@ a {
 .join-cta p {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
+    padding: 0 8rem 0 0;
 }
 
 .join-cta  a{
@@ -2140,6 +2158,12 @@ a {
     .line-of-work {
         padding: 1rem 2rem;
         margin: 0;
+        display:flex;
+        flex-direction: column;
+    }
+    .line-of-work-card {
+        padding: 1rem;
+        margin: 1rem 0;
     }
 
     .line-of-work h2{
@@ -2442,6 +2466,16 @@ a {
         margin: 4rem auto 0 auto; /* Centers the form and adds vertical spacing */
         padding: 0;
     }
+    .visitanos-container {
+        margin: 4rem auto 0 auto;
+        max-width: 95vw;
+    } 
+    .visitanos-container iframe {
+        padding: 0 auto;
+        margin: 0 2rem;
+        width: 80vw;
+        height: auto;
+    }
     .contact-form-container {
         padding: 0;
         margin: 0;
@@ -2467,12 +2501,17 @@ a {
         display: block;
     }
     .visit-map h2{ 
-        font-size: 2rem;
+        font-size: 1.5rem;
+    }
+    .visit-map p{ 
+        font-size: 1.7rem;
     }
     .hero-visitanos h1{
         font-size: 2rem;
     }
-    
+    .hero-visitanos p{
+        font-size: 1.7rem;
+    }
     .visit-contact p{
         font-size: 1.5rem;
     }
@@ -2489,11 +2528,11 @@ a {
 .hero-activismo {
     min-height: 40vh;
     background-color: rgba(98, 45, 134, 0.6); /* Color de fondo similar a la imagen */
-    padding: 3rem 1rem;
+    padding: 4rem 10rem 0 6rem;
     display: flex;
     align-items: left;
     justify-content: left;
-    margin: 4rem 0;
+    margin: 4rem 0 0 0;
 }
 
 .hero-activismo h1{
@@ -2513,14 +2552,14 @@ a {
 /*////////////////////// ACTIVISMO CAROUSEL /////////////////////////////////////
 /* General Layout */
 .topic-section {
-    margin: 2rem 3rem;
+    margin: 2rem 8rem;
     padding: 2rem 0;
     border-bottom: 4px solid rgb(98, 45, 134);
 }
 
 .topic-section h2{
     margin: 1rem 3rem;
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: black;
 }
 .event-section {
@@ -2762,14 +2801,14 @@ a {
 
 .cta-button-formacion {
     padding: 1rem 1rem 1rem 0.7rem;
-    background-color: rgb(214, 128, 138);
+    background-color: rgb(255, 128, 128);
     color: white;
     border-radius: 5px;
     text-decoration: none;
 }
 
 .cta-button-formacion:hover {
-    background-color: rgba(214, 128, 138, 0.6);
+    background-color: rgb(255, 204, 204);
     color: white;
 }
 
@@ -2951,6 +2990,20 @@ a {
         text-decoration: none;
         min-width: 20vw;
     }
+    .grid-container {
+        width: auto;
+        margin: 0 0 2rem 0;
+        padding:0;
+    }
+    .flip-card {
+        width: 85vw;
+        min-height: auto;
+        margin: 1.5rem 0; 
+    }
+    .flip-card-inner {
+        width: 85vw;
+        min-height: 60vh; 
+    }
 }
 
 /*//////////////////////////// CONSUMO //////////////////////////////*/
@@ -3106,12 +3159,18 @@ a {
         margin: 0;
     }
     .hero-consumo .hero-content .hero-text {
-        padding: 5rem 0 0 2rem;
+        padding: 6rem 0 0 2rem;
         margin: 0;
+    }
+    .hero-consumo .hero-content .hero-text h1{
+        padding: 0;
+        margin: 0;
+        font-size: 2rem;
     }
     .hero-consumo .hero-content .hero-text p{
         padding: 1rem 3rem 1rem 0;
         margin: 0;
+        font-size: 1.5rem;
     }
     .hero-consumo .hero-content .hero-text a{
         padding: 0.6rem;
@@ -3123,6 +3182,13 @@ a {
         border-radius: 5px;
         text-decoration: none;
         min-width: 20vw;
+    }
+    .colaboracion-section h1{
+        font-size: 2rem;
+    }
+    .colaboracion-section .logo{
+        min-width: 8rem;
+        height: 8rem;
     }
 }
 
@@ -3183,28 +3249,6 @@ a {
     justify-content: center; /* Centers the entire wrapper */
 }
 
-/* Dot Styling */
-
-/* Dot Color for Activismo Section */
-.interventions-activismo .intervention-wrapper::before,
-.interventions-activismo .dot {
-    background-color: #d9a9fb; /* Red shade */
-    color:#d9a9fb; /* Ensures currentColor matches */
-}
-
-/* Dot Color for Formacion Section */
-.interventions-formacion .intervention-wrapper::before,
-.interventions-formacion .dot {
-    background-color: #ff6b6b; /* Green shade */
-    color: #ff6b6b;
-}
-
-/* Dot Color for Consumo Section */
-.interventions-consumo .intervention-wrapper::before,
-.interventions-consumo .dot {
-    background-color: #99cc33; /* Green shade */
-    color: #99cc33;
-}
 
 /* Intervention Card Styling */
 .intervention-card {
@@ -3354,11 +3398,11 @@ a {
     display: flex;
     flex-direction: column;
     min-width: auto;
-    max-width: 40rem;    
-    margin:0 17rem 0 4rem;
+    max-width: 45rem;    
+    margin: 0;
 }
 .about-section .about-us-image img{
-    border-radius: 10%;
+    border-radius: 5%;
 }
 
 .about-section h1 {
@@ -3382,10 +3426,10 @@ a {
     flex: 1;
     text-align: left;
     padding: 0 1rem;
-    margin: 0 4rem;
+    margin: 0 5rem;
 }
 .about-text h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 700;
     margin: 2rem 0;
     color: #000000;
@@ -3451,19 +3495,33 @@ a {
     .about-section {
         flex-direction: column;
         text-align: left;
-        margin: 1rem 1rem;
+        margin: 2rem 1rem;
     }
 
     .about-section h1{
         font-size: 2rem;
+        padding: 0 4rem 0 0;
+        margin:0;
+    }
+    .about-section p{
+        font-size: 1.7rem;
+        padding: 0 4rem 0 0;
+        margin:0;
     }
 
     .about-text {
-        margin: 1rem 1rem;
+        margin: 2rem 1rem;
         padding: 0 0;
     }
     .about-text h2{
         font-size: 2rem;
+        padding: 0 4rem 0 0;
+        margin:0;
+    }
+    .about-text p{
+        font-size: 1.7rem;
+        padding: 0 4rem 0 0;
+        margin:0;
     }
     .about-text .cta-button {
         padding: 0.5rem 1rem;
@@ -3472,6 +3530,10 @@ a {
         border-radius: 5px;
         font-weight: 500;
         transition: background-color 0.3s;
+    }
+    .about-text .card-container {
+        padding: 0;
+        margin:0;
     }
 }
 /*//////////////////////////////////////////////////////////////////////////////////////*/
@@ -3485,10 +3547,10 @@ a {
     background-color: #fff;
 }
 
-.allies h2 {
+.allies p {
     font-size: 2rem;
-    margin: 0 0 3rem 5rem;
-    padding: 0 20rem 0 0;
+    margin: 0 0 3rem 10rem;
+    padding: 2rem 20rem 0 0;
 }
 
 .allies-grid {
@@ -3617,6 +3679,12 @@ a {
     }
     .allies h2{
         margin: 1rem 0;
+        padding: 0;
+        font-size: 1.5rem;
+    }
+    .allies p{
+        margin: 1rem 0;
+        padding: 0;
         font-size: 1.5rem;
     }
     .allies-grid {
@@ -3775,10 +3843,11 @@ a {
 }
 
 .cards-full img{
-    border-radius: 15%;
-    max-width: 95vw;
+    border-radius: 20px;
+    max-width: 80vw;
     max-height: 150vh;
-    padding: 2rem 1rem 2rem 0rem;
+    padding: 0;
+    margin: 2rem 1rem 2rem 4rem;
 }
 
 @media (max-width: 1028px){
@@ -3844,9 +3913,10 @@ a {
         padding: 0;
     }
     .cards-full img{
-        border-radius: 15%;
+        border-radius: 20px;
         max-width: 95vw;
-        padding: 2rem 1rem 2rem 1rem;
+        padding: 0;
+        margin: 0 0.5rem;
     }
 }
 
@@ -3906,3 +3976,14 @@ font-size: 2rem;
     clip-path: circle(100%);
 }
 
+.tienda-kef-link {
+    color: rgb(167, 187, 64);
+}
+
+.tienda-kef {
+    background-color:  rgb(167, 187, 64);
+    color:white;
+}
+.juanchamigos {
+    color:#FF8080;
+}
