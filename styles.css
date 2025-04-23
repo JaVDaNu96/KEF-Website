@@ -235,7 +235,6 @@ a {
         top: 60px; /* adjust based on your header height */
         left: 0;
         width: 100%;
-        background-color: #fff; /* change as needed */
         flex-direction: column;
         display: none;
         margin: 0;
@@ -287,6 +286,7 @@ a {
         border-bottom: 1px solid #000000;
     }
 
+    
     .nav-links a {
         font-size: 1.5rem;
         padding: 0;
@@ -325,10 +325,12 @@ a {
     }
 
     .menu-toggle:checked + .hamburger-menu + .nav-links {
-        height: auto;
-        padding: 0 1rem;
+        padding:6rem 0 0 0;
         margin: 0;
-        background-color: #fff;
+        left: -2rem;
+        right: 0;
+        min-width: 100vw;
+        min-height: 100vh;
         color:#000000;
         border: 1.5px solid #000000;
     }
@@ -701,6 +703,13 @@ a {
         padding: 0 4rem 0 0;
         margin: 0;
     }
+    .main-hero-text.second-text p{
+        max-width: 70vw;
+        font-size: 2rem;
+        line-height: 1.1;
+        padding: 0;
+        margin: 2rem 4rem;
+    }
 
     .main-hero-text h1{
         font-size: 3rem;
@@ -717,10 +726,11 @@ a {
     }
     .main-hero-button {
         font-size: 2rem;
-        margin: 1rem;
+        margin: 1rem 4rem;
     }
 
     .main-hero-image{
+        right: 2rem;
         margin: 0;
         padding: 3rem 1rem 1rem 1.2rem;
         min-width: 95vw;
@@ -734,7 +744,7 @@ a {
     }
 
     .main-hero-social-container .footer-social {
-        margin: 1rem 1.2rem;
+        margin: 1rem 2rem 0 4.2rem;
         padding: 0;
     }
 }
@@ -822,6 +832,15 @@ a {
         margin: 0;
         padding: 0;
         text-align: justify;
+    }
+    
+    .main-hero-text.second-text p{
+        font-size: 1.5rem;
+        font-weight: 1; /* Smaller font for extra small screens */
+        line-height: 2rem;
+        padding: 0px;
+        margin: 1rem 0 0 2rem;
+        text-align: left;
     }
     .main-hero-text h1 {
         text-align: left;
@@ -929,9 +948,6 @@ a {
     margin: auto 0; /* Centers content vertically */
     overflow-x: hidden; /* Enables horizontal scrolling */
 }
-.card p {
-    text-overflow: hidden;
-} 
 
 /* Scrollbar Styling */
 .card-container::-webkit-scrollbar {
@@ -960,6 +976,7 @@ a {
 }
 .card p{
     font-size: 2rem;
+    text-overflow: hidden;
 }
 .cta-cards {
     padding: 0 4rem;
@@ -1166,7 +1183,7 @@ a {
         width: 100vw;
         flex-direction: column;
         text-align: left;
-        margin: 2rem 2rem;
+        margin: 2rem 2rem 2rem 3rem;
     }
 
     .conocenos-text {
@@ -1337,7 +1354,7 @@ a {
         font-size: 3rem;
     }
     .contactanos-text p{
-        font-size: 2.5rem;
+        font-size: 2rem;
         line-height: 1;
         padding: 0 8rem 0 0;
     }
@@ -1346,7 +1363,7 @@ a {
         padding: 0.7rem 1.5rem;
         text-decoration: none;
         border-radius: 5px;
-        font-weight: 900;
+        font-weight: 500;
         font-size: 2.5rem;
         transition: background-color 0.3s;
     }
@@ -1479,13 +1496,13 @@ a {
     .footer-content {
         flex-direction: row;
         text-align: left;
-        margin: 0.5rem 0 0 3rem;
+        margin: 0.5rem 0 0 1rem;
     }
     .footer-content p{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
     .footer-content div{
-        margin: 0 2rem;
+        margin: 0 1rem;
     }
 
     .footer-contact,
@@ -3398,8 +3415,8 @@ a {
     display: flex;
     flex-direction: column;
     min-width: auto;
-    max-width: 45rem;    
-    margin: 0;
+    max-width: 60rem;  
+    margin: 0 0 0 4rem;
 }
 .about-section .about-us-image img{
     border-radius: 5%;
@@ -3470,6 +3487,73 @@ a {
 
 }
 /* Responsive Design */
+@media (max-width: 1028px){
+    .about-section {
+        flex-direction: column;
+        text-align: left;
+        margin: 2rem 1rem 0 2rem;
+    }
+
+    .about-section h1{
+        font-size: 2rem;
+        padding: 0 4rem 0 0;
+        margin:0;
+    }
+    .about-section p{
+        font-size: 1.7rem;
+        padding: 0 8rem 0 0;
+        margin:0;
+    }
+    
+    .about-section .about-us-image{
+        display: flex;
+        flex-direction: column;
+        min-width: auto;
+        max-width: 40rem;    
+        margin: 0 6rem 0 0;
+    }
+    .about-text {
+        margin: 1rem 1rem;
+    }
+    .about-text h2{
+        font-size: 1.7rem;
+    }
+    .about-text p{
+        font-size: 1.7rem;
+    }
+
+    .about-text .cta-button {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: 500;
+        transition: background-color 0.3s;
+    }
+    
+    .about-text .card-container {
+        min-width: 60vw;
+        padding: 0;
+        margin: 0 4rem 0 0;
+    }
+    .about-text .card-container .card{
+        min-width: 60vw;
+        padding: 2rem 6rem 2rem 0;
+        margin: 0;
+    }
+    .about-text .card-container .card h3 {
+        font-size: 1.5rem;
+        padding: 0;
+        margin:0;
+    }
+    .about-text .card-container .card p{
+        font-size: 1.5rem;
+        padding: 2rem 0;
+        margin:0;
+    }
+}
+
+/* Responsive Design */
 @media (max-width: 767px) {
     .about-section {
         flex-direction: column;
@@ -3489,9 +3573,13 @@ a {
         font-weight: 500;
         transition: background-color 0.3s;
     }
+
 }
 
 @media (max-width: 480px) {
+    .about-us {
+        margin: 6rem 2rem 0 0;
+    }
     .about-section {
         flex-direction: column;
         text-align: left;
@@ -3520,7 +3608,7 @@ a {
     }
     .about-text p{
         font-size: 1.7rem;
-        padding: 0 4rem 0 0;
+        padding: 2rem 4rem 2rem 0;
         margin:0;
     }
     .about-text .cta-button {
@@ -3533,6 +3621,15 @@ a {
     }
     .about-text .card-container {
         padding: 0;
+        margin: 0 4rem 0 0;
+    }
+    .about-text .card-container .card h3 {
+        font-size: 1.5rem;
+        padding: 0;
+        margin:0;
+    }.about-text .card-container .card p{
+        font-size: 1.5rem;
+        padding: 2rem 0;
         margin:0;
     }
 }
@@ -3860,6 +3957,30 @@ a {
     }
     .cards-full .text-cards p{
         font-size: 2rem;
+        margin: 2rem 15rem 2rem 0;
+    }
+    .cards-full img{
+        border-radius: 20px;
+        max-width: 90vw;
+        max-height: 150vh;
+        padding: 0;
+        margin: 2rem 1rem 2rem 1rem;
+    }
+    
+    .cards-full .card-container {
+        padding: 4rem 1rem 4rem 17rem;
+    }
+}
+@media (max-width: 767px){
+    .cards-full {
+        min-height: 50vh;
+        padding: 4rem 1rem 4rem 2rem;
+    }
+    .cards-full .text-cards h2{
+        font-size: 3rem;
+    }
+    .cards-full .text-cards p{
+        font-size: 2rem;
     }
     .cards-full img{
         border-radius: 15%;
@@ -3917,6 +4038,10 @@ a {
         max-width: 95vw;
         padding: 0;
         margin: 0 0.5rem;
+    }
+    
+    .cards-full .card-container {
+        padding: 1rem 4rem 2rem 1rem;
     }
 }
 
