@@ -404,7 +404,7 @@ a {
     padding: 0 1rem; /* Space between each word */
     font-size: 2.7rem;
     font-weight: 700;
-    color: black;
+    color: white;
 }
 
 /* Animation for scrolling text */
@@ -438,7 +438,6 @@ a {
         padding: 0 1rem; /* Space between each word */
         font-size: 1rem;
         font-weight: 700;
-        color: black;
     }
 }
 
@@ -923,10 +922,10 @@ a {
     .main-hero-social-container {
         display: flex;
         gap: 1rem;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: left;
         align-items: left;
-        padding: 0px;
+        padding: 0 13.4rem 0 0;
         max-height: 4rem;
         margin: 1rem 0 1rem 0;
     }
@@ -1108,12 +1107,14 @@ a {
     }
     .cta-cards {
         padding: 0 2rem;
+        margin: 0 0 2rem 0;
     }
     .cta-cards p{
         font-size: 2rem;
     }
     .cta-cards a {
-        font-weight: 300; 
+        font-weight: 300;
+        font-size: 2rem;
     }
 }
 
@@ -1654,7 +1655,7 @@ a {
 
 /* Blog Entries */
 .blog-entry {
-    margin-bottom: 2rem;
+    margin: 0 0 2rem 0;
     padding: 1.5rem;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
@@ -1667,7 +1668,7 @@ a {
 
 .blog-entry p.meta {
     font-size: 0.9rem;
-    color: #e3e2e2;
+    color: #767676;
 }
 
 .entrada-blog h1{
@@ -1682,27 +1683,64 @@ a {
     background-color: #ebebeb;
     font-size: 1.5rem;
     margin:0;
-    padding:1rem 6rem;
+    padding: 1rem 2rem 0 0;
+}
+.entrada-blog .referencias p{
+    font-size: 1.5rem;
+    margin:0;
+    padding: 0;
+}
+.entrada-blog .referencias li{
+    list-style: none;
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 1rem 3rem 0 0;  
+    max-width:70vw;
 }
 
 @media (max-width: 767px) {
 }
 @media (max-width: 480px) { 
     .blog {
-        padding: 4rem 2rem;
+        padding: 7rem 2rem 4rem 2rem;
         margin: 0px;
     }
     .blog h1{
         font-size: 3rem;
+        margin: 0 0 1.5rem 0; 
     }
     .blog p{
+        padding: 0 2rem 0 0;
         font-size: 1.5rem;
+        margin: 0 0 1.5rem 0; 
+    }
+    .blog-filter {
+        min-width: 60vw;
+        max-height: 3.5rem;
+        display: flex;
+        flex-direction: row;
+        padding:0;
+        margin:0;
+    }
+    .blog-filter select {
+        margin:0;
+        padding: 0 0.5rem;
+        max-height:1.5rem;
+        min-width: auto;
+        margin-top: 1.5rem;
+    }
+    .blog-filter input {
+        padding: 0;
+        margin:0;
+        max-height:1.5rem;
+        min-width: auto;
+        margin-top: 1.5rem;
     }
     .blog-filters label{
         font-size: 1.5rem;
     }
     .blog-entry {
-        margin-bottom: 2rem;
+        margin: 4rem 0 2rem 0;
         padding: 1.5rem;
         background-color: #f9f9f9;
         border: 1px solid #ddd;
@@ -1732,12 +1770,13 @@ a {
     }
     .entrada-blog p{
         font-size: 1.5rem;
-        padding: 0 0 1rem 0;
+        padding: 0 1rem 1rem 0;
         margin: 1rem 1rem 0 2rem;
+        text-align: justify;
     }
     .entrada-blog .referencias {
         font-size: 1.5rem;
-        padding: 2rem;
+        padding: 2rem 3rem 2rem 2rem;
         margin: 0;
     }
 }
@@ -1929,11 +1968,13 @@ a {
     }
 
     .hero-donations h1{
-        font-size: 3rem;
+        padding: 4rem 0 0 0;
+        font-size: 2rem;
     }
 
     .hero-donations p{
         font-size: 1.5rem;
+        padding: 0 4rem 0 0;
     }
 
     .donations-section {
@@ -1955,7 +1996,7 @@ a {
     .donations-text h2{
         padding: 1rem 0;
         margin:0;
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     .donations-text p{
@@ -1996,6 +2037,19 @@ a {
     text-align: left;
     font-size: 2rem;
     align-items: left;
+}
+.hero-sumate a{
+    font-style: normal;
+    font-size: 1.7rem;
+}
+.hero-sumate a.enlace-activismo{
+    color:#622d86;
+}
+.hero-sumate a.enlace-formacion{
+    color:#ff4747
+}
+.hero-sumate a.enlace-colaboracion{
+    color:#a7bb40;
 }
 /* Line of Work Section */
 .line-of-work {
@@ -2179,18 +2233,32 @@ a {
         flex-direction: column;
     }
     .line-of-work-card {
-        padding: 1rem;
-        margin: 1rem 0;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 1.5rem 1rem 2rem;
+        margin: 2rem 0 1rem 0;
+    }
+    
+    .line-of-work-card h2 {
+        align-items: left;
+        padding: 0.3rem 0;
+        margin: 0;
+    }
+    .line-of-work-card p {
+        align-items: left;
+        padding: 0.3rem 0;
+        margin: 0;
     }
 
     .line-of-work h2{
-        align-items: left;
+        align-items: center;
         font-size: 2rem;
         margin-bottom: 0;
     }
 
     .line-of-work p{
-        align-items: left;
+        align-items: center;
         font-size: 1.5rem;
         margin-bottom: 1rem;
     }
@@ -2198,7 +2266,7 @@ a {
         font-size: 1.5rem;
     }
     .join-cta {
-        text-align: left;
+        text-align: center;
         padding: 2rem 2rem;
         border-radius: 10px;
         margin-top: 0;
@@ -2208,7 +2276,7 @@ a {
     }
     .join-cta p{
         font-size: 1.5rem;
-        text-align: left;
+        text-align: center;
         padding: 0;
         border-radius: 10px;
         margin-top: 0;
@@ -2768,14 +2836,15 @@ a {
     }
     .topic-section h2{
         margin: 0 2rem;
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
     .event-section {
         margin: 1rem 0 0 0;
     }
-    .event-section h3{
+    .event-section h3{        
         margin: 1rem 2rem;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+        font-style: italic;
     }
     .event-section p{
         margin: 0 2rem 1rem 2rem;
@@ -3044,7 +3113,7 @@ a {
     font-size: 2rem;
     margin: 0;
     padding: 1rem 0 0 0;
-    color: rgb(167, 187, 64);
+    color: rgb(0, 0, 0);
 }
 .hero-consumo a{
     padding: 1rem 0.5rem;
@@ -3580,6 +3649,13 @@ a {
     .about-us {
         margin: 6rem 2rem 0 0;
     }
+    .about-section .about-us-image{
+        display: flex;
+        flex-direction: column;
+        min-width: 80vw;
+        max-width: 100vw;   
+        margin: 0 6rem 0 0;
+    }
     .about-section {
         flex-direction: column;
         text-align: left;
@@ -3760,13 +3836,13 @@ a {
         min-height: auto;
     }
     .blog-cta h2{
-        font-size: 2rem;
+        font-size: 1.5rem;
         padding: 0 0 1rem 0;
         margin: 0;
     }
     .blog-cta p{
         padding: 1rem 0;
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     .blog-cta a{
         font-size: 1.7rem;

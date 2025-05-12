@@ -9,14 +9,14 @@
 
     }, 
     { 
-        "name": "Taller de suculentas", 
+        "name": "Taller de Suculentas", 
         "date": "18 de mayo del 2024", 
         "description": "Exploramos estrategias de incidencia política y defensa de derechos.",
         "category": "activismo",
         "available": false
     }, 
     { 
-        "name": "Círculo de siembra urbano entre mujeres", 
+        "name": "Círculo de Siembra Urbana entre Mujeres", 
         "date": "15 de septiembre del 2024", 
         "description": "Exploramos estrategias de incidencia política y defensa de derechos.",
         "category": "consumo",
@@ -44,7 +44,7 @@
         "available": false
     }, 
     { 
-        "name": "Talleres con Emprendedoras con enfoque Ecofeminista – Aliadas Fundación Manos Bordadoras del Pacífico", 
+        "name": "Talleres con Emprendedoras con Enfoque Ecofeminista – Aliadas Fundación Manos Bordadoras del Pacífico", 
         "date": "18 y 19 de septiembre del 2024", 
         "description": "Exploramos estrategias de incidencia política y defensa de derechos.",
         "category": "formacion",

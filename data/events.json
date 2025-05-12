@@ -20,7 +20,7 @@
     {
         "id": 3,
         "title": "Conversatorio No más Violencia contra las Mujeres",
-        "category": "Movilizaciones o encuentros feministas",
+        "category": "Movilizaciones y encuentros feministas",
         "description": "Conversatorio en contra de la violencia de género.",
         "date": "2023-11-25",
         "location": "Dulcencanto",
@@ -56,7 +56,7 @@
     {
         "id": 7,
         "title": "8M – Mujeres y Diversidades a las Calles",
-        "category": "Movilizaciones o encuentros feministas",
+        "category": "Movilizaciones y encuentros feministas",
         "description": "Marcha feminista para el Día Internacional de la Mujer.",
         "date": "2024-03-08",
         "location": "Cali, Colombia",
@@ -182,7 +182,7 @@
     {
         "id": 21,
         "title": "Día de Acción Global por un Aborto libre, seguro y gratuito",
-        "category": "Movilizaciones o encuentros feministas",
+        "category": "Movilizaciones y encuentros feministas",
         "description": "Participación en apoyo a los derechos reproductivos.",
         "date": "2024-09-28",
         "location": "Cali, Colombia",
@@ -227,7 +227,7 @@
     {
         "id": 26,
         "title": "Las cuchas tienen razón - 8M del 2025",
-        "category": "Movilizaciones o encuentros feministas",
+        "category": "Movilizaciones y encuentros feministas",
         "description": "Marcha feminista para el Día Internacional de la Mujer.",
         "date": "2025-03-08",
         "location": "Cali, Colombia",
