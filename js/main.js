@@ -1,28 +1,27 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const img = document.getElementById("animated-image");
-
-    // Expand image on load
-    img.onload = function () {
-        img.classList.add("visible-image");
-    };
-
-    if (img.complete) {
-        img.onload();
-    }
-
-    // Observe scrolling behavior
+// Remove all previous code and start fresh
+document.addEventListener("DOMContentLoaded", () => {
     const observer = new IntersectionObserver(
         (entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    img.classList.add("visible-image"); // Expand
-                } else {
-                    img.classList.remove("visible-image"); // Shrink
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.hasAttribute('data-animated')) {
+                    // Add animation class when in viewport and not previously animated
+                    requestAnimationFrame(() => {
+                        entry.target.classList.add('animate');
+                        // Mark as animated
+                        entry.target.setAttribute('data-animated', 'true');
+                        // Stop observing this image
+                        observer.unobserve(entry.target);
+                    });
                 }
             });
         },
-        { threshold: 0.3 } // Adjust threshold for when the effect triggers
+        {
+            threshold: 0.2,
+            rootMargin: '50px'
+        }
     );
 
-    observer.observe(img);
+    // Get all images and observe them
+    const images = document.querySelectorAll('img');
+    images.forEach(img => observer.observe(img));
 });
