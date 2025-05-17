@@ -1,8 +1,7 @@
 [
     { 
         "name": "Club de Lectura Be Feminist", 
-        "date": "Encuentros desde agosto 2022", 
-        "description": "Exploramos estrategias de incidencia política y defensa de derechos.",
+        "description": "Leemos autoras del sur global para reflexionar sobre feminismo, identidad y género. Nuestro club es un espacio libre para dialogar, compartir sentires y crecer en comunidad.",
         "category": "formacion",
         "available": true,
         "link": "https://shorturl.at/kyuZ9"
@@ -10,43 +9,43 @@
     }, 
     { 
         "name": "Taller de Suculentas", 
-        "date": "18 de mayo del 2024", 
-        "description": "Exploramos estrategias de incidencia política y defensa de derechos.",
+        "description": "Un espacio práctico para reconectar con la tierra desde lo íntimo y colectivo. A través del cuidado de las plantas, reflexionamos sobre la siembra como acto cotidiano de resistencia, autocuidado y creación y sobre el cuidado de la vida.",
         "category": "activismo",
         "available": false
     }, 
     { 
         "name": "Círculo de Siembra Urbana entre Mujeres", 
-        "date": "15 de septiembre del 2024", 
-        "description": "Exploramos estrategias de incidencia política y defensa de derechos.",
+        "description": "Creamos juntas espacios de siembra como apuesta política y ecológica. Compartimos saberes, semillas y memorias entre mujeres jóvenes que creemos que sembrar en comunidad es resistir desde la ternura, el cuidado  y la soberanía alimentaria.",
         "category": "consumo",
         "available": false
     }, 
     { 
         "name": "Taller Siembra Vida - Aliada Fundación Integral Agua de Vida", 
-        "date": "23 de octubre del 2024", 
-        "description": "Exploramos estrategias de incidencia política y defensa de derechos.",
+        "description": "Diseñamos, en alianza con la fundación Agua de Vida, un espacio seguro y creativo para las madres y sus hijxs, en donde compartimos experiencias en torno al autocuidado y sus experiencias y retos sobre la maternidad.",
         "category": "consumo",
         "available": false
     }, 
     { 
         "name": "Taller mi Cuerpo- Mi territorio", 
-        "date": "17 y 18 de noviembre del 2023", 
-        "description": "Exploramos estrategias de incidencia política y defensa de derechos.",
+        "description": "Reconocemos el cuerpo como el primer territorio que habitamos, digno de cuidado y placer. Reflexionamos sobre violencias, mandatos y cicatrices que nos atraviesan y desarrollamos metodologías participativas que vinculan teoría, experiencia y acción.",
         "category": "activismo",
         "available": false
     }, 
     { 
         "name": "Taller Voces Valientes - Aliada Fundación Paz y Bien", 
-        "date": "Agosto a Noviembre 2024", 
-        "description": "Exploramos estrategias de incidencia política y defensa de derechos.",
+        "description": "Ofrecemos herramientas lúdicas y didácticas para que las jóvenes de la Fundación Paz y Bien aprendan a identificar, nombrar y prevenir violencias naturalizadas. Además de construir espacios seguros de escucha, respeto, autonomía y autocuidado.",
         "category": "activismo",
         "available": false
     }, 
     { 
         "name": "Talleres con Emprendedoras con Enfoque Ecofeminista – Aliadas Fundación Manos Bordadoras del Pacífico", 
-        "date": "18 y 19 de septiembre del 2024", 
-        "description": "Exploramos estrategias de incidencia política y defensa de derechos.",
+        "description": "Acompañamos a mujeres emprendedoras de la organización Manos Bordadoras del Pacífico para fortalecer sus capacidades y liderazgos en sus proyectos productivos. Reflexionamos sobre el trabajo, los cuidados y el uso del tiempo para ellas.",
+        "category": "formacion",
+        "available": false
+    }, 
+    { 
+        "name": "Taller Ultimate por la Equidad, libre de violencias de género", 
+        "description": "Usamos el deporte como herramienta pedagógica para promover relaciones igualitarias. Cuestionamos roles de género, violencias normalizadas y prácticas excluyentes, y fomentamos una cultura del juego basada en el respeto, el consentimiento y la equidad.",
         "category": "formacion",
         "available": false
     }

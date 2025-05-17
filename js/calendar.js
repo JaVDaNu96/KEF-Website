@@ -14,7 +14,7 @@ async function loadCalendar() {
             const eventDate = new Date(event.date);
             const year = eventDate.getFullYear();
             // Usar un array de meses o extraer el mes a través de toLocaleString si se prefiere
-            const monthNames = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
+            const monthNames = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
             const month = monthNames[eventDate.getMonth()];
 
             if (!eventMap[year]) {

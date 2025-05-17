@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", async function () {
                     <!-- Front Side -->
                     <div class="flip-card-front ${course.category}">
                         <h3>${course.name}</h3>
-                        <p>${course.date}</p>
                     </div>
                     
                     <!-- Back Side -->

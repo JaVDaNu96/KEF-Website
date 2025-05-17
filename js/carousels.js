@@ -1,5 +1,8 @@
 const eventscarouselUrl = '../data/eventscarousel.json';
 
+let currentImageIndex = 0;
+let currentImageList = [];
+
 async function loadCarousels() {
     try {
         const response = await fetch(eventscarouselUrl);
@@ -39,7 +42,7 @@ async function loadCarousels() {
                     const imgElement = document.createElement('img');
                     imgElement.src = imgSrc;
                     imgElement.className = 'carousel-img';
-                    imgElement.onclick = () => expandImage(imgSrc);
+                    imgElement.onclick = () => expandImage(imgSrc, carousel);
                     carousel.appendChild(imgElement);
                 });
 
@@ -53,10 +56,16 @@ async function loadCarousels() {
         console.error("Error loading carousels:", error);
     }
 }
+
 // Function to Expand Image in Modal
-function expandImage(src) {
+function expandImage(src, carouselElement) {
     const modal = document.getElementById("image-modal");
     const modalImg = document.getElementById("expanded-img");
+
+    // Get all images from the current carousel
+    const allImages = Array.from(carouselElement.querySelectorAll('.carousel-img'));
+    currentImageList = allImages.map(img => img.src);
+    currentImageIndex = currentImageList.indexOf(src);
 
     modal.style.display = "block";
     modalImg.src = src;
@@ -65,6 +74,27 @@ function expandImage(src) {
         modal.style.display = "none";
     };
 }
-// Load carousels on page load
-document.addEventListener('DOMContentLoaded', loadCarousels);
 
+// Event Listeners for Modal Navigation
+window.addEventListener('DOMContentLoaded', () => {
+    loadCarousels();
+
+    const leftArrow = document.querySelector(".left-arrow");
+    const rightArrow = document.querySelector(".right-arrow");
+
+    if (leftArrow && rightArrow) {
+        leftArrow.addEventListener("click", () => {
+            if (currentImageIndex > 0) {
+                currentImageIndex--;
+                document.getElementById("expanded-img").src = currentImageList[currentImageIndex];
+            }
+        });
+
+        rightArrow.addEventListener("click", () => {
+            if (currentImageIndex < currentImageList.length - 1) {
+                currentImageIndex++;
+                document.getElementById("expanded-img").src = currentImageList[currentImageIndex];
+            }
+        });
+    }
+});
