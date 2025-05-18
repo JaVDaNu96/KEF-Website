@@ -662,7 +662,7 @@ a {
 .main-hero-image img {
     max-width: 100vw;
     max-height: 150vh;
-    margin: 4rem 0 4rem 6rem;
+    margin:0;
     border-radius: 10%;
     padding: 2rem 3rem;
 }
@@ -697,11 +697,13 @@ a {
     .main-hero .container{
         padding: 7rem 3rem 0rem 0;
     }
-
-    .main-hero-text {
-        padding: 0 4rem 0 0;
-        margin: 0;
+    .main-hero-content {
+    display: flex;
+    flex-direction: column; /* Default: side-by-side layout */
+    align-items: left;
+    justify-content: left;
     }
+
     .main-hero-text.second-text p{
         max-width: 70vw;
         font-size: 2rem;
@@ -725,30 +727,31 @@ a {
     }
     .main-hero-button {
         font-size: 2rem;
-        margin: 1rem 4rem;
+        margin: 1rem 4rem 0 4rem;
     }
 
     .main-hero-image{
         right: 2rem;
         margin: 0;
         padding: 3rem 1rem 1rem 1.2rem;
-        min-width: 95vw;
+        min-width: 100vw;
     }
     .main-hero-image img{
         margin: 0 2rem 0 0;
         padding: 0 2rem 0 0;
     }
     .main-hero-social-container {
-        padding: 1rem 70% 1rem 0;
+        padding: 1rem 70rem 1rem 0;
+        margin: 0;
     }
 
     .main-hero-social-container .footer-social {
-        margin: 1rem 2rem 0 4.2rem;
+        margin: 0 2rem 0 4.2rem;
         padding: 0;
     }
 }
 /* XS and S Media Queries */
-@media (max-width: 767px) { /* Covers XS and S */
+@media (max-width: 770px) { /* Covers XS and S */
     .main-hero {
         flex-direction: column; /* Stack image and text vertically */
         padding:0px;
@@ -778,23 +781,28 @@ a {
         text-align: left; /* Center-align text */
         padding: 0.2rem 6rem 2rem 3rem;
     }
+    .main-hero-text.second-text {
+        margin: 0 0 0 4rem;
+    }
     
     .main-hero-button {
         font-size: 2rem;
-        margin: 1rem;
+        margin: 1rem 1rem 1rem 4rem;
         padding: 0.5rem 0.5rem;
         border-radius: 5px;
         text-decoration: none;
     }
 
     .main-hero-image {
-        padding: 2rem 2rem; /* Scale down the image */
-        margin: 2rem 0;
+        padding: 2rem 1rem; /* Scale down the image */
+        margin: 2rem 0 2rem 3.2rem;
+        width:120vw;
     }
 
     .main-hero-image img {
-        margin: 2rem 0;
-        max-width: 100vw; /* Scale down the image */
+        margin: 0 2rem 0 0;
+        padding: 0 2rem;
+        width:100vw;
     }
     
     .main-hero-social-container {
@@ -803,7 +811,7 @@ a {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 0 35% 0 0;
+        padding: 0 35rem 0 0;
         margin: 0 4rem 0 0;
     }
 
@@ -831,6 +839,9 @@ a {
         margin: 0;
         padding: 0;
         text-align: justify;
+    }
+    .main-hero-text.second-text {
+        margin: 0;
     }
     
     .main-hero-text.second-text p{
@@ -906,6 +917,30 @@ a {
         padding: 0 0.25rem;
     }
 }
+@media (max-width: 430px) { /* Specific to XS */
+    .main-hero-social-container {
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+        justify-content: left;
+        align-items: left;
+        padding: 1rem 17.5rem 1rem 0;
+        max-height: 4rem;
+        margin: 1rem 0 1rem 0;
+    }
+    .main-hero-image {
+        max-width: 100vw;
+        min-height: 30vh;
+        padding: 1rem 0 2rem 0;
+        margin: 0 0 2rem 0;
+
+    }
+    .main-hero-image img {
+        min-width: 95vw;
+        padding: 0 0.25rem;
+        margin:0;
+    }
+}
 @media (max-width: 380px) { /* Specific to XS */
     .main-hero-social-container {
         display: flex;
@@ -913,9 +948,21 @@ a {
         flex-direction: column;
         justify-content: left;
         align-items: left;
-        padding: 1rem 12% 1rem 0;
+        padding: 1rem 14rem 1rem 0;
         max-height: 4rem;
         margin: 1rem 0 1rem 0;
+    }
+    .main-hero-image {
+        max-width: 100vw;
+        min-height: 30vh;
+        padding: 1rem 0 2rem 0;
+        margin: 0 0 2rem 0;
+
+    }
+    .main-hero-image img {
+        min-width: 95vw;
+        padding: 0 0.25rem;
+        margin:0;
     }
 }
 @media (max-width: 320px) { /* Specific to XS */
@@ -1405,7 +1452,7 @@ a {
 }
 @media (max-width: 480px) {
     .contactanos-full {
-        padding: 2rem 0;
+        padding: 2rem 0 0 0;
         flex-direction: column;
         text-align: left;
     }
@@ -1449,9 +1496,8 @@ a {
     padding: 1.5rem 2rem;
     background-color: #fff; /* Background color of the footer */
     color: #333;
-    border-top: solid 2px; 
-    border-color: #333;
-}
+    border-top: solid 0.5px;
+    border-color: #333;}
 
 .footer-content {
     display: flex;
@@ -1667,7 +1713,7 @@ a {
 }
 
 .blog-entry p.meta {
-    font-size: 0.9rem;
+    font-size: 1.5rem;
     color: #767676;
 }
 
@@ -2015,19 +2061,18 @@ a {
 
 .hero-sumate {
     display: flex;
-    min-height: auto;
     flex-direction: column;
     align-items: left;
-    padding: 5rem 6rem 0 6rem;
-    margin-top: 2rem;
+    padding: 8rem 4rem 1rem 6rem;
+    min-height: auto;
 }
-
 .hero-sumate h1{
     padding: 2rem 0;
     font-size: 3rem; 
 }
-
 .hero-sumate p{
+    padding: 0;
+    margin: 0;
     text-align: left;
     font-size: 2rem;
     align-items: left;
@@ -2045,23 +2090,7 @@ a {
 .hero-sumate a.enlace-colaboracion{
     color:#a7bb40;
 }
-/* Line of Work Section */
-.line-of-work {
-    display: flex;
-    flex-direction: row;
-    min-height: auto;
-    padding: 2rem 6rem;
-    margin-bottom: 2rem;
-    text-align: left;
-    border-radius: 10px;
-    width: auto;
-}
-.line-of-work-card {
-    padding: 3rem 8rem 1rem 3rem;
-    margin: 0 1rem;
-    border-radius: 20px;
-    min-height: auto;
-}
+
 .line-of-work-card.activismo {
     background-color: rgba(217, 169, 251, 0.4);
 }
@@ -2079,10 +2108,49 @@ a {
     margin: 0;
     padding: 0;
 }
+.line-of-work {
+        min-height: auto;
+        display:flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 2rem 4rem 2rem 6rem;
+        width: 75vw!important;
+    }
 .line-of-work p {
     font-size: 2rem;
     margin: 2rem 0;
+} 
+.line-of-work .about-section {
+    display:flex;
+    flex-direction: column;
+    width: 75vw!important;
 }
+.line-of-work .about-section .about-us-image {
+    display:flex;
+    flex-direction: column;
+    margin:0;
+    width: 75vw!important;
+}
+.line-of-work .about-section .about-us-image img {
+    margin:0;
+    width: 75vw!important;
+}
+.line-of-work p{
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+}
+.line-of-work-card {
+border-radius: 10px;
+font-size: 1.7rem;
+padding: 2rem;
+margin: 1rem 0rem;
+width: 75vw!important;
+}
+
+.line-of-work-card p{
+font-size: 1.7rem;
+}
+
 .cta-button {
     font-size: 2.5rem;
     display: inline-block;
@@ -2126,75 +2194,117 @@ a {
         display: flex;
         flex-direction: column;
         align-items: left;
-        padding: 6rem 2rem 2rem 2rem;
-        min-height: auto;
-    }
-
-    .hero-sumate h1{
-        font-size: 3rem;
+        padding: 4rem 4rem 1rem 4rem;
     }
     .hero-sumate p{
-        font-size: 2rem;
-        line-height: 1;
-        padding: 1rem 10rem 0 0;
+        padding: 0;
     }
-
     .line-of-work {
         min-height: auto;
-        padding: 1rem 10rem 0 2rem;
+        display:flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 2rem 4rem 2rem 6rem;
+        width: 75vw!important;
     }
-    
-    .line-of-work h2{
-        font-size: 3rem;
-        margin-bottom: 1rem;
+    .line-of-work .about-section {
+        display:flex;
+        flex-direction: column;
+        width: 75vw!important;
     }
-
+    .line-of-work .about-section .about-us-image {
+        display:flex;
+        flex-direction: column;
+        margin:0;
+        width: 75vw!important;
+    }
+    .line-of-work .about-section .about-us-image img {
+        margin:0;
+        width: 75vw!important;
+    }
     .line-of-work p{
-        font-size: 2rem;
-        line-height: 1.2;
+        font-size: 1.7rem;
         margin-bottom: 1rem;
     }
-    .line-of-work a{
-        font-size: 2rem;
-        margin-bottom: 1rem;
+     .line-of-work-card {
+        font-size: 1.5rem;
+        padding: 2rem;
+        margin: 1rem 0rem;
+        width: 75vw!important;
     }
-
     .join-cta {
+        display: flex;
+        flex-direction: column;
         margin: 0;
         min-height: auto;
+        align-items: center;
+        padding: 0 6rem 2rem 4rem;
     }
-
     .join-cta h2{
         font-size: 3rem;
     }
-
     .join-cta p{
+        text-align: center;
         font-size: 2rem;
         line-height: 1.2;
-        padding: 0 12rem 0 0;
+        padding: 0;
     }
     .join-cta a{
         font-size: 2rem;
     }
 }
-@media (max-width: 767px) {
+@media (max-width: 770px){
     .hero-sumate {
         display: flex;
         flex-direction: column;
         align-items: left;
-        padding: 2rem 2rem 1rem 2rem;
+        padding: 4rem 4rem 1rem 4rem;
     }
-
+    .hero-sumate p{
+            padding: 0;
+        }
     .line-of-work {
         min-height: auto;
+        display:flex;
+        flex-direction: column;
+        margin: 2rem 8rem 2rem 2rem;
     }
-
+    .line-of-work .about-section {
+            display:flex;
+            flex-direction: column;
+            width: 80vw!important;
+        }
+    .line-of-work .about-section .about-us-image {
+        display:flex;
+        flex-direction: column;
+        margin:0;
+        width: 80vw!important;
+    }
+    .line-of-work .about-section .about-us-image img {
+        margin:0;
+        width: 80vw!important;
+    }
     .line-of-work p{
         font-size: 1.5rem;
         margin-bottom: 1rem;
     }
+     .line-of-work-card {
+        font-size: 1.5rem;
+        margin: 1rem 2rem 1rem 0;
+        width: 80vw!important;
+    }
 
     .join-cta {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: auto;
+    }
+    .join-cta p {
+        display: flex;
+        flex-direction: column;
+        text-align: center!important;
+        padding: 0;
         min-height: auto;
     }
 
@@ -2226,10 +2336,16 @@ a {
         display:flex;
         flex-direction: column;
     }
+    .line-of-work .about-section .about-us-image {
+            display:flex;
+            flex-direction: column;
+            width: 80vw;
+    }
     .line-of-work-card {
         display:flex;
         flex-direction: column;
         align-items: center;
+        width:80vw;
         padding: 2rem 1.5rem 1rem 2rem;
         margin: 2rem 0 1rem 0;
     }
@@ -2261,7 +2377,7 @@ a {
     }
     .join-cta {
         text-align: center;
-        padding: 2rem 2rem;
+        padding: 2rem 3rem 2rem 2rem;
         border-radius: 10px;
         margin-top: 0;
     } 
@@ -3042,14 +3158,15 @@ a {
         margin: 0;
     }
     .hero-formacion .hero-text a{
-        padding: 1rem 1.2rem;
+        padding: 1rem 1.5rem;
         font-size: 2rem;
         margin: 0;
+        min-width: auto;
+        max-width: 10rem;
     }
     .cta-button-formacion {
         border-radius: 5px;
         text-decoration: none;
-        min-width: 20vw;
     }
     
 }
@@ -3312,7 +3429,7 @@ a {
         font-size: 2rem;
     }
     .hero-consumo .hero-content .hero-text p{
-        padding: 1rem 3rem 1rem 0;
+        padding: 1rem 1rem 1rem 0;
         margin: 0;
         font-size: 1.5rem;
     }
@@ -3328,6 +3445,7 @@ a {
         min-width: 20vw;
     }
     .colaboracion-section h1{
+        padding: 0 1rem 0 0;
         font-size: 1.5rem;
         text-align: center;
     }
@@ -3335,7 +3453,7 @@ a {
         font-size: 1.5rem;
         text-align: center;
         margin: 0.5rem 0;
-        padding: 0;
+        padding: 0 1rem 0 0;
     }
     .colaboracion-section .logo{
         min-width: 8rem;
@@ -3642,7 +3760,7 @@ a {
 @media (max-width: 1028px){
     .about-us .about-us-image {
         margin: 1rem 0;
-        width: 90vw;
+        width: 80vw;
     }
     .about-section {
         flex-direction: column;
@@ -3706,19 +3824,36 @@ a {
 }
 
 /* Responsive Design */
-@media (max-width: 767px) {
+@media (max-width: 770px) {
+
     .about-us .about-us-image {
         margin: 1rem 0;
-        width: 80vw;
+        width: 90vw;
     }
     .about-section {
         flex-direction: column;
         text-align: left;
-        margin: 0 2rem;
+        margin: 2rem 1rem 0 2rem;
     }
 
+    .about-section h1{
+        font-size: 2rem;
+        padding: 0 4rem 0 0;
+        margin:0;
+    }
+    .about-section p{
+        font-size: 1.7rem;
+        padding: 0 8rem 0 0;
+        margin:0;
+    }
     .about-text {
         margin: 1rem 1rem;
+    }
+    .about-text h2{
+        font-size: 1.7rem;
+    }
+    .about-text p{
+        font-size: 1.7rem;
     }
 
     .about-text .cta-button {
@@ -3729,7 +3864,31 @@ a {
         font-weight: 500;
         transition: background-color 0.3s;
     }
-
+    
+    .about-text .card-container {
+        min-width: 60vw;
+        padding: 0;
+        margin: 0 4rem 0 0;
+    }
+    .about-text .card-container .card{
+        min-width: 60vw;
+        padding: 2rem 4rem 2rem 0;
+        margin: 0;
+    }
+    .about-text .card-container .card img {
+        min-width: 50vw;
+        margin: 1rem 0;
+    }
+    .about-text .card-container .card h3 {
+        font-size: 1.5rem;
+        padding: 0;
+        margin:0;
+    }
+    .about-text .card-container .card p{
+        font-size: 1.5rem;
+        padding: 2rem 0;
+        margin:0;
+    }
 }
 
 @media (max-width: 480px) {
@@ -3739,8 +3898,8 @@ a {
     .about-section .about-us-image{
         display: flex;
         flex-direction: column;
-        width: 80vw;
-        margin: 0 1rem;
+        width: 85vw;
+        margin: 0 1rem 0 0;
     }
     .about-section {
         flex-direction: column;
@@ -4160,6 +4319,7 @@ a {
 
 .conocenos-full {
     background-color: rgba(167, 187, 64, 0.6);
+    padding: 2rem 0 0 0;
 }
 
 .visitanos-section {
@@ -4207,7 +4367,7 @@ a {
     }
     
     .cards-full .card-container {
-        padding: 4rem 1rem 4rem 17rem;
+        padding: 4rem 1rem 4rem 25rem;
     }
 }
 @media (max-width: 767px){
@@ -4239,7 +4399,7 @@ a {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 2.5rem 0 2rem 0;
+        padding: 2.5rem 0 0 0;
     }
     .cards-full {
         padding: 0 0 2rem 0;
@@ -4248,7 +4408,7 @@ a {
     .moving-banner {
         height: 2rem;
         padding: 0.5rem 0;
-        margin: 1rem 0 1rem 0;
+        margin: 1rem 0 0 0;
     }
     .cards-full .text-cards h2{
         font-size: 2rem;
