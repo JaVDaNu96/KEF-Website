@@ -169,5 +169,40 @@
         ]
     }
     ]
+},
+{
+    "topic": " Economía Circular Comunitaria",
+    "events": [
+    {
+        "name": "Swap Party KEF - 6 de Abril del 2024",
+        "description": "Una tarde para pensarnos el consumo. En la Swap Party nos reunimos mujeres de diferentes rincones de Cali para cuestionar juntas el modelo acelerado de la moda, reconectarnos con el valor de lo que ya existe y darle una nueva vida a nuestras prendas. Cada una trajo hasta 10 piezas para intercambiar, creando así una red de renovación colectiva, sin necesidad de producir más. Fue un ejercicio de conciencia, sororidad 💜 y estilo circular.",
+        "images": [
+        "/assets/images/SwapParty/SP1.jpg",
+        "/assets/images/SwapParty/SP2.jpg",
+        "/assets/images/SwapParty/SP3.jpg",
+        "/assets/images/SwapParty/SP4.jpg"
+        ]
+    },
+    {
+        "name": "Juanchatienda Bio 6 - 15 de Junio del 2024",
+        "description": "Un evento donde el cuidado del territorio y el trueque se encontraron. En la Juanchatienda, compartimos ropa, alimentos 🥫 y útiles de primera necesidad con la comunidad a cambio del plástico que ellxs recogen de las playas y los ríos del Pacífico 🐚. Ese mismo plástico, gracias al saber y la creatividad de lxs jóvenes de Plástico Precioso Uramba, se transforma luego en objetos útiles como pupitres para escuelas 🪑 o mobiliario para la Biblioteca Sueño Pacífico 📚. Un acto de reciprocidad, transformación y justicia ambiental.",
+        "images": [
+        "/assets/images/Juanchatienda6/JT6-1.jpg",
+        "/assets/images/Juanchatienda6/JT6-2.jpg",
+        "/assets/images/Juanchatienda6/JT6-3.jpg",
+        "/assets/images/Juanchatienda6/JT6-4.jpg"
+        ]
+    },
+    {
+        "name": "Pulguerito y Trueque KEF & Santeli - 7 de Septiembre del 2024",
+        "description": "Junto a Santeli, emprendimiento de moda circular, creamos este espacio para intercambiar tesoros olvidados. Un pulguerito lleno de historias, donde los objetos y prendas encontraron segundas oportunidades en nuevas manos 🙌. Apostamos por una economía circular viva y cercana, que nos enseña a consumir con consciencia 🌱 y a valorar lo que ya tenemos. Porque cada objeto usado guarda memoria, y merece seguir su camino.",
+        "images": [
+        "/assets/images/Pulguerito/pulguerito1.jpg",
+        "/assets/images/Pulguerito/pulguerito2.jpg",
+        "/assets/images/Pulguerito/pulguerito3.jpg",
+        "/assets/images/Pulguerito/pulguerito4.jpg"
+        ]
+    }
+    ]
 }
 ]
