@@ -1049,14 +1049,36 @@ a {
     gap: 1rem; /* Reduce gap between cards */
     padding: 2rem; /* Adjust padding for smaller screens */
 }
+.full-section.cards-full-cta img{
+    border-radius: 20px;
+    max-width: 80vw;
+    max-height: 150vh;
+    padding: 0;
+    margin: 2rem 1rem 2rem 4rem;
+}
 .cards-full .card-container.landing{
-        width: 40vw;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;                 /* normal spacing for small screens */
-        /* give the stack some breathing room so tops/edges are visible */
-        padding: 2rem;
-    }
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;                 /* normal spacing for small screens */
+    /* give the stack some breathing room so tops/edges are visible */
+    padding: 2rem;
+}
+.text-cards-landing{        
+    width: 50vw;
+    margin: 0;
+    padding: 2rem 2rem 0 4rem;
+    text-align: left;
+}
+
+.text-cards-landing h2{        
+    width: 80vw;
+    margin: 0;
+    padding: 2rem 0;
+    font-size: 3rem;
+    text-align: left;
+    color:#622d86;
+}
 /* ───────── cards ───────── */
 .card-container.landing .card {
   /* slide-in start state */
@@ -1153,6 +1175,22 @@ a {
         gap: 1rem; /* Reduce gap between cards */
         padding: 3rem 0 4rem 20rem; /* Adjust padding for smaller screens */
     }
+    
+    .text-cards-landing{        
+        width: 50vw;
+        margin: 0;
+        padding: 2rem 0 0 0;
+        text-align: left;
+    }
+    
+    .text-cards-landing h2{        
+        width: 80vw;
+        margin: 0;
+        padding: 2rem 0;
+        font-size: 3rem;
+        text-align: left;
+        color:#622d86;
+    }
 
     .card {
         width: 25rem; /* Reduce card width for smaller screens */
@@ -1170,7 +1208,7 @@ a {
         font-size: 2rem;
     }
     .cta-cards {
-        padding: 0 1rem;
+        padding: 0 1rem 0 4rem;
     }
     .cta-cards p{
         font-size: 2rem;
@@ -1181,10 +1219,32 @@ a {
 }
 /* Responsive Adjustments for XS and S */
 @media (max-width: 770px) {
+    .full-section.cards-full {
+        display:flex;
+        flex-direction:column; /* Align cards to the left */
+        align-items: center;
+        gap: 1rem; /* Reduce gap between cards */
+        padding: 2rem; /* Adjust padding for smaller screens */
+    }
+    .text-cards-landing {        
+        width: 80vw;
+        margin: 0;
+        padding: 2rem 2rem 2rem 0;
+        text-align: left;
+    }
+    .text-cards-landing h2{        
+        width: 80vw;
+        margin: 0;
+        padding: 2rem 0;
+        font-size: 3rem;
+        text-align: left;
+        color:#622d86;
+    }
     .cards-full .card-container.landing{
-        justify-content: left; /* Align cards to the left */
+        justify-content: center; /* Align cards to the left */
         gap: 1rem; /* Reduce gap between cards */
         padding: 0 4rem 2rem 12rem; /* Adjust padding for smaller screens */
+        margin: 0 4rem 0 0;
     }
     .cards-full .card-container.landing .card {
         width: 25rem; /* Reduce card width for smaller screens */
@@ -1193,9 +1253,43 @@ a {
     .cards-full .card-container.landing .card h3{
         font-size: 2rem;
     }
+    .full-section.cards-full-cta img{
+        border-radius: 20px;
+        max-width: 80vw;
+        max-height: 150vh;
+        padding: 0;
+        margin: 2rem 1rem 2rem 2rem;
+    }
 }
 
 @media (max-width: 480px) {
+    .full-section.cards-full {
+        display:flex;
+        flex-direction:column; /* Align cards to the left */
+        align-items: center;
+        gap: 1rem; /* Reduce gap between cards */
+        padding: 2rem 2rem 0 2rem; /* Adjust padding for smaller screens */
+    }
+    .full-section.cards-full.text-cards-landing {
+        margin: 0;
+        padding: 0;
+    }
+    .text-cards-landing h2{        
+        width: 80vw;
+        margin: 0;
+        padding: 0;
+        font-size: 2rem;
+        text-align: left;
+        padding: 0 0 2rem 0;
+        color:#622d86;
+    }
+    .full-section.cards-full.text-cards-landing p{
+        width: 80vw;
+        text-align: left;
+        font-size: 1.3rem;
+        margin: 0;
+        padding: 0;
+    }
     .text-cards {
         margin: 0;
         padding: 0;
@@ -1205,9 +1299,9 @@ a {
         padding: 0 0 2rem 0;
         color:#622d86;
     }
-    .text-cards p{
+    .text-cards-landing p{
         text-align: left;
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         margin: 0;
         padding: 0;
     }
@@ -1218,9 +1312,11 @@ a {
         overflow-x: hidden;
     }
     .cards-full .card-container.landing{
+        display:flex;
+        flex-direction: column;
         justify-content: left; /* Align cards to the left */
         gap: 1rem; /* Reduce gap between cards */
-        padding: 0 4rem 2rem 2rem; /* Adjust padding for smaller screens */
+        padding: 0 0 0 4rem; /* Adjust padding for smaller screens */
     }
     .cards-full .card-container.landing .card {
         width: 80vw;
@@ -1240,7 +1336,7 @@ a {
     }
     .cta-cards {
         padding: 0 2rem;
-        margin: 0 0 2rem 0;
+        margin: 0;
     }
     .cta-cards p{
         font-size: 2rem;
@@ -1248,6 +1344,103 @@ a {
     .cta-cards a {
         font-weight: 300;
         font-size: 2rem;
+    }
+    
+    .full-section.cards-full-cta img{
+        border-radius: 20px;
+        max-width: 80vw;
+        max-height: 150vh;
+        padding: 0;
+        margin: 2rem 1rem 2rem 0;
+    }
+}
+@media (max-width: 380px) {
+    .full-section.cards-full {
+        display:flex;
+        flex-direction:column; /* Align cards to the left */
+        align-items: center;
+        gap: 1rem; /* Reduce gap between cards */
+        padding: 2rem 2rem 0 2rem; /* Adjust padding for smaller screens */
+    }
+    .text-cards-landing{        
+        width: 80vw;
+        padding: 0;
+    }
+    .full-section .cards-full .text-cards-landing h2{
+        margin: 0;
+        padding: 0;
+        text-align: left;
+        padding: 0 0 2rem 0;
+        color:#622d86;
+    }
+    .full-section.cards-full.text-cards-landing p{
+        text-align: left;
+        font-size: 1.3rem;
+        margin: 0;
+        padding: 0;
+    }
+    .text-cards {
+        margin: 0;
+        padding: 0;
+    }
+    .text-cards h1{        
+        text-align: left;
+        padding: 0 0 2rem 0;
+        color:#622d86;
+    }
+    .text-cards-landing p{
+        text-align: left;
+        font-size: 1.5rem;
+        margin: 0;
+        padding: 0;
+    }
+    .card-container {
+        gap: 0.5rem; /* Further reduce gap for XS devices */
+        padding: 1.5rem 1rem; /* Tight padding for very small screens */
+        flex-direction: column;
+        overflow-x: hidden;
+    }
+    .cards-full .card-container.landing{
+        display:flex;
+        flex-direction: column;
+        justify-content: left; /* Align cards to the left */
+        gap: 1rem; /* Reduce gap between cards */
+        padding: 0 0 0 4rem; /* Adjust padding for smaller screens */
+    }
+    .cards-full .card-container.landing .card {
+        width: 80vw;
+        height: auto; /* Smaller card width for XS */
+        margin: 1rem 0;
+        padding: 1rem 2rem 1rem 1rem;
+    }
+    .card h3{
+        font-size: 2rem;
+    }
+    .card.consumo h3{
+        font-size: 2rem;
+    }
+    .card p{
+        padding: 1rem 0;
+        font-size: 1.5rem;
+    }
+    .cta-cards {
+        padding: 0 2rem;
+        margin: 0;
+    }
+    .cta-cards p{
+        font-size: 2rem;
+    }
+    .cta-cards a {
+        font-weight: 300;
+        font-size: 2rem;
+    }
+    
+    .full-section.cards-full-cta img{
+        border-radius: 20px;
+        max-width: 80vw;
+        max-height: 150vh;
+        padding: 0;
+        margin: 2rem 1rem 2rem 0;
     }
 }
 
@@ -1387,7 +1580,7 @@ a {
     }
 
     .tienda-kef-text {
-        margin: 2rem 0 1rem 0;
+        margin: 2rem 0 0 0;
         padding: 0 3rem 0 2rem;
     }
     .tienda-kef-text h2{
@@ -1549,7 +1742,7 @@ a {
         font-size: 2.5rem;
     }
     .conocenos-text p{
-        padding: 0 1rem 0 0;
+        padding: 0 3rem 0 0;
         font-size: 1.5rem;
     }
     .conocenos-image img {
@@ -4882,14 +5075,6 @@ width: 40vw;
     margin: 0 0 2rem 0;
 }
 
-.cards-full-cta img{
-    border-radius: 20px;
-    max-width: 80vw;
-    max-height: 150vh;
-    padding: 0;
-    margin: 2rem 1rem 2rem 4rem;
-}
-
 @media (max-width: 1028px){
     .cards-full {
         min-height: 50vh;
@@ -4954,7 +5139,7 @@ width: 40vw;
     .moving-banner {
         height: 2rem;
         padding: 0.5rem 0;
-        margin: 1rem 0 0 0;
+        margin: 0;
     }
     .cards-full .text-cards h2{
         font-size: 2rem;
