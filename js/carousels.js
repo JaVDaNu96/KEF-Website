@@ -98,3 +98,19 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+document.addEventListener("keydown", function (event) {
+    const modal = document.getElementById("image-modal");
+    if (modal.style.display === "block") {
+        if (event.key === "ArrowLeft") {
+            if (currentImageIndex > 0) {
+                currentImageIndex--;
+                document.getElementById("expanded-img").src = currentImageList[currentImageIndex];
+            }
+        } else if (event.key === "ArrowRight") {
+            if (currentImageIndex < currentImageList.length - 1) {
+                currentImageIndex++;
+                document.getElementById("expanded-img").src = currentImageList[currentImageIndex];
+            }
+        }
+    }
+});
