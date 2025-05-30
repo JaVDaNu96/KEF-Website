@@ -1,5 +1,6 @@
-[
-{
+// eventsData.js - Convert your JSON to this format
+const eventsData = [
+    {
     "topic": "Movilizaciones y encuentros feministas",
     "events": [
     {
@@ -203,4 +204,11 @@
     }
     ]
 }
-]
+];
+
+// Export for use in other files
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = eventsData;
+} else {
+    window.eventsData = eventsData;
+}

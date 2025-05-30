@@ -1,9 +1,0 @@
-# CORS headers for JSON files
-/data/*
-  Access-Control-Allow-Origin: *
-  Access-Control-Allow-Headers: Content-Type
-  Access-Control-Allow-Methods: GET, OPTIONS
-
-# Optional: Cache control for better performance
-/data/*.json
-  Cache-Control: public, max-age=3600
