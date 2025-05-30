@@ -11,6 +11,14 @@
     src: url('/fonts/GillSansNova/gillsansnova_cnmedium.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+} 
+@font-face {
+  font-family: 'Coniferous';
+  src:
+    url('/fonts/Coniferous/fonnts.com-Coniferous-Demo-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;   /* good Core Web Vitals */
 }
 
 /* Reset */
@@ -153,7 +161,7 @@ a {
     width: 100%;
     height: 5.5rem;
     z-index: 1000; /* Ensures it stays on top of other content */
-    background-color: #622d86; /* Or your desired background */
+    background-color: white; /* Or your desired background */
     padding: 1rem 2rem;
     border-bottom: 0.5px solid #000000;
 }
@@ -166,7 +174,7 @@ a {
 }
 
 .logo {
-    min-width: 1.7rem;
+    min-width: 2.5rem;
     max-width: 3rem; /* Adjust as needed */
 }
 
@@ -181,14 +189,14 @@ a {
     position: absolute;
     top: 100%;
     right: 0;
-    color: rgb(220, 175, 250);
+    color:#622d86;
     width: 200px;
     height: 0;
     overflow: hidden;
     transition: height 0.3s ease-in-out;
 }
 .nav-links li:hover {
-    color:rgb(168, 105, 209);
+    color:rgb(220, 175, 250);
 }
 
 /* Hamburger Menu Styling */
@@ -218,7 +226,7 @@ a {
     color:#000000;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
     .navbar {
         display: flex;
         align-items: center;
@@ -238,7 +246,7 @@ a {
         flex-direction: column;
         display: none;
         margin: 0;
-        padding: 0;
+        padding: 2rem 0 0 0;
     }
     .nav-links li {
         list-style: none;
@@ -267,10 +275,7 @@ a {
         height: auto;
         background: none;
         width: auto;
-        padding: 0;
-    }
-    .logo {
-        max-width: 2.5rem; /* Adjust as needed */
+        padding: 0.5rem 0 0 0;
     }
 }
 @media (max-width: 767px) {
@@ -281,25 +286,20 @@ a {
         width: 100%;
         max-height: 4.5rem;
         z-index: 1000; /* Ensures it stays on top of other content */
-        background-color: #622d86; /* Or your desired background */
         padding: 0.7rem 2rem 1rem 2rem;
         border-bottom: 1px solid #000000;
     }
-
-    
     .nav-links a {
         font-size: 1.5rem;
         padding: 0;
         margin: 0;
         }
-    
     .navbar {
         display: flex;
         justify-content: space-between;
         align-items: center;
         position: relative;
     }
-    
     .logo {
         max-width: 1.5rem; /* Adjust as needed */
     }
@@ -313,7 +313,7 @@ a {
     }
 
     .hamburger-menu span {
-        background-color: rgb(213, 151, 254);
+        background-color:  #622d86;
         height: 3px;
         width: 25px;
         border-radius: 2px;
@@ -1083,6 +1083,8 @@ a {
 .card-container.landing .card {
   /* slide-in start state */
   opacity: 0;
+  width: 40vw;
+  height: 60vh;
   transform: translateY(60px);
   transition: opacity .6s ease-out, transform .6s ease-out;
 
@@ -1175,6 +1177,21 @@ a {
         gap: 1rem; /* Reduce gap between cards */
         padding: 3rem 0 4rem 20rem; /* Adjust padding for smaller screens */
     }
+        /* ───────── cards ───────── */
+    .card-container.landing .card {
+    /* slide-in start state */
+    opacity: 0;
+    width: 40vw;
+    height: 85vh;
+    transform: translateY(60px);
+    transition: opacity .6s ease-out, transform .6s ease-out;
+
+    /* stacking behaviour */
+    position: sticky;
+    top: 4rem;          /* “parking spot” for the stack */
+    margin-top: 0;      /* NO overlap: they sit exactly on top */
+    /* z-index is set in JS so each newer card > previous */
+    }
     
     .text-cards-landing{        
         width: 50vw;
@@ -1248,7 +1265,7 @@ a {
     }
     .cards-full .card-container.landing .card {
         width: 25rem; /* Reduce card width for smaller screens */
-        height: auto; /* Allow height to adjust automatically */
+        height: 85vh; /* Allow height to adjust automatically */
     }
     .cards-full .card-container.landing .card h3{
         font-size: 2rem;
@@ -1259,6 +1276,9 @@ a {
         max-height: 150vh;
         padding: 0;
         margin: 2rem 1rem 2rem 2rem;
+    }
+    .cta-cards a {
+        font-size: 2rem; 
     }
 }
 
@@ -1320,7 +1340,7 @@ a {
     }
     .cards-full .card-container.landing .card {
         width: 80vw;
-        height: auto; /* Smaller card width for XS */
+        height: 50vh; /* Smaller card width for XS */
         margin: 1rem 0;
         padding: 1rem 2rem 1rem 1rem;
     }
@@ -1409,7 +1429,7 @@ a {
     }
     .cards-full .card-container.landing .card {
         width: 80vw;
-        height: auto; /* Smaller card width for XS */
+        height: 60vh; /* Smaller card width for XS */
         margin: 1rem 0;
         padding: 1rem 2rem 1rem 1rem;
     }
@@ -1441,6 +1461,14 @@ a {
         max-height: 150vh;
         padding: 0;
         margin: 2rem 1rem 2rem 0;
+    }
+}
+@media (max-width: 325px) {
+    .cards-full .card-container.landing .card {
+        width: 80vw;
+        height: 65vh; /* Smaller card width for XS */
+        margin: 1rem 0;
+        padding: 1rem 2rem 1rem 1rem;
     }
 }
 
@@ -1534,7 +1562,7 @@ a {
         text-decoration: none;
         border-radius: 5px;
         font-weight: 500;
-        font-size: 2.5rem;
+        font-size: 2rem;
         transition: background-color 0.3s;
     }
 }
@@ -1849,7 +1877,7 @@ a {
         text-decoration: none;
         border-radius: 5px;
         font-weight: 500;
-        font-size: 2.5rem;
+        font-size: 2rem;
         transition: background-color 0.3s;
     }
 }
@@ -2540,6 +2568,7 @@ a {
     min-height: auto;
 }
 .hero-sumate h1{
+    text-align: center;
     padding: 2rem 0;
     font-size: 3rem; 
 }
@@ -2582,9 +2611,20 @@ a {
         display:flex;
         flex-direction: row;
         padding: 0;
-        margin: 2rem 4rem 2rem 6rem;
+        margin: 2rem 4rem 2rem 8rem;
         width: 90vw;
-    }
+}
+.line-of-work.typetwo .about-section {
+    display:flex;
+    flex-direction: column;
+    width: 40vw;
+    height:auto;
+    margin: 0 0 0 1rem;
+    padding: 0;
+}
+.line-of-work.typetwo .line-of-work-card {
+ margin:0;
+}
 .line-of-work .about-section {
     display:flex;
     flex-direction: column;
@@ -2626,9 +2666,6 @@ width: 40vw;
     margin: 1rem 0;
 }
 
-.cta-button:hover {
-    background-color: #ff4747;
-}
 
 /* Join CTA Section */
 .join-cta {
@@ -2646,7 +2683,7 @@ width: 40vw;
 .join-cta p {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
-    padding: 0 8rem 0 0;
+    padding: 0 8rem ;
 }
 
 .join-cta  a{
@@ -2654,6 +2691,11 @@ width: 40vw;
 }
 
 
+@media (max-width: 1380px) {
+    .line-of-work .about-section .about-us-image.colaboracion {
+        padding: 5.2rem 0 0 0;
+    }
+}
 @media (max-width: 1028px) {
     .hero-sumate {
         display: flex;
@@ -2687,6 +2729,11 @@ width: 40vw;
         width: 35vw;
         height: auto;
     }
+    
+    .line-of-work .about-section .about-us-image.colaboracion {
+        padding: 4.2rem 0 0 0;
+    }
+    
     .line-of-work .about-section .about-us-image img {
         margin:0;
         width: 40vw;
@@ -2726,6 +2773,15 @@ width: 40vw;
     }
     .join-cta a{
         font-size: 2rem;
+    }
+    .cta-button {
+        font-size: 2rem;
+        display: inline-block;
+        padding: 0.7rem 1.5rem;
+        color: white;
+        text-decoration: none;
+        border-radius: 10px;
+        margin: 1rem 0;
     }
 }
 @media (max-width: 770px){
@@ -2886,6 +2942,7 @@ width: 40vw;
 /*//////////////////////////// VISITANOS //////////////////////////////*/
 
 .hero-visitanos {
+    text-align: center;
     margin: 8rem auto 0 auto; /* Centers the form and adds vertical spacing */
     padding: 0;
 }
@@ -2900,6 +2957,7 @@ width: 40vw;
     font-size: 2rem;
 }
 .visit-map {
+    text-align: center;
     margin: 0;
     padding: 0;
 }
@@ -2916,17 +2974,19 @@ width: 40vw;
 .visit-map iframe{
     margin: 1rem 2rem;
     padding: 0;
+    width:60vw;
+    height: 80vh;
     font-size: 2rem;
 }
 @media (max-width: 1028px) {
     .hero-visitanos {
         margin: 8rem auto 0 auto; /* Centers the form and adds vertical spacing */
-        padding: 0;
+        padding: 0 8rem;
     }
     .hero-visitanos h1{
         margin: 1rem 2rem;
         padding: 0;
-        font-size: 3rem;
+        font-size: 2rem;
     }
     .hero-visitanos p{
         margin: 0 2rem;
@@ -2987,7 +3047,7 @@ width: 40vw;
 /* Contact Form Section */
 .contact-form-container {
     padding: 4rem;
-    margin: 0;
+    margin: 0 0 2rem 0;
     min-width: 90vw;
 }
 .contact-form {
@@ -4316,7 +4376,7 @@ width: 40vw;
     font-size: 2rem;
     font-weight: 400;
     line-height: 1.2;
-    margin:0 17rem 0 3rem;
+    margin: 1rem 17rem 1rem 3rem;
     color: #000000;
 }
 
@@ -4344,8 +4404,9 @@ width: 40vw;
         flex-direction: row;
         width: 90vw;
         height: auto;
-        padding: 2rem 4rem 2rem 2rem;
+        padding: 2rem ;
         margin: 0 0 2rem 0;
+        box-shadow: none;
     }
 .about-text .card-container .card.typetwo {
         display:flex;
@@ -4359,10 +4420,14 @@ width: 40vw;
     border-radius: 10px;
     max-width: 40vw;
     height: auto;
-    margin: 2rem 1rem;
+    margin: 3rem;
+    padding: 0;
+}
+.about-text .card img.alejandra {
+    margin: 4rem 3rem;
 }
 .about-text .card .about-us-card-text {
-    max-width: 50vw;
+    max-width: 60vw;
     height: auto;
     margin: 1rem;
 }
@@ -4374,6 +4439,73 @@ width: 40vw;
     margin: 1rem 1rem 0 0;
 
 }
+
+@media (max-width: 1380px) {
+    .about-text .card-container {
+            min-width: 60vw;
+            padding: 0;
+            margin: 0 4rem 0 0;
+        }
+    .about-text .card-container .card{
+        display:flex;
+        flex-direction: row;
+        width: 90vw;
+        height: auto;
+        padding: 2rem 2rem 2rem 2rem;
+        margin: 0;
+    }
+    .about-text .card-container .card.typetwo {
+            display:flex;
+            flex-direction: row-reverse;
+            width: 90vw;
+            height: auto;
+            padding: 2rem 0 2rem 2rem;
+            margin: 0 0 2rem 0;
+        }
+    .about-text .card img {
+        border-radius: 10px;
+        min-width: auto;
+        max-height: 60vh;
+        margin: 6rem 1rem;
+        padding: 0;
+    }
+    .about-text .card img.alejandra {
+        margin: 9rem 3rem;
+    }
+}
+@media (max-width: 1270px) {
+    .about-text .card-container {
+            min-width: 60vw;
+            padding: 0;
+            margin: 0 4rem 0 0;
+        }
+    .about-text .card-container .card{
+        display:flex;
+        flex-direction: row;
+        width: 90vw;
+        height: auto;
+        padding: 2rem 2rem 2rem 2rem;
+        margin: 0;
+    }
+    .about-text .card-container .card.typetwo {
+            display:flex;
+            flex-direction: row-reverse;
+            width: 90vw;
+            height: auto;
+            padding: 2rem 0 2rem 2rem;
+            margin: 0 0 2rem 0;
+        }
+    .about-text .card img {
+        border-radius: 10px;
+        min-width: auto;
+        max-height: 60vh;
+        margin: 6rem 1rem;
+        padding: 0;
+    }
+    .about-text .card img.alejandra {
+        margin: 9rem 3rem;
+    }
+}
 /* Responsive Design */
 @media (max-width: 1028px){
     .about-us .about-us-image {
@@ -4383,7 +4515,7 @@ width: 40vw;
     .about-section {
         flex-direction: column;
         text-align: left;
-        margin: 2rem 1rem 0 2rem;
+        margin: 2rem 1rem 2rem 2rem;
     }
 
     .about-section h1{
@@ -4398,7 +4530,7 @@ width: 40vw;
     }
     .about-text {
         width: 90vw;
-        margin: 1rem 1rem;
+        margin: 1rem 4rem 1rem 1rem;
         padding: 0;
     }
     .about-text h2{
@@ -4413,7 +4545,7 @@ width: 40vw;
     }
     .about-text p{
         font-size: 1.7rem;
-        margin: 0 1rem;
+        margin: 0 1rem 2rem 1rem;
         padding: 0;
     }
 
@@ -4436,23 +4568,26 @@ width: 40vw;
         flex-direction: row;
         width: 90vw;
         height: auto;
-        padding: 2rem 4rem 2rem 2rem;
-        margin: 0 0 2rem 0;
+        padding: 2rem 0 2rem 2rem;
+        margin: 0;
     }
     .about-text .card-container .card.typetwo {
             display:flex;
             flex-direction: row-reverse;
             width: 90vw;
             height: auto;
-            padding: 2rem 4rem 2rem 2rem;
-            margin: 0 0 2rem 0;
+            padding: 2rem 0 0 2rem;
+            margin: 0;
         }
     .about-text .card img {
         border-radius: 10px;
         min-width: auto;
         max-height: 60vh;
-        margin: 8rem 1rem;
+        margin: 6rem 1rem;
         padding: 0;
+    }
+    .about-text .card img.alejandra {
+        margin: 9rem 3rem;
     }
     .about-text .card .about-us-card-text {
         max-width: 50vw;
@@ -4513,35 +4648,34 @@ width: 40vw;
         font-weight: 500;
         transition: background-color 0.3s;
     }
-    
-    
+        
     .about-text .card-container {
         min-width: 60vw;
         padding: 0;
-        margin: 0 4rem 0 0;
+        margin: 2rem 4rem 0 0;
     }
     .about-text .card-container .card{
         display:flex;
         flex-direction: row;
         width: 90vw;
         height: auto;
-        padding: 0 4rem 0 2rem;
-        margin: 0 0 2rem 0;
+        padding: 0;
+        margin: 0;
     }
     .about-text .card-container .card.typetwo {
             display:flex;
             flex-direction: row-reverse;
             width: 90vw;
             height: auto;
-            padding: 2rem 4rem 2rem 2rem;
-            margin: 0 0 2rem 0;
+            padding: 0;
+            margin: 0;
         }
-    .about-text .card img {
-        border-radius: 10px;
-        max-width: 35vw;
-        max-height: 60vh;
-        margin: 7rem 1rem;
-        padding: 0;
+    .about-text .card img.alejandra {
+        margin: 9rem 3rem;
+    }
+    
+    .about-text .card img.tatiana {
+        margin: 9rem 1rem;
     }
     .about-text .card .about-us-card-text {
         max-width: 40vw;
@@ -4671,8 +4805,14 @@ width: 40vw;
     .about-text .card-container .card{
         min-width: 50vw;
         max-width: 90vw;
-        padding: 1rem 1.5rem;
-        margin: 1rem 4rem 0 0;
+        padding: 0 1.5rem;
+        margin: 0 4rem 0 0;
+    }
+    .about-text .card-container .card.typetwo{
+        min-width: 50vw;
+        max-width: 90vw;
+        padding: 0 1.5rem;
+        margin: 0 4rem 0 0;
     }
     
     .about-text .card-container .card img {
@@ -4685,7 +4825,7 @@ width: 40vw;
         margin:0;
     }.about-text .card-container .card p{
         font-size: 1.5rem;
-        padding: 2rem 0;
+        padding: 1rem 0 2rem 0;
         margin:0;
     }
 }
@@ -5269,4 +5409,9 @@ img.animate {
     transform: scale(1);
     opacity: 1;
   }
+}
+.text-kef{
+    font-style: normal;
+    font-family: 'Coniferous', sans-serif!important;
+    font-size: 4rem;
 }
