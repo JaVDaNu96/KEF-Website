@@ -2,6 +2,16 @@
   functions = "netlify/functions"
   
 [[headers]]
-  for = "/data/intervenciones.json"
+  for = "/data/*.json"
   [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Headers = "Content-Type"
+    Access-Control-Allow-Methods = "GET, OPTIONS"
     Cache-Control = "max-age=3600"
+
+[[headers]]
+  for = "/*.json"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Headers = "Content-Type"
+    Access-Control-Allow-Methods = "GET, OPTIONS"
