@@ -3,13 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Activismo</title>
+    <title>Activismo - Debug Version</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="js/includes.js" defer></script>
-    <script src="js/eventsData.js"></script>
-    <script src="js/carousels.js" defer></script>
+    <script src="/js/eventsData.js"></script>
+    <script src="/js/includes.js" defer></script>
+    <script src="/js/carousels.js" defer></script>
+    <!-- Add console logging for debugging -->
+    <script>
+        console.log('🔍 Debug: HTML head loaded');
+        window.addEventListener('error', function(e) {
+            console.error('🚨 Global Error:', e.error, 'File:', e.filename, 'Line:', e.lineno);
+        });
+    </script>
 </head>
 <body>
+    <script>console.log('🔍 Debug: Body started loading');</script>
 
     <!-- Header Section -->
     <div id="header-placeholder"></div>
@@ -29,22 +37,101 @@
         <div class="allies">
             <p>Desde el año 2023 hemos participado en las siguientes marchas, intervenciones urbanas, acciones simbólicas y campañas de sensibilización.</p>
         </div>
+        
+        <!-- Debug info -->
+        <div id="debug-info" style="background: #f0f0f0; padding: 10px; margin: 10px; border: 1px solid #ccc;">
+            <h3>Debug Information:</h3>
+            <p id="events-data-status">Checking eventsData...</p>
+            <p id="carousel-container-status">Checking carousel container...</p>
+            <p id="scripts-status">Checking scripts...</p>
+        </div>
+        
         <div id="carousel-container"></div>
+        
         <!-- Modal for Expanded Image -->
-        <div id="image-modal" class="modal">
+        <div id="image-modal" class="modal" style="display: none;">
             <span class="close">&times;</span>
-            <span class="nav-arrow left-arrow">&#10094;</span> <!-- ← -->
+            <span class="nav-arrow left-arrow">&#10094;</span>
             <img class="modal-content" id="expanded-img">
             <span class="nav-arrow right-arrow">&#10095;</span>
         </div>
+        
         <!-- Blog CTA Section -->
         <div class="blog-cta">
             <h2>Descubre Nuestro Espacio de Reflexión</h2>
             <a href="blog.html?topic=activismo" class="cta-button-activismo">Activismo en nuestro Blog</a>
         </div>
     </section>
+    
     <!-- Footer Section -->
     <div id="footer-placeholder"></div>
 
+    <!-- Load scripts with error handling and debug info -->
+    <script>
+        console.log('🔍 Debug: About to load eventsData.js');
+        
+        // Check if scripts are loading
+        function checkScriptLoad(scriptSrc, name) {
+            const script = document.createElement('script');
+            script.src = scriptSrc;
+            script.onload = () => {
+                console.log(`✅ ${name} loaded successfully`);
+                updateDebugStatus(name + '-status', `✅ ${name} loaded`);
+            };
+            script.onerror = (e) => {
+                console.error(`❌ Failed to load ${name}:`, e);
+                updateDebugStatus(name + '-status', `❌ Failed to load ${name}`);
+            };
+            document.head.appendChild(script);
+        }
+        
+        function updateDebugStatus(elementId, message) {
+            const element = document.getElementById(elementId);
+            if (element) {
+                element.textContent = message;
+                element.style.color = message.includes('✅') ? 'green' : 'red';
+            }
+        }
+        
+        // Load eventsData first
+        checkScriptLoad('./js/eventsData.js', 'eventsData.js');
+        
+        // Wait a bit then load other scripts
+        setTimeout(() => {
+            checkScriptLoad('./js/includes.js', 'includes.js');
+            checkScriptLoad('./js/carousels.js', 'carousels.js');
+        }, 100);
+        
+        // Check eventsData availability
+        setTimeout(() => {
+            if (window.eventsData) {
+                console.log('✅ eventsData available:', window.eventsData.length, 'topics');
+                updateDebugStatus('events-data-status', `✅ eventsData loaded with ${window.eventsData.length} topics`);
+            } else {
+                console.error('❌ eventsData not available');
+                updateDebugStatus('events-data-status', '❌ eventsData not available - check file path');
+            }
+            
+            const container = document.getElementById('carousel-container');
+            if (container) {
+                updateDebugStatus('carousel-container-status', '✅ Carousel container found');
+            } else {
+                updateDebugStatus('carousel-container-status', '❌ Carousel container not found');
+            }
+        }, 500);
+        
+        // Manual carousel loading for debugging
+        window.addEventListener('load', () => {
+            console.log('🔍 Debug: Window loaded, attempting manual carousel load');
+            setTimeout(() => {
+                if (window.loadCarousels && typeof window.loadCarousels === 'function') {
+                    console.log('🔍 Debug: Calling loadCarousels manually');
+                    window.loadCarousels();
+                } else {
+                    console.error('❌ loadCarousels function not available');
+                }
+            }, 1000);
+        });
+    </script>
 </body>
 </html>

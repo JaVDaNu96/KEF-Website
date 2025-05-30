@@ -1,21 +1,33 @@
-// Updated carousels.js that uses the JS module instead of fetch
+// Improved carousels.js with better error handling and debugging
 let currentImageIndex = 0;
 let currentImageList = [];
 
 function loadCarousels() {
+    console.log('🔍 loadCarousels() called');
+    
     try {
-        // Use the globally available eventsData instead of fetching
-        const topics = window.eventsData;
-
-        if (!topics) {
-            console.error('Events data not found. Make sure eventsData.js is loaded.');
+        // Check if eventsData is available
+        if (!window.eventsData) {
+            console.error('❌ eventsData not found on window object');
+            console.log('Available on window:', Object.keys(window).filter(key => key.includes('event')));
             return;
         }
 
+        const topics = window.eventsData;
+        console.log('✅ Found eventsData with', topics.length, 'topics');
+
         const container = document.getElementById('carousel-container');
+        if (!container) {
+            console.error('❌ carousel-container element not found');
+            return;
+        }
+        
+        console.log('✅ Found carousel container');
         container.innerHTML = '';
 
-        topics.forEach(topic => {
+        topics.forEach((topic, topicIndex) => {
+            console.log(`Processing topic ${topicIndex + 1}:`, topic.topic);
+            
             // Create Topic Section
             const topicSection = document.createElement('div');
             topicSection.className = 'topic-section';
@@ -24,7 +36,9 @@ function loadCarousels() {
             topicTitle.textContent = topic.topic;
             topicSection.appendChild(topicTitle);
 
-            topic.events.forEach(event => {
+            topic.events.forEach((event, eventIndex) => {
+                console.log(`  Processing event ${eventIndex + 1}:`, event.name);
+                
                 // Create Event Section
                 const eventSection = document.createElement('div');
                 eventSection.className = 'event-section';
@@ -38,59 +52,136 @@ function loadCarousels() {
                 eventSection.appendChild(eventTitle);
                 eventSection.appendChild(eventDescription);
 
-                // Create Carousel Container
-                const carousel = document.createElement('div');
-                carousel.className = 'carousel';
+                // Only create carousel if there are images
+                if (event.images && event.images.length > 0) {
+                    console.log(`    Creating carousel with ${event.images.length} images`);
+                    
+                    // Create Carousel Container
+                    const carousel = document.createElement('div');
+                    carousel.className = 'carousel';
 
-                event.images.forEach(imgSrc => {
-                    const imgElement = document.createElement('img');
-                    imgElement.src = imgSrc;
-                    imgElement.className = 'carousel-img';
-                    imgElement.onclick = () => expandImage(imgSrc, carousel);
-                    carousel.appendChild(imgElement);
-                });
+                    event.images.forEach((imgSrc, imgIndex) => {
+                        const imgElement = document.createElement('img');
+                        imgElement.src = imgSrc;
+                        imgElement.className = 'carousel-img';
+                        imgElement.alt = `${event.name} - Image ${imgIndex + 1}`;
+                        
+                        // Add error handling for images
+                        imgElement.onerror = function() {
+                            console.warn(`⚠️ Failed to load image: ${imgSrc}`);
+                            this.style.display = 'none';
+                        };
+                        
+                        imgElement.onload = function() {
+                            console.log(`✅ Loaded image: ${imgSrc}`);
+                        };
+                        
+                        imgElement.onclick = () => expandImage(imgSrc, carousel);
+                        carousel.appendChild(imgElement);
+                    });
 
-                eventSection.appendChild(carousel);
+                    eventSection.appendChild(carousel);
+                } else {
+                    console.log('    No images for this event');
+                    const noImagesText = document.createElement('p');
+                    noImagesText.textContent = 'No hay imágenes disponibles para este evento.';
+                    noImagesText.style.fontStyle = 'italic';
+                    noImagesText.style.color = '#666';
+                    eventSection.appendChild(noImagesText);
+                }
+
                 topicSection.appendChild(eventSection);
             });
 
             container.appendChild(topicSection);
         });
+        
+        console.log('✅ Carousels loaded successfully');
+        
     } catch (error) {
-        console.error("Error loading carousels:", error);
+        console.error("❌ Error loading carousels:", error);
+        console.error(error.stack);
     }
 }
 
 // Function to Expand Image in Modal
 function expandImage(src, carouselElement) {
-    const modal = document.getElementById("image-modal");
-    const modalImg = document.getElementById("expanded-img");
+    console.log('🔍 Expanding image:', src);
+    
+    try {
+        const modal = document.getElementById("image-modal");
+        const modalImg = document.getElementById("expanded-img");
 
-    // Get all images from the current carousel
-    const allImages = Array.from(carouselElement.querySelectorAll('.carousel-img'));
-    currentImageList = allImages.map(img => img.src);
-    currentImageIndex = currentImageList.indexOf(src);
+        if (!modal || !modalImg) {
+            console.error('❌ Modal elements not found');
+            return;
+        }
 
-    modal.style.display = "block";
-    modalImg.src = src;
+        // Get all images from the current carousel
+        const allImages = Array.from(carouselElement.querySelectorAll('.carousel-img'));
+        currentImageList = allImages.map(img => img.src);
+        currentImageIndex = currentImageList.indexOf(src);
 
-    document.querySelector(".close").onclick = function() {
-        modal.style.display = "none";
-    };
+        console.log(`Found ${currentImageList.length} images in carousel, current index: ${currentImageIndex}`);
+
+        modal.style.display = "block";
+        modalImg.src = src;
+
+        // Setup close button
+        const closeBtn = document.querySelector(".close");
+        if (closeBtn) {
+            closeBtn.onclick = function() {
+                console.log('🔍 Closing modal');
+                modal.style.display = "none";
+            };
+        }
+        
+    } catch (error) {
+        console.error('❌ Error expanding image:', error);
+    }
 }
 
-// Event Listeners for Modal Navigation
-window.addEventListener('DOMContentLoaded', () => {
-    loadCarousels();
+// Enhanced initialization
+function initializeCarousels() {
+    console.log('🔍 Initializing carousels...');
+    
+    // Wait for eventsData to be available
+    let attempts = 0;
+    const maxAttempts = 50; // 5 seconds max wait
+    
+    const checkAndLoad = () => {
+        attempts++;
+        console.log(`Attempt ${attempts}: Checking for eventsData...`);
+        
+        if (window.eventsData) {
+            console.log('✅ eventsData found, loading carousels');
+            loadCarousels();
+            setupModalNavigation();
+        } else if (attempts < maxAttempts) {
+            console.log('⏳ eventsData not ready, waiting...');
+            setTimeout(checkAndLoad, 100);
+        } else {
+            console.error('❌ Timeout waiting for eventsData');
+        }
+    };
+    
+    checkAndLoad();
+}
 
+function setupModalNavigation() {
+    console.log('🔍 Setting up modal navigation');
+    
     const leftArrow = document.querySelector(".left-arrow");
     const rightArrow = document.querySelector(".right-arrow");
 
     if (leftArrow && rightArrow) {
+        console.log('✅ Found modal navigation arrows');
+        
         leftArrow.addEventListener("click", () => {
             if (currentImageIndex > 0) {
                 currentImageIndex--;
                 document.getElementById("expanded-img").src = currentImageList[currentImageIndex];
+                console.log('◀ Previous image, index:', currentImageIndex);
             }
         });
 
@@ -98,14 +189,26 @@ window.addEventListener('DOMContentLoaded', () => {
             if (currentImageIndex < currentImageList.length - 1) {
                 currentImageIndex++;
                 document.getElementById("expanded-img").src = currentImageList[currentImageIndex];
+                console.log('▶ Next image, index:', currentImageIndex);
             }
         });
+    } else {
+        console.warn('⚠️ Modal navigation arrows not found');
     }
-});
+}
 
+// Event Listeners
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeCarousels);
+} else {
+    // DOM already loaded
+    initializeCarousels();
+}
+
+// Keyboard navigation for modal
 document.addEventListener("keydown", function (event) {
     const modal = document.getElementById("image-modal");
-    if (modal.style.display === "block") {
+    if (modal && modal.style.display === "block") {
         if (event.key === "ArrowLeft") {
             if (currentImageIndex > 0) {
                 currentImageIndex--;
@@ -116,6 +219,12 @@ document.addEventListener("keydown", function (event) {
                 currentImageIndex++;
                 document.getElementById("expanded-img").src = currentImageList[currentImageIndex];
             }
+        } else if (event.key === "Escape") {
+            modal.style.display = "none";
         }
     }
 });
+
+// Make functions globally available for debugging
+window.loadCarousels = loadCarousels;
+window.expandImage = expandImage;
