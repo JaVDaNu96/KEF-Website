@@ -21,8 +21,32 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', () => {
     cards.forEach(card => {
       const r = card.getBoundingClientRect();
-      const isParked = r.top <= 64 && r.bottom > 64;  // 64 px = top + padding
+      const isParked = r.top <= 60 && r.bottom > 60;  // 64 px = top + padding
       card.style.boxShadow = isParked ? 'none' : '';  // remove halo while stacked
     });
+  });
+  // 2. IntersectionObserver to toggle the "in-view" class
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+      } else {
+        entry.target.classList.remove('in-view');
+      }
+    });
+  }, {
+    root: null,               // viewport
+    threshold: 0.6,           // fire when 10% visible
+    rootMargin: '0px 0px -20% 0px' // shift trigger a bit upward
+  });
+
+  cards.forEach(card => observer.observe(card));
+   cards.forEach((card, i) => {
+    if (i > 0) {
+      const style     = getComputedStyle(card);
+      const topOffset = parseFloat(style.top);                    // in px
+      const height    = card.getBoundingClientRect().height;     // in px
+      card.style.marginTop = `${-height}px`;
+    }
   });
 });

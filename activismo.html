@@ -6,6 +6,9 @@
     <title>Activismo - Debug Version</title>
     <link rel="stylesheet" href="styles.css">
     <!-- Add console logging for debugging -->
+    <script src="/js/eventsData.js" defer></script>    
+    <script src="/js/carousels.js" defer></script>
+    <script src="/js/includes.js" defer></script>
     <script>
         console.log('🔍 Debug: HTML head loaded');
         window.addEventListener('error', function(e) {
@@ -30,10 +33,6 @@
             </div>
         </div>
         
-        <!-- Community and Allies Section -->
-        <div class="allies">
-            <p>Desde el año 2023 hemos participado en las siguientes marchas, intervenciones urbanas, acciones simbólicas y campañas de sensibilización.</p>
-        </div>
         <div id="carousel-container"></div>
         
         <!-- Modal for Expanded Image -->
@@ -64,11 +63,9 @@
             script.src = scriptSrc;
             script.onload = () => {
                 console.log(` ${name} loaded successfully`);
-                updateDebugStatus(name + '-status', ` ${name} loaded`);
             };
             script.onerror = (e) => {
                 console.error(` Failed to load ${name}:`, e);
-                updateDebugStatus(name + '-status', ` Failed to load ${name}`);
             };
             document.head.appendChild(script);
         }
@@ -86,17 +83,15 @@
         setTimeout(() => {
             if (window.eventsData) {
                 console.log(' eventsData available:', window.eventsData.length, 'topics');
-                updateDebugStatus('events-data-status', ` eventsData loaded with ${window.eventsData.length} topics`);
             } else {
                 console.error(' eventsData not available');
-                updateDebugStatus('events-data-status', ' eventsData not available - check file path');
             }
             
             const container = document.getElementById('carousel-container');
             if (container) {
-                updateDebugStatus('carousel-container-status', ' Carousel container found');
+                console.log(' Carousel container found');
             } else {
-                updateDebugStatus('carousel-container-status', ' Carousel container not found');
+                console.log(' Carousel container not found');
             }
         }, 500);
         
