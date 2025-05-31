@@ -97,12 +97,18 @@ window.addEventListener('DOMContentLoaded', () => {
                 currentImageIndex--;
                 document.getElementById("expanded-img").src = currentImageList[currentImageIndex];
             }
+            else {
+                console.log('no previous image available')
+            }
         });
 
         rightArrow.addEventListener("click", () => {
             if (currentImageIndex < currentImageList.length - 1) {
                 currentImageIndex++;
                 document.getElementById("expanded-img").src = currentImageList[currentImageIndex];
+            }
+            else {
+                console.log('there are no more photos')
             }
         });
     }
