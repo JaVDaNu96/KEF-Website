@@ -1095,7 +1095,7 @@ a {
   margin-top: 0;
   /* collapse reserved space so cards overlap */
   opacity: 0;
-  transform: translateY(20vh);
+  transform: translateY(60px);
   transition: opacity 0.7s ease-out, transform 0.7s ease-out;
   /* z-index is still set via JS */
 }
@@ -1205,7 +1205,7 @@ a {
     flex-direction: row; /* Align cards to the left */
     gap: 1rem; /* Reduce gap between cards */
     padding: 2rem 4rem 20vh 4rem; /* Adjust padding for smaller screens */
-}
+    }
     .text-cards-landing{        
         width: 50vw;
         margin: 0;
@@ -1221,7 +1221,16 @@ a {
         text-align: left;
         color:#622d86;
     }
-
+    .card-container.landing .card {
+        width: 40vw;
+        height: 85vh;
+        position: sticky;
+        top: 0;
+        margin-top: 0;
+        opacity: 0;
+        transform: translateY(60px);
+        transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    }
     .card {
         width: 25rem; /* Reduce card width for smaller screens */
         height: auto;
