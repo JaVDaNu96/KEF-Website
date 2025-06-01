@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Activismo - Debug Version</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="/js/carousels.js"></script>
     <!-- Add console logging for debugging -->
     <script>
         console.log('🔍 Debug: HTML head loaded');
@@ -30,10 +31,6 @@
             </div>
         </div>
         
-        <!-- Community and Allies Section -->
-        <div class="allies">
-            <p>Desde el año 2023 hemos participado en las siguientes marchas, intervenciones urbanas, acciones simbólicas y campañas de sensibilización.</p>
-        </div>
         <div id="carousel-container"></div>
         
         <!-- Modal for Expanded Image -->
@@ -64,11 +61,9 @@
             script.src = scriptSrc;
             script.onload = () => {
                 console.log(` ${name} loaded successfully`);
-                updateDebugStatus(name + '-status', ` ${name} loaded`);
             };
             script.onerror = (e) => {
                 console.error(` Failed to load ${name}:`, e);
-                updateDebugStatus(name + '-status', ` Failed to load ${name}`);
             };
             document.head.appendChild(script);
         }
@@ -79,26 +74,8 @@
         // Wait a bit then load other scripts
         setTimeout(() => {
             checkScriptLoad('./js/includes.js', 'includes.js');
-            checkScriptLoad('./js/carousels.js', 'carousels.js');
         }, 100);
         
-        // Check eventsData availability
-        setTimeout(() => {
-            if (window.eventsData) {
-                console.log(' eventsData available:', window.eventsData.length, 'topics');
-                updateDebugStatus('events-data-status', ` eventsData loaded with ${window.eventsData.length} topics`);
-            } else {
-                console.error(' eventsData not available');
-                updateDebugStatus('events-data-status', ' eventsData not available - check file path');
-            }
-            
-            const container = document.getElementById('carousel-container');
-            if (container) {
-                updateDebugStatus('carousel-container-status', ' Carousel container found');
-            } else {
-                updateDebugStatus('carousel-container-status', ' Carousel container not found');
-            }
-        }, 500);
         
         // Manual carousel loading for debugging
         window.addEventListener('load', () => {
