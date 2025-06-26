@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Activismo - Debug Version</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="/js/carousels.js"></script>
     <!-- Add console logging for debugging -->
     <script src="/js/eventsData.js" defer></script>    
     <script src="/js/carousels.js" defer></script>
@@ -76,24 +77,8 @@
         // Wait a bit then load other scripts
         setTimeout(() => {
             checkScriptLoad('./js/includes.js', 'includes.js');
-            checkScriptLoad('./js/carousels.js', 'carousels.js');
         }, 100);
         
-        // Check eventsData availability
-        setTimeout(() => {
-            if (window.eventsData) {
-                console.log(' eventsData available:', window.eventsData.length, 'topics');
-            } else {
-                console.error(' eventsData not available');
-            }
-            
-            const container = document.getElementById('carousel-container');
-            if (container) {
-                console.log(' Carousel container found');
-            } else {
-                console.log(' Carousel container not found');
-            }
-        }, 500);
         
         // Manual carousel loading for debugging
         window.addEventListener('load', () => {

@@ -8,7 +8,6 @@ function loadCarousels() {
         const topics = window.eventsData;
 
         if (!topics) {
-            console.error('Events data not found. Make sure eventsData.js is loaded.');
             return;
         }
 

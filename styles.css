@@ -723,6 +723,7 @@ a {
         padding: 7rem 3rem 0 0;
     }
     .main-hero-content {
+        margin: 7rem 0 0 0;
         display: flex;
         flex-direction: column; /* Default: side-by-side layout */
         align-items: flex-start;
@@ -1089,17 +1090,17 @@ a {
 /* ───────── cards ───────── */
 .card-container.landing .card {
   width: 40vw;
-  height: 60vh;
+  height: 70vh;
   position: sticky;
   top: 0;
   margin-top: 0;
   /* collapse reserved space so cards overlap */
   opacity: 0;
-  transform: translateY(20vh);
+  transform: translateY(30px);
   transition: opacity 0.7s ease-out, transform 0.7s ease-out;
   /* z-index is still set via JS */
 }
-
+/* 
 .sliding-card-activismo {
     position: sticky;
     top: 0;
@@ -1118,7 +1119,7 @@ a {
     height: 120vh;
     margin-top: -20vh;
 
-}
+} */
 .card-container.landing .card.in-view {
   opacity: 1;
   transform: translateY(0);
@@ -1193,23 +1194,23 @@ a {
 }
 /* Responsive Adjustments for M */
 @media (max-width: 1028px) {
-    .card-container {
+    .cards-full .card-container.landing {
         display: flex;
         flex-direction: column; 
         justify-content: right; /* Align cards to the left */
         gap: 1rem; /* Reduce gap between cards */
-        padding: 3rem 0 4rem 20rem; /* Adjust padding for smaller screens */
+        padding: 5rem 0 4rem 0; /* Adjust padding for smaller screens */
     }
     .full-section.cards-full {
     display:flex;
     flex-direction: row; /* Align cards to the left */
     gap: 1rem; /* Reduce gap between cards */
-    padding: 2rem 4rem 20vh 4rem; /* Adjust padding for smaller screens */
-}
+    padding: 2rem 4rem 0rem 4rem; /* Adjust padding for smaller screens */
+    }
     .text-cards-landing{        
-        width: 50vw;
+        width: 45vw;
         margin: 0;
-        padding: 2rem 0 0 0;
+        padding: 2rem 1rem 0 0;
         text-align: left;
     }
     
@@ -1221,7 +1222,16 @@ a {
         text-align: left;
         color:#622d86;
     }
-
+    .card-container.landing .card {
+        width: 45vw;
+        height: 76vh;
+        position: sticky;
+        top: 0;
+        margin-top: 0;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    }
     .card {
         width: 25rem; /* Reduce card width for smaller screens */
         height: auto;
@@ -1350,12 +1360,14 @@ a {
         justify-content: left; /* Align cards to the left */
         gap: 1rem; /* Reduce gap between cards */
         padding: 0 0 0 4rem; /* Adjust padding for smaller screens */
-    }
+    }    
     .cards-full .card-container.landing .card {
         width: 80vw;
-        height: 50vh; /* Smaller card width for XS */
-        margin: 1rem 0;
+        height: 55vh; /* Smaller card width for XS */
+        margin: 1rem 0 2rem 0;
         padding: 1rem 2rem 1rem 1rem;
+        transform: translateY(30px);
+        transition: opacity 0.7s ease-out, transform 0.7s ease-out;
     }
     .card h3{
         font-size: 2rem;
@@ -1443,7 +1455,7 @@ a {
     .cards-full .card-container.landing .card {
         width: 80vw;
         height: 60vh; /* Smaller card width for XS */
-        margin: 1rem 0;
+        margin: 1rem 0 2rem 0;
         padding: 1rem 2rem 1rem 1rem;
     }
     .card h3{
@@ -1480,7 +1492,7 @@ a {
     .cards-full .card-container.landing .card {
         width: 80vw;
         height: 65vh; /* Smaller card width for XS */
-        margin: 1rem 0;
+        margin: 1rem 0 2rem 0;
         padding: 1rem 2rem 1rem 1rem;
     }
 }
@@ -2851,7 +2863,7 @@ width: 40vw;
         flex-direction: column;
         width: 80vw!important;
     }
-    .line-of-work .about-section.typetwo {
+    .line-of-work.typetwo .about-section {
         display:flex;
         flex-direction: column;
         width: 80vw!important;
@@ -3654,7 +3666,15 @@ width: 40vw;
     margin: 2rem 4rem;
     padding: 2rem 0;
     border-bottom: 4px solid rgb(98, 45, 134);
-}
+    }
+    .modal-content {
+    max-width: 80vw;
+    max-height: 75vh;
+    margin: auto;
+    display: block;
+    margin-top: 3rem;
+    border-radius: 10px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -3718,18 +3738,46 @@ width: 40vw;
         margin: 0 2rem 1rem 2rem;
         font-size: 1.5rem;
     }    
-    .modal-content {
-        max-width: 80vw;
-        max-height: 80vh;
-        margin: 8rem 0 0 0;
-        display: block;
-        border-radius: 10px;
-    }
+    
     .cta-button-activismo {
         padding: 1rem 2rem;
         border-radius: 10px;
         text-decoration: none;
         min-width: 20vw;
+    }
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        text-align: center;
+        padding: 8rem 1.5rem;
+    }
+    .modal-content {
+        max-width: 80vw;
+        max-height: 80vh;
+        margin: 4rem 1rem 1rem 1rem;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+    }
+    .left-arrow {
+        left: 5px;
+    }
+    .right-arrow {
+        right: 5px;
+    }
+    .close {
+        position: absolute;
+        top: 7rem;
+        right: 15px;
+        font-size: 40px;
+        color: white;
+        cursor: pointer;
     }
 }
 
@@ -4829,7 +4877,7 @@ width: 40vw;
         flex-direction: row;
         width: 90vw;
         height: auto;
-        padding: 2rem ;
+        padding: 2rem 2rem 2rem 0;
         margin: 0 0 2rem 0;
         box-shadow: none;
     }
@@ -4845,11 +4893,11 @@ width: 40vw;
     border-radius: 10px;
     max-width: 40vw;
     height: auto;
-    margin: 3rem;
+    margin: auto 3rem;
     padding: 0;
 }
 .about-text .card img.alejandra {
-    margin: 4rem 3rem;
+    margin: 7rem 3rem;
 }
 .about-text .card .about-us-card-text {
     text-align: justify;
@@ -4867,7 +4915,54 @@ width: 40vw;
     margin: 1rem 1rem 0 0;
 
 }
-
+@media (min-width: 1500px) {
+    .about-text .card-container {
+            min-width: 60vw;
+            padding: 0;
+            margin: 0 4rem 0 0;
+    }
+    .about-text .card-container .card{
+        justify-content: center;
+        display:flex;
+        flex-direction: row;
+        width: 90vw;
+        height: auto;
+        padding: 2rem 2rem 2rem 2rem;
+        margin: 0;
+    }
+    .about-text .card-container .card.typetwo {
+            display:flex;
+            flex-direction: row-reverse;
+            width: 90vw;
+            height: auto;
+            padding: 2rem 0 2rem 2rem;
+            margin: 0 0 2rem 0;
+    }
+    .about-text .card img {
+        border-radius: 10px;
+        min-width: auto;
+        max-height: 60vh;
+        margin: auto 1rem;
+        padding: 0;
+    }
+    .about-text .card img.alejandra {
+        margin: auto 3rem;
+    }
+    .about-text .card h3{
+    max-width: 40vw;
+    font-size: 2.5rem;
+    }
+    .about-text .card p{
+        max-width: 40vw;
+        font-size: 2.5rem;
+        margin: 1rem 1rem 0 0;
+    }
+    .about-text .role-title{
+    color:#622d86;
+    font-family: 'Hewitt-Cooper', sans-serif !important;
+    font-size: 2.5rem;
+    }
+}
 @media (max-width: 1380px) {
     .about-text .card-container {
             min-width: 60vw;
@@ -5018,13 +5113,13 @@ width: 40vw;
         border-radius: 10px;
         min-width: auto;
         max-height: 60vh;
-        margin: 6rem 1rem;
+        margin: auto 1rem;
         padding: 0;
     }
     .about-text .card img.alejandra {
         margin: 9rem 3rem;
     }
-     .about-text .card img.camilao {
+    .about-text .card img.camilao {
         margin: 5rem 3rem;
     }
     .about-text .card .about-us-card-text {
@@ -5114,13 +5209,20 @@ width: 40vw;
             height: auto;
             padding: 0;
             margin: 0;
-        }
+    }
+    .about-text .card img {
+        border-radius: 10px;
+        min-width: auto;
+        max-height: 40vh;
+        margin: auto 1rem;
+        padding: 0;
+    }
     .about-text .card img.alejandra {
         margin: 7rem 3rem;
     }
     
     .about-text .card img.tatiana {
-        margin: 9rem 1rem;
+        margin: 6rem 1rem;
     }
     .about-text .card .about-us-card-text {
         max-width: 40vw;
@@ -5173,7 +5275,6 @@ width: 40vw;
         padding: 0 2rem 0 1rem;
         margin:0;
     }
-
     .about-text {
         margin: 2rem 1rem;
         padding: 0;
@@ -5181,7 +5282,7 @@ width: 40vw;
     .about-text h2{
         text-align: center;
         font-size: 1.5rem;
-        padding: 2rem 3rem 0 1rem;
+        padding: 2rem 3rem 0 3rem;
         margin:0;
     }
     .about-text .role-title{
@@ -5191,9 +5292,10 @@ width: 40vw;
     font-size: 1.2rem;
     }
     .about-text p{
+        text-align: justify;
         font-size: 1.5rem;
-        padding: 1rem 3rem 2rem 1rem;
-        margin:0;
+        padding: 1rem 2rem 2rem 1rem;
+        margin: 0 0 2rem 0;
     }
     .about-text .cta-button {
         padding: 0.5rem 1rem;
@@ -5207,11 +5309,16 @@ width: 40vw;
         padding: 0;
         margin: 0 ;
     }
+     .about-text .card-container h2{
+        text-align: center;
+        padding: 0;
+        margin: 0 4rem 0 0;
+       }
     .about-text .card-container .card{
         display:flex;
         flex-direction: column;
         min-width: 50vw;
-        padding: 1rem 1.5rem;
+        padding: 1rem 1rem;
         margin: 1rem 0 1rem 0;
     }
     .about-text .card-container .card.typetwo{
@@ -5225,7 +5332,7 @@ width: 40vw;
     .about-text .card-container .card img {
         max-width:80vw;
         min-width: auto;
-        margin: 1rem 0;
+        margin: 1rem 1rem;
     }
     .about-text .card .about-us-card-text {
         max-width: 80vw;
@@ -5247,7 +5354,13 @@ width: 40vw;
 
 @media (max-width: 380px) {
     .about-text p {
-        padding: 0 1.5rem 0 1rem;
+        text-align: justify;
+        padding: 0 1.5rem 2rem 1rem;
+        margin: 0;
+    }
+    .about-text h2{
+        text-align: center;
+        padding: 0 1.5rem 2rem 1rem;
         margin: 0;
     }
     .about-text .card-container {
@@ -5255,7 +5368,7 @@ width: 40vw;
         margin: 0 ;
     }
     .about-text .card-container h2 {
-        margin:1rem 0 0 2rem;
+        margin:1rem 2rem 0 0;
         font-size: 1.5rem;
     }
     .about-text .card-container .card{
@@ -5272,7 +5385,7 @@ width: 40vw;
     
     .about-text .card-container .card img {
         min-width: 50vw;
-        margin: 1rem 0;
+        margin: 1rem 1rem;
     }
     .about-text .card-container .card h3 {
         text-align: left;
@@ -5294,6 +5407,21 @@ width: 40vw;
     }    
     .about-text .card .about-us-card-text {
     max-width: 90vw;
+    }
+}
+@media (max-width: 325px) {
+    .about-text p {
+        text-align: justify;
+        padding: 0 1.5rem 2rem 1rem;
+        margin: 0;
+    }
+    .about-text .card-container h2 {
+        margin:1rem 2rem 0 0;
+        font-size: 1.5rem;
+    }
+    .about-text .card .about-us-card-text {
+    max-width: 90vw;
+    margin: 0;
     }
 }
 /*//////////////////////////////////////////////////////////////////////////////////////*/
