@@ -2211,10 +2211,16 @@ a {
     padding: 10rem 0 0;
     margin: 2rem 6rem 3rem 6rem;
 }
+.entrada-blog h2{
+    font-size: 2rem;
+    padding: 2rem 0 0;
+    margin: 2rem 9rem 3rem 6rem;
+}
 .entrada-blog p{
     font-size: 2rem;
     margin: 1rem 10rem 1rem 6rem;
 }
+
 .entrada-blog .referencias {
     background-color: #ebebeb;
     font-size: 1.5rem;
@@ -2233,6 +2239,7 @@ a {
     padding: 1rem 3rem 0 0;  
     max-width:70vw;
 }
+
 
 @media (max-width: 1028px) {
     .blog-cta {
