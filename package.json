@@ -4,7 +4,9 @@
   "description": "Este es el sitio web oficial de KEF - Komunidad Eco Feminista",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "repository": {
     "type": "git",
@@ -17,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/JaVDaNu96/KEF-Website/issues"
   },
-  "homepage": "https://github.com/JaVDaNu96/KEF-Website#readme"
+  "homepage": "https://github.com/JaVDaNu96/KEF-Website#readme",
+  "devDependencies": {
+    "vite": "^7.2.6",
+    "vite-plugin-html-inject": "^1.1.2"
+  }
 }

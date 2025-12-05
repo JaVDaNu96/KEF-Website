@@ -1,17 +1,20 @@
-// Clean production version of carousels.js
+import { eventsData } from './eventsData.js';
+
 let currentImageIndex = 0;
 let currentImageList = [];
 
 function loadCarousels() {
     try {
-        // Use the globally available eventsData instead of fetching
-        const topics = window.eventsData;
+        // Use the imported eventsData
+        const topics = eventsData;
 
         if (!topics) {
             return;
         }
 
         const container = document.getElementById('carousel-container');
+        if (!container) return; // Guard clause
+
         container.innerHTML = '';
 
         topics.forEach(topic => {
@@ -78,9 +81,12 @@ function expandImage(src, carouselElement) {
     modal.style.display = "block";
     modalImg.src = src;
 
-    document.querySelector(".close").onclick = function() {
-        modal.style.display = "none";
-    };
+    const closeBtn = document.querySelector(".close");
+    if (closeBtn) {
+        closeBtn.onclick = function () {
+            modal.style.display = "none";
+        };
+    }
 }
 
 // Event Listeners for Modal Navigation
@@ -94,7 +100,8 @@ window.addEventListener('DOMContentLoaded', () => {
         leftArrow.addEventListener("click", () => {
             if (currentImageIndex > 0) {
                 currentImageIndex--;
-                document.getElementById("expanded-img").src = currentImageList[currentImageIndex];
+                const img = document.getElementById("expanded-img");
+                if (img) img.src = currentImageList[currentImageIndex];
             }
             else {
                 console.log('no previous image available')
@@ -104,7 +111,8 @@ window.addEventListener('DOMContentLoaded', () => {
         rightArrow.addEventListener("click", () => {
             if (currentImageIndex < currentImageList.length - 1) {
                 currentImageIndex++;
-                document.getElementById("expanded-img").src = currentImageList[currentImageIndex];
+                const img = document.getElementById("expanded-img");
+                if (img) img.src = currentImageList[currentImageIndex];
             }
             else {
                 console.log('there are no more photos')
@@ -115,16 +123,18 @@ window.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener("keydown", function (event) {
     const modal = document.getElementById("image-modal");
-    if (modal.style.display === "block") {
+    if (modal && modal.style.display === "block") {
         if (event.key === "ArrowLeft") {
             if (currentImageIndex > 0) {
                 currentImageIndex--;
-                document.getElementById("expanded-img").src = currentImageList[currentImageIndex];
+                const img = document.getElementById("expanded-img");
+                if (img) img.src = currentImageList[currentImageIndex];
             }
         } else if (event.key === "ArrowRight") {
             if (currentImageIndex < currentImageList.length - 1) {
                 currentImageIndex++;
-                document.getElementById("expanded-img").src = currentImageList[currentImageIndex];
+                const img = document.getElementById("expanded-img");
+                if (img) img.src = currentImageList[currentImageIndex];
             }
         } else if (event.key === "Escape") {
             modal.style.display = "none";

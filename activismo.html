@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Activismo - Debug Version</title>
+    <meta name="description"
+        content="Activismo en KEF. Únete a nuestras marchas y campañas por la equidad de género y la justicia ambiental en Cali.">
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Activismo - KEF">
+    <meta property="og:description" content="Movilización y defensa de derechos humanos y ambientales.">
+    <meta property="og:image" content="https://kef.com/assets/KEF-LOGO.png">
+    <link rel="icon" type="image/png" href="assets/KEF-LOGO.png">
+    <title>Activismo - KEF</title>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <script defer src="/js/carousels.js"></script>
-    <!-- Add console logging for debugging -->
-    <script>
-        console.log('🔍 Debug: HTML head loaded');
-        window.addEventListener('error', function(e) {
-            console.error(' Global Error:', e.error, 'File:', e.filename, 'Line:', e.lineno);
-        });
-    </script>
 </head>
+
 <body>
-    <script>console.log('🔍 Debug: Body started loading');</script>
 
     <!-- Header Section -->
-    <div id="header-placeholder"></div>
+    <load src="header.html" />
     <section class="full-section-wrapper">
         <!-- Hero Section -->
         <div class="hero-activismo">
             <div class="hero-content">
                 <div class="hero-text">
                     <h1>Activismo</h1>
-                    <p>Únete a nuestros programas de activismo social para impulsar un cambio significativo en la ciudad.</p>
+                    <p>Únete a nuestros programas de activismo social para impulsar un cambio significativo en la
+                        ciudad.</p>
                     <a href="contact-us.html" class="cta-button-activismo">Contáctanos</a>
                 </div>
             </div>
         </div>
-        
+
         <div id="carousel-container"></div>
-        
+
         <!-- Modal for Expanded Image -->
         <div id="image-modal" class="modal" style="display: none;">
             <span class="close">&times;</span>
@@ -40,55 +43,17 @@
             <img class="modal-content" id="expanded-img">
             <span class="nav-arrow right-arrow">&#10095;</span>
         </div>
-        
+
         <!-- Blog CTA Section -->
         <div class="blog-cta">
             <h2>Descubre Nuestro Espacio de Reflexión</h2>
             <a href="blog.html?topic=activismo" class="cta-button-activismo">Activismo en nuestro Blog</a>
         </div>
     </section>
-    
-    <!-- Footer Section -->
-    <div id="footer-placeholder"></div>
 
-    <!-- Load scripts with error handling and debug info -->
-    <script>
-        console.log('🔍 Debug: About to load eventsData.js');
-        
-        // Check if scripts are loading
-        function checkScriptLoad(scriptSrc, name) {
-            const script = document.createElement('script');
-            script.src = scriptSrc;
-            script.onload = () => {
-                console.log(` ${name} loaded successfully`);
-            };
-            script.onerror = (e) => {
-                console.error(` Failed to load ${name}:`, e);
-            };
-            document.head.appendChild(script);
-        }
-        
-        // Load eventsData first
-        checkScriptLoad('./js/eventsData.js', 'eventsData.js');
-        
-        // Wait a bit then load other scripts
-        setTimeout(() => {
-            checkScriptLoad('./js/includes.js', 'includes.js');
-        }, 100);
-        
-        
-        // Manual carousel loading for debugging
-        window.addEventListener('load', () => {
-            console.log(' Debug: Window loaded, attempting manual carousel load');
-            setTimeout(() => {
-                if (window.loadCarousels && typeof window.loadCarousels === 'function') {
-                    console.log('Debug: Calling loadCarousels manually');
-                    window.loadCarousels();
-                } else {
-                    console.error('loadCarousels function not available');
-                }
-            }, 1000);
-        });
-    </script>
+    <!-- Footer Section -->
+    <load src="footer.html" />
+    <script type="module" src="js/carousels.js"></script>
 </body>
+
 </html>
