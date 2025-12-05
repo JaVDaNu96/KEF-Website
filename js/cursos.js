@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", async function () {
     const container = document.getElementById("courses-container");
-    
+
     try {
-        const response = await fetch("../data/cursos.json");
+        const response = await fetch("data/cursos.json");
         const courses = await response.json();
 
         courses.forEach(course => {
@@ -19,11 +19,10 @@ document.addEventListener("DOMContentLoaded", async function () {
                     <!-- Back Side -->
                     <div class="flip-card-back ${course.category}">
                         <p>${course.description}</p>
-                        ${
-                            course.available 
-                                ? `<a href="${course.link}" target="_blank" class="cta-button">Inscribirse</a>` 
-                                : ""
-                        }
+                        ${course.available
+                    ? `<a href="${course.link}" target="_blank" class="cta-button">Inscribirse</a>`
+                    : ""
+                }
                     </div>
                 </div>
             `;

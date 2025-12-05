@@ -1,5 +1,5 @@
 // URL del archivo JSON de eventos
-const eventsUrl = '../data/events.json';
+const eventsUrl = 'data/events.json';
 
 // Función para cargar y organizar eventos en un objeto {Año -> Mes -> Eventos}
 async function loadCalendar() {
@@ -62,7 +62,7 @@ function renderCalendar(eventMap) {
             eventColumn.innerHTML = '';
             monthColumn.classList.remove('show');
             eventColumn.classList.remove('show');
-        
+
             // For each month in the selected year, create the month buttons
             Object.keys(eventMap[year]).forEach(month => {
                 const monthButton = document.createElement('button');
