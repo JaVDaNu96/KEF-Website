@@ -137,7 +137,7 @@ a {
         min-height: auto;
         overflow-x: hidden;
         padding: 0.5rem 0 1.5rem 0;
-        margin: 0 0 5rem 0;
+        margin: 0 auto;
     }
 
     .full-section-wrapper.hero-image {
@@ -358,14 +358,15 @@ a {
     }
 
     .menu-toggle:checked+.hamburger-menu+.nav-links {
-        padding: 6rem 0 0 0;
+        padding: 4rem auto;
         margin: 0;
-        left: -2rem;
         right: 0;
-        min-width: 100%;
-        min-height: 100vh;
         color: #000000;
         border: 1.5px solid #000000;
+        align-items: left;
+        justify-content: center;
+        left: 0;
+
     }
 }
 
@@ -384,24 +385,24 @@ a {
     position: relative;
     width: 100vw;
     overflow: hidden;
-    height: 4rem;
+    height: 3.7rem;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0;
-    padding: 0.5rem 0 0.5rem 0;
+    padding: auto;
 }
 
-.moving-banner-b {
+/* .moving-banner-b {
     position: relative;
     width: 100vw;
     overflow: hidden;
-    height: 2rem;
+    height: 3.7rem;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 1rem 0;
-}
+} */
 
 /* Style the banner text */
 .banner-text {
@@ -1158,9 +1159,9 @@ a {
     min-width: 100vw;
     display: flex;
     flex-direction: column;
-    align-items: right;
+    align-items: left;
     gap: 2rem;
-    padding: 2rem 2rem 3rem 45rem;
+    padding: auto;
     margin: auto 0;
     /* Centers content vertically */
     /* Centers content vertically */
@@ -1174,7 +1175,7 @@ a {
     align-items: flex-start;
     /* Crucial for sticky text */
     gap: 1rem;
-    padding: 0;
+    padding: auto;
     /* Remove top padding */
 }
 
@@ -1184,7 +1185,7 @@ a {
     /* Align cards to the left */
     gap: 1rem;
     /* Reduce gap between cards */
-    padding: 2rem;
+    padding: auto;
     /* Adjust padding for smaller screens */
 }
 
@@ -1193,7 +1194,7 @@ a {
     max-width: 80vw;
     max-height: 150vh;
     padding: 0;
-    margin: 2rem 1rem 2rem 4rem;
+    margin: auto;
 }
 
 .cards-full .card-container.landing {
@@ -1203,15 +1204,14 @@ a {
     gap: 1rem;
     /* normal spacing for small screens */
     /* give the stack some breathing room so tops/edges are visible */
-    padding: 2rem 4rem 2rem 0;
-    padding-bottom: 0;
+    padding: auto;
     /* Removed extra whitespace */
 }
 
 .text-cards-landing {
-    width: 50vw;
+    width: auto;
     margin: 0;
-    padding: 2rem 2rem 0 4rem;
+    padding: auto;
     text-align: left;
     position: sticky;
     top: 25vh;
@@ -1220,10 +1220,11 @@ a {
 }
 
 .text-cards-landing h2 {
-    width: 80vw;
+    width: auto;
     margin: 0;
     padding: 2rem 0;
     font-size: 3rem;
+    color: #622d86;
 }
 
 /* Scrollbar Styling */
@@ -1241,11 +1242,12 @@ a {
 /* Card Styling */
 .card {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     border-radius: 15px;
     width: 40vw;
     height: auto;
-    padding: 2.5rem 4rem;
+    padding: auto;
     text-align: left;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
@@ -1261,7 +1263,7 @@ a {
 }
 
 .cta-cards {
-    padding: 0 4rem;
+    padding: auto;
 }
 
 .cta-cards p {
@@ -1312,12 +1314,11 @@ a {
     .cards-full .card-container.landing {
         display: flex;
         flex-direction: column;
-        justify-content: right;
+        justify-content: left;
         /* Align cards to the left */
         gap: 1rem;
-        /* Consistent gap between cards */
-        padding: 5rem 0 4rem 0;
-        /* Adjust padding for smaller screens */
+        padding: auto
+            /* Consistent gap between cards */
     }
 
     .full-section.cards-full {
@@ -1326,7 +1327,7 @@ a {
         /* Align cards to the left */
         gap: 1rem;
         /* Reduce gap between cards */
-        padding: 2rem 4rem 0rem 4rem;
+        padding: auto;
         /* Adjust padding for smaller screens */
     }
 
@@ -1400,7 +1401,6 @@ a {
         padding: 2rem 0;
         font-size: 3rem;
         text-align: left;
-        color: #622d86;
     }
 
     .cards-full .card-container.landing {
@@ -1550,11 +1550,13 @@ a {
     }
 
     .full-section.cards-full-cta img {
+        justify-content: center;
+        align-items: center;
         border-radius: 20px;
-        max-width: 80vw;
+        max-width: 95vw;
         max-height: 150vh;
-        padding: 0;
-        margin: 2rem 1rem 2rem 0;
+        padding: 0.5rem;
+        margin: auto;
     }
 }
 
@@ -1662,14 +1664,6 @@ a {
     .cta-cards a {
         font-weight: 300;
         font-size: 2rem;
-    }
-
-    .full-section.cards-full-cta img {
-        border-radius: 20px;
-        max-width: 80vw;
-        max-height: 150vh;
-        padding: 0;
-        margin: 2rem 1rem 2rem 0;
     }
 }
 
@@ -2227,7 +2221,8 @@ a {
 .footer-social {
     flex: 1;
     text-align: center;
-    padding: 0 2rem;
+    align-items: center;
+    padding: 0 auto;
 }
 
 
@@ -2266,21 +2261,22 @@ a {
     }
 
     .footer-content p {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
 
     .footer-content div {
-        margin: 0 1rem;
+        margin: 0 auto;
+        align-items: center;
     }
 
     .footer-contact,
     .footer-copyright,
     .footer-social {
-        margin: 0.3rem 1rem;
+        margin: 0.3rem auto;
     }
 
     .footer-social {
-        padding: 1rem 4rem 0 3.5rem;
+        padding: 1rem auto;
         display: flex;
         justify-content: center;
         gap: 1.5rem;
@@ -5637,7 +5633,7 @@ a {
     }
 
     .about-text .card img.alejandra {
-        margin: 9rem 3rem;
+        margin: auto 3rem;
     }
 }
 
@@ -5675,7 +5671,7 @@ a {
     }
 
     .about-text .card img.alejandra {
-        margin: 9rem 3rem;
+        margin: auto 3rem;
     }
 }
 
@@ -5778,7 +5774,7 @@ a {
     }
 
     .about-text .card img.alejandra {
-        margin: 9rem 3rem;
+        margin: auto 3rem;
     }
 
     .about-text .card img.camilao {
@@ -5894,7 +5890,7 @@ a {
     }
 
     .about-text .card img.alejandra {
-        margin: 7rem 3rem;
+        margin: auto 3rem;
     }
 
     .about-text .card img.tatiana {
@@ -6523,7 +6519,7 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 2rem 0 4rem 0;
+    padding: auto 2rem;
 }
 
 .hero-full {
@@ -6547,21 +6543,21 @@ a {
 
 .cards-full .text-cards {
     width: 50vw;
-    margin: 0 0 2rem 4rem;
-    padding: 0 4rem 0 0;
+    margin: auto;
+    padding: auto;
 }
 
 .cards-full .text-cards h2 {
     width: 40vw;
     color: #622d86;
     font-size: 3rem;
-    margin: 1rem 0;
+    margin: auto;
 }
 
 .cards-full .text-cards p {
     width: 40vw;
     font-size: 2rem;
-    margin: 0 0 2rem 0;
+    margin: auto;
 }
 
 @media (max-width: 1028px) {
@@ -6576,7 +6572,7 @@ a {
 
     .cards-full .text-cards p {
         font-size: 2rem;
-        margin: 2rem 15rem 2rem 0;
+        margin: auto;
     }
 
     .cards-full img {
@@ -6588,7 +6584,7 @@ a {
     }
 
     .cards-full .card-container {
-        padding: 0 1rem 4rem 25rem;
+        padding: auto;
     }
 }
 
@@ -6896,6 +6892,7 @@ img.animate {
 }
 
 .card-container.landing .card {
+    padding: 2rem;
     width: 40vw;
     min-height: 70vh;
     height: auto;
