@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/JaVDaNu96/KEF-Website#readme",
   "dependencies": {
-    "vite": "^7.2.6",
+    "vite": "^5.4.21",
     "vite-plugin-html-inject": "^1.1.2"
   }
 }
