@@ -5548,6 +5548,63 @@ a {
 
 }
 
+/* Target the gap between 1380px and 1500px (includes 1440px) */
+@media (min-width: 1381px) and (max-width: 1499px) {
+    .about-text .card-container {
+        min-width: 60vw;
+        padding: 0;
+        margin: 0 4rem 0 0;
+    }
+
+    .about-text .card-container .card {
+        justify-content: center;
+        display: flex;
+        flex-direction: row;
+        width: 90vw;
+        height: auto;
+        padding: 2rem 2rem 2rem 2rem;
+        margin: 0;
+    }
+
+    .about-text .card-container .card.typetwo {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 90vw;
+        height: auto;
+        padding: 2rem 0 2rem 2rem;
+        margin: 0 0 2rem 0;
+    }
+
+    .about-text .card img {
+        border-radius: 10px;
+        min-width: auto;
+        max-height: 60vh;
+        margin: auto 1rem;
+        padding: 0;
+    }
+
+    .about-text .card img.alejandra {
+        margin: auto 3rem;
+    }
+
+    .about-text .card h3 {
+        max-width: 40vw;
+        font-size: 2rem;
+    }
+
+    .about-text .card p {
+        max-width: 40vw;
+        font-size: 1.8rem;
+        margin: 1rem 1rem 0 0;
+    }
+
+    .about-text .role-title {
+        color: #622d86;
+        font-family: 'Hewitt-Cooper', sans-serif !important;
+        font-size: 2rem;
+    }
+}
+
 @media (min-width: 1500px) {
     .about-text .card-container {
         min-width: 60vw;
