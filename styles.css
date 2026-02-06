@@ -5549,7 +5549,8 @@ a {
 }
 
 /* Target the gap between 1380px and 1500px (includes 1440px) */
-@media (min-width: 1381px) and (max-width: 1499px) {
+/* Ultrawide / XL (> 1600px) */
+@media (min-width: 1601px) {
     .about-text .card-container {
         min-width: 60vw;
         padding: 0;
@@ -5589,23 +5590,138 @@ a {
 
     .about-text .card h3 {
         max-width: 40vw;
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .about-text .card p {
+        max-width: 40vw;
+        font-size: 2.5rem;
+        margin: 1rem 1rem 0 0;
+    }
+
+    .about-text .role-title {
+        color: #622d86;
+        font-family: 'Hewitt-Cooper', sans-serif !important;
+        font-size: 2.5rem;
+    }
+}
+
+/* Large Desktop / 1440 (1401px - 1600px) */
+@media (min-width: 1401px) and (max-width: 1600px) {
+    .about-text .card-container {
+        min-width: 60vw;
+        padding: 0;
+        margin: 0 4rem 0 0;
+    }
+
+    .about-text .card-container .card {
+        justify-content: center;
+        display: flex;
+        flex-direction: row;
+        width: 90vw;
+        height: auto;
+        padding: 2rem 2rem 2rem 2rem;
+        margin: 0;
+    }
+
+    .about-text .card-container .card.typetwo {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 90vw;
+        height: auto;
+        padding: 2rem 0 2rem 2rem;
+        margin: 0 0 2rem 0;
+    }
+
+    .about-text .card img {
+        border-radius: 10px;
+        min-width: auto;
+        max-height: 60vh;
+        margin: auto 1rem;
+        padding: 0;
+    }
+
+    .about-text .card img.alejandra {
+        margin: auto 3rem;
+    }
+
+    .about-text .card h3 {
+        max-width: 40vw;
+        font-size: 2.2rem;
+    }
+
+    .about-text .card p {
+        max-width: 40vw;
+        font-size: 2rem;
+        margin: 1rem 1rem 0 0;
+    }
+
+    .about-text .role-title {
+        color: #622d86;
+        font-family: 'Hewitt-Cooper', sans-serif !important;
+        font-size: 2.2rem;
+    }
+}
+
+/* Standard Laptop / 1366 (1201px - 1400px) */
+@media (min-width: 1201px) and (max-width: 1400px) {
+    .about-text .card-container {
+        min-width: 60vw;
+        padding: 0;
+        margin: 0 4rem 0 0;
+    }
+
+    .about-text .card-container .card {
+        justify-content: center;
+        display: flex;
+        flex-direction: row;
+        width: 90vw;
+        height: auto;
+        padding: 2rem 2rem 2rem 2rem;
+        margin: 0;
+    }
+
+    .about-text .card-container .card.typetwo {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 90vw;
+        height: auto;
+        padding: 2rem 0 2rem 2rem;
+        margin: 0 0 2rem 0;
+    }
+
+    .about-text .card img {
+        border-radius: 10px;
+        min-width: auto;
+        max-height: 50vh;
+        margin: auto 1rem;
+        padding: 0;
+    }
+
+    .about-text .card img.alejandra {
+        margin: auto 3rem;
+    }
+
+    .about-text .card h3 {
         max-width: 40vw;
         font-size: 1.8rem;
+    }
+
+    .about-text .card p {
+        max-width: 40vw;
+        font-size: 1.6rem;
         margin: 1rem 1rem 0 0;
     }
 
     .about-text .role-title {
         color: #622d86;
         font-family: 'Hewitt-Cooper', sans-serif !important;
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 }
 
-@media (min-width: 1500px) {
+/* Small Laptop / iPad Pro Landscape (1029px - 1200px) */
+@media (min-width: 1029px) and (max-width: 1200px) {
     .about-text .card-container {
         min-width: 60vw;
         padding: 0;
@@ -5613,12 +5729,11 @@ a {
     }
 
     .about-text .card-container .card {
-        justify-content: center;
         display: flex;
         flex-direction: row;
         width: 90vw;
         height: auto;
-        padding: 2rem 2rem 2rem 2rem;
+        padding: 1.5rem 2rem;
         margin: 0;
     }
 
@@ -5627,16 +5742,15 @@ a {
         flex-direction: row-reverse;
         width: 90vw;
         height: auto;
-        padding: 2rem 0 2rem 2rem;
-        margin: 0 0 2rem 0;
+        padding: 1.5rem 0 1.5rem 2rem;
+        margin: 0;
     }
 
     .about-text .card img {
         border-radius: 10px;
         min-width: auto;
-        max-height: 60vh;
+        max-height: 45vh;
         margin: auto 1rem;
-        padding: 0;
     }
 
     .about-text .card img.alejandra {
@@ -5645,95 +5759,19 @@ a {
 
     .about-text .card h3 {
         max-width: 40vw;
-        font-size: 2.5rem;
+        font-size: 1.5rem;
     }
 
     .about-text .card p {
         max-width: 40vw;
-        font-size: 2.5rem;
+        font-size: 1.4rem;
         margin: 1rem 1rem 0 0;
     }
 
     .about-text .role-title {
         color: #622d86;
         font-family: 'Hewitt-Cooper', sans-serif !important;
-        font-size: 2.5rem;
-    }
-}
-
-@media (max-width: 1380px) {
-    .about-text .card-container {
-        min-width: 60vw;
-        padding: 0;
-        margin: 0 4rem 0 0;
-    }
-
-    .about-text .card-container .card {
-        display: flex;
-        flex-direction: row;
-        width: 90vw;
-        height: auto;
-        padding: 2rem 2rem 2rem 2rem;
-        margin: 0;
-    }
-
-    .about-text .card-container .card.typetwo {
-        display: flex;
-        flex-direction: row-reverse;
-        width: 90vw;
-        height: auto;
-        padding: 2rem 0 2rem 2rem;
-        margin: 0 0 2rem 0;
-    }
-
-    .about-text .card img {
-        border-radius: 10px;
-        min-width: auto;
-        max-height: 60vh;
-        margin: 6rem 1rem;
-        padding: 0;
-    }
-
-    .about-text .card img.alejandra {
-        margin: auto 3rem;
-    }
-}
-
-@media (max-width: 1270px) {
-    .about-text .card-container {
-        min-width: 60vw;
-        padding: 0;
-        margin: 0 4rem 0 0;
-    }
-
-    .about-text .card-container .card {
-        display: flex;
-        flex-direction: row;
-        width: 90vw;
-        height: auto;
-        padding: 2rem 2rem 2rem 2rem;
-        margin: 0;
-    }
-
-    .about-text .card-container .card.typetwo {
-        display: flex;
-        flex-direction: row-reverse;
-        width: 90vw;
-        height: auto;
-        padding: 2rem 0 2rem 2rem;
-        margin: 0 0 2rem 0;
-    }
-
-    .about-text .card img {
-        border-radius: 10px;
-        min-width: auto;
-        max-height: 60vh;
-        margin: 6rem 1rem;
-        padding: 0;
-    }
-
-    .about-text .card img.alejandra {
-        margin: auto 3rem;
+        font-size: 1.5rem;
     }
 }
 
