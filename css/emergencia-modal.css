@@ -1,0 +1,282 @@
+/* ==========================================================================
+   Modal de emergencia — Sismo del 10 de agosto de 2026 (Chocó / Pacífico)
+   --------------------------------------------------------------------------
+   Campaña temporal. Vive fuera de styles.css a propósito: cuando la campaña
+   termine, se borra este archivo, js/emergencia-modal.js y el bloque
+   <div class="kef-emergencia"> de index.html. Nada más.
+
+   Nota: styles.css declara `h1,h2,h3 { font-size:3rem !important }` y
+   `p,ul,li { font-size:2rem !important }` de forma global. Por eso aquí
+   se repite `!important` en tipografía: no es capricho, es defensa.
+   ========================================================================== */
+
+.kef-emergencia {
+    --kef-morado: #622d86;
+    --kef-morado-claro: #7a3aa6;
+    --kef-rosado: #d6808a;
+    --kef-verde: #a7bb40;
+    --kef-gris: #6f6e6e;
+    --kef-tinta: #2b1436;
+
+    position: fixed;
+    inset: 0;
+    z-index: 9000;
+    /* por encima del header, que vive en z-index: 1000 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem;
+}
+
+.kef-emergencia[hidden] {
+    display: none;
+}
+
+/* --- Fondo ---------------------------------------------------------------- */
+
+.kef-emergencia__backdrop {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(28, 10, 38, 0.68);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    animation: kef-emergencia-fade 220ms ease-out both;
+}
+
+/* --- Panel ---------------------------------------------------------------- */
+
+.kef-emergencia__dialog {
+    position: relative;
+    width: 100%;
+    max-width: 34rem;
+    max-height: calc(100vh - 2.5rem);
+    overflow-y: auto;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 18px 48px rgba(28, 10, 38, 0.32);
+    padding: 2.5rem 2rem 2rem;
+    text-align: left;
+    animation: kef-emergencia-entrar 260ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* --- Logo ------------------------------------------------------------------ */
+
+.kef-emergencia__logo {
+    display: block;
+    height: 2rem;
+    width: 2rem;
+    object-fit: contain;
+    margin: 0 0 0.6rem;
+}
+
+/* --- Botón de cierre ------------------------------------------------------ */
+
+.kef-emergencia__cerrar {
+    position: absolute;
+    top: 0.9rem;
+    right: 0.9rem;
+    width: 2.25rem;
+    height: 2.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    color: var(--kef-gris);
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.kef-emergencia__cerrar:hover,
+.kef-emergencia__cerrar:focus-visible {
+    background-color: #f3edf7;
+    color: var(--kef-morado);
+}
+
+.kef-emergencia__cerrar svg {
+    width: 1.05rem;
+    height: 1.05rem;
+    display: block;
+}
+
+/* --- Contenido ------------------------------------------------------------ */
+
+.kef-emergencia__eyebrow {
+    font-family: 'Gill Sans Nova', sans-serif !important;
+    font-size: 0.94rem !important;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--kef-morado);
+    margin: 0 0 0.75rem !important;
+}
+
+.kef-emergencia__titulo {
+    font-family: 'Gill Sans Nova', sans-serif !important;
+    font-size: 2.22rem !important;
+    line-height: 1.2;
+    font-weight: 700;
+    color: var(--kef-tinta) !important;
+    margin: 0 0 1rem !important;
+}
+
+.kef-emergencia__texto p {
+    font-family: 'Gill Sans Nova', sans-serif !important;
+    font-size: 1.22rem !important;
+    line-height: 1.6;
+    color: #3f3a44;
+    margin: 0 0 0.9rem !important;
+}
+
+.kef-emergencia__texto p:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* --- Acciones ------------------------------------------------------------- */
+
+.kef-emergencia__acciones {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1.75rem;
+}
+
+.kef-emergencia__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.85rem 1.5rem;
+    background-color: var(--kef-morado);
+    color: #ffffff !important;
+    font-family: 'Gill Sans Nova', sans-serif !important;
+    font-size: 1.2rem !important;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.25s ease, transform 0.15s ease;
+}
+
+.kef-emergencia__cta:hover,
+.kef-emergencia__cta:focus-visible {
+    background-color: var(--kef-morado-claro);
+    transform: translateY(-1px);
+}
+
+.kef-emergencia__cta svg {
+    width: 1.15rem;
+    height: 1.15rem;
+    flex-shrink: 0;
+}
+
+.kef-emergencia__despues {
+    padding: 0.85rem 0.75rem;
+    border: none;
+    background: none;
+    font-family: 'Gill Sans Nova', sans-serif !important;
+    font-size: 1.14rem !important;
+    color: var(--kef-gris);
+    cursor: pointer;
+    border-radius: 6px;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.kef-emergencia__despues:hover,
+.kef-emergencia__despues:focus-visible {
+    color: var(--kef-tinta);
+    background-color: #f5f2f7;
+}
+
+/* --- Foco visible (accesibilidad) ----------------------------------------- */
+
+.kef-emergencia :focus-visible {
+    outline: 3px solid var(--kef-rosado);
+    outline-offset: 2px;
+}
+
+/* --- Bloqueo de scroll del fondo ------------------------------------------ */
+
+body.kef-emergencia-abierto {
+    overflow: hidden;
+}
+
+/* --- Responsive ----------------------------------------------------------- */
+
+@media (max-width: 560px) {
+    .kef-emergencia {
+        padding: 1rem;
+        align-items: flex-end;
+    }
+
+    .kef-emergencia__dialog {
+        padding: 2.25rem 1.4rem 1.6rem;
+        max-height: calc(100vh - 2rem);
+    }
+
+    .kef-emergencia__logo {
+        height: 1.6rem;
+        width: 1.6rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .kef-emergencia__cerrar {
+        top: 0.75rem;
+        right: 0.75rem;
+    }
+
+    .kef-emergencia__titulo {
+        font-size: 1.86rem !important;
+    }
+
+    .kef-emergencia__texto p {
+        font-size: 1.18rem !important;
+    }
+
+    .kef-emergencia__acciones {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.35rem;
+    }
+
+    .kef-emergencia__cta {
+        justify-content: center;
+    }
+}
+
+/* --- Animaciones ---------------------------------------------------------- */
+
+@keyframes kef-emergencia-fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes kef-emergencia-entrar {
+    from {
+        opacity: 0;
+        transform: translateY(16px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .kef-emergencia__backdrop,
+    .kef-emergencia__dialog {
+        animation: kef-emergencia-fade 120ms ease-out both;
+    }
+
+    .kef-emergencia__cta:hover,
+    .kef-emergencia__cta:focus-visible {
+        transform: none;
+    }
+}
